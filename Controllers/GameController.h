@@ -15,7 +15,7 @@ namespace SpaceInvaders::Controllers
         ~GameController();
 
         void loadScene(SceneEnum scene);
-
+        Scenes::Scene* getCurrentScene();
         Events::EventHandler* getEventHandler();
 
     private:

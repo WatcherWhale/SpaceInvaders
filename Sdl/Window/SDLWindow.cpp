@@ -101,6 +101,8 @@ void SDLWindow::draw()
 
     if(startime == 0) startime = ticks;
 
+    this->clear();
+
     if(this->background != nullptr)
     {
         auto* backgroundSprite = dynamic_cast<Assets::Sprites::SDLSprite*>(this->background);

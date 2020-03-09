@@ -32,10 +32,21 @@ void Game::run()
         {
             this->window->pollEvents();
 
+            if(this->controller->getCurrentScene() != nullptr)
+            {
+                this->controller->getCurrentScene()->update(this->window->getDeltaTime());
+                this->controller->getCurrentScene()->draw(this->window);
+            }
+            else
+            {
+                this->controller->loadScene(SpaceInvaders::Controllers::SceneEnum::GAME);
+            }
+
+            this->window->draw();
         }
 
-            this->window->clear();
-            this->window->draw();
+        this->window->clear();
+        this->window->draw();
     }
 
     delete controller;

@@ -23,10 +23,21 @@ void SpaceInvaders::Controllers::GameController::loadScene(SpaceInvaders::Contro
     if(scene == SceneEnum::GAME)
     {
         this->currentScene = new Scenes::GameScene();
+        this->currentScene->load(this->factory, this->spriteLoader);
+
+        for(auto* listener : *this->currentScene->getListeners())
+        {
+            this->eventHandler->addListener(listener);
+        }
     }
 }
 
 SpaceInvaders::Events::EventHandler* SpaceInvaders::Controllers::GameController::getEventHandler()
 {
     return this->eventHandler;
+}
+
+SpaceInvaders::Scenes::Scene* SpaceInvaders::Controllers::GameController::getCurrentScene()
+{
+    return this->currentScene;
 }

@@ -16,7 +16,7 @@ namespace SpaceInvaders::Scenes
         virtual ~Scene();
         virtual void load(Factories::GameFactory* factory, Assets::Sprites::SpriteLoader* loader) = 0;
 
-        void draw(Windows::Window* win);
+        virtual void draw(Windows::Window* win);
 
         virtual void update(double deltaTime);
 

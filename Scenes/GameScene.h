@@ -13,9 +13,11 @@ namespace SpaceInvaders::Scenes
         ~GameScene() override;
         void update(double deltaTime) override;
         void load(Factories::GameFactory* factory, Assets::Sprites::SpriteLoader* loader) override;
+        void draw(Windows::Window* window) override;
 
     private:
         Controllers::LevelController* lvlController;
+        Assets::Sprites::Sprite* background;
     };
 }
 #endif
