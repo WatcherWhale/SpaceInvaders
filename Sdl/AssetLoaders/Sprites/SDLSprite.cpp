@@ -6,8 +6,8 @@ using namespace SpaceInvaders::Assets::Sprites;
 
 SDLSprite::~SDLSprite()
 {
-    SDL_FreeSurface(this->surface);
-    SDL_DestroyTexture(this->texture);
+    if(this->surface != nullptr) SDL_FreeSurface(this->surface);
+    if(this->texture != nullptr) SDL_DestroyTexture( this->texture );
 }
 
 void SDLSprite::load()
@@ -26,12 +26,6 @@ void SDLSprite::texturize(SDL_Renderer* renderer)
     this->surface = nullptr;
 
     this->isTexture = true;
-}
-
-void SDLSprite::unload()
-{
-    if(this->surface != nullptr) SDL_FreeSurface(this->surface);
-    if(this->texture != nullptr) SDL_DestroyTexture( this->texture );
 }
 
 void* SDLSprite::display()

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(Game)
+project(SpaceInvaders)
 
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR/cmake})
 set(CMAKE_CXX_STANDARD 20)
@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 20)
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})
 
-add_executable(Game
+add_executable(SpaceInvaders
 			  	main.cpp
 
 				GameConstants.h
@@ -62,7 +62,7 @@ add_executable(Game
 		UI/Text.cpp
 		UI/Text.h
 				Sdl/AssetLoaders/Sprites/SDLText.cpp
-				Sdl/AssetLoaders/Sprites/SDLText.h Scenes/Scene.cpp Scenes/Scene.h UI/UIComponent.h UI/UIComponent.cpp AssetLoaders/Sprites/SpriteMap.cpp AssetLoaders/Sprites/SpriteMap.h Controllers/GameController.cpp Controllers/GameController.h)
+				Sdl/AssetLoaders/Sprites/SDLText.h Scenes/Scene.cpp Scenes/Scene.h UI/UIComponent.h UI/UIComponent.cpp AssetLoaders/Sprites/SpriteMap.cpp AssetLoaders/Sprites/SpriteMap.h Controllers/GameController.cpp Controllers/GameController.h Scenes/GameScene.cpp Scenes/GameScene.h)
 
 
-target_link_libraries(Game ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)
+target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)

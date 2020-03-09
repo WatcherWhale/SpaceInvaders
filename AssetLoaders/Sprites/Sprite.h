@@ -10,7 +10,6 @@ namespace SpaceInvaders::Assets::Sprites
     public:
         Sprite(std::string path);
         virtual void load() = 0;
-        virtual void unload() = 0;
         virtual void* display() = 0;
 
         virtual int getWidth() = 0;

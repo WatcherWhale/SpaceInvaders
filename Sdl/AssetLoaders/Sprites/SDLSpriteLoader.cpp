@@ -7,7 +7,7 @@ SDLSpriteLoader::~SDLSpriteLoader()
 {
     for(auto sprite : this->sprites)
     {
-        sprite.second->unload();
+        delete sprite.second;
     }
 }
 

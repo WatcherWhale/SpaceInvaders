@@ -13,6 +13,7 @@ namespace SpaceInvaders::GameObjects
     {
     public:
         GameObject();
+        virtual ~GameObject();
         virtual void loadSprites(Assets::Sprites::SpriteLoader* loader) = 0;
         void loadSprites(Assets::Sprites::Sprite* sprite, int amount);
         virtual Assets::Sprites::Sprite* getSprite();

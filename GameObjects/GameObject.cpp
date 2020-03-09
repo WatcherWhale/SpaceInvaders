@@ -71,3 +71,11 @@ void GameObject::move(double dx, double dy)
     this->position[0] = std::lround(this->dPosition[0]);
     this->position[1] = std::lround(this->dPosition[1]);
 }
+
+GameObject::~GameObject()
+{
+    for(auto* sprite : this->sprites)
+    {
+        delete sprite;
+    }
+}

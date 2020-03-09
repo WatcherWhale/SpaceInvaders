@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Game.dir/GameObjects/Alien.cpp.obj"
   "CMakeFiles/Game.dir/GameObjects/GameObject.cpp.obj"
   "CMakeFiles/Game.dir/GameObjects/Player.cpp.obj"
+  "CMakeFiles/Game.dir/Scenes/GameScene.cpp.obj"
   "CMakeFiles/Game.dir/Scenes/Scene.cpp.obj"
   "CMakeFiles/Game.dir/Sdl/AssetLoaders/SDLFontLoader.cpp.obj"
   "CMakeFiles/Game.dir/Sdl/AssetLoaders/Sprites/SDLSprite.cpp.obj"

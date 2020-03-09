@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Game" targetName="Game" />
+      <config projectName="SpaceInvaders" targetName="SpaceInvaders" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -11,7 +11,35 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbcf06a3-5ae5-42cc-83a1-2feda02e0bee" name="Default Changelist" comment="" />
+    <list default="true" id="bbcf06a3-5ae5-42cc-83a1-2feda02e0bee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Scenes/GameScene.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scenes/GameScene.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssetLoaders/Sprites/Sprite.h" beforeDir="false" afterPath="$PROJECT_DIR$/AssetLoaders/Sprites/Sprite.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameObjects/GameObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameObjects/GameObject.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameObjects/GameObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameObjects/GameObject.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/Scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Scene.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/Scene.h" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Scene.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sdl/AssetLoaders/Sprites/SDLSprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Sdl/AssetLoaders/Sprites/SDLSprite.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sdl/AssetLoaders/Sprites/SDLSprite.h" beforeDir="false" afterPath="$PROJECT_DIR$/Sdl/AssetLoaders/Sprites/SDLSprite.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sdl/AssetLoaders/Sprites/SDLSpriteLoader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Sdl/AssetLoaders/Sprites/SDLSpriteLoader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Game.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Game.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +53,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YFyZGr3FzKxAiLEwCI08RpwTYC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -51,7 +82,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Game" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Game" TARGET_NAME="Game" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Game" RUN_TARGET_NAME="Game">
+    <configuration name="SpaceInvaders" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SpaceInvaders" TARGET_NAME="SpaceInvaders" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SpaceInvaders" RUN_TARGET_NAME="SpaceInvaders">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -93,6 +124,7 @@
       <workItem from="1583339115236" duration="2087000" />
       <workItem from="1583758109653" duration="5059000" />
       <workItem from="1583763302364" duration="92000" />
+      <workItem from="1583763689862" duration="3123000" />
     </task>
     <servers />
   </component>
@@ -112,22 +144,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="476" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1583760184046" />
-    <state width="1877" height="191" key="GridCell.Tab.0.bottom" timestamp="1583763174918">
+    <state width="1877" height="97" key="GridCell.Tab.0.bottom" timestamp="1583766815051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="191" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583763174918" />
-    <state width="1877" height="191" key="GridCell.Tab.0.center" timestamp="1583763174918">
+    <state width="1877" height="97" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583766815051" />
+    <state width="1877" height="97" key="GridCell.Tab.0.center" timestamp="1583766815051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="191" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583763174918" />
-    <state width="1877" height="191" key="GridCell.Tab.0.left" timestamp="1583763174918">
+    <state width="1877" height="97" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583766815051" />
+    <state width="1877" height="97" key="GridCell.Tab.0.left" timestamp="1583766815050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="191" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583763174918" />
-    <state width="1877" height="191" key="GridCell.Tab.0.right" timestamp="1583763174918">
+    <state width="1877" height="97" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583766815050" />
+    <state width="1877" height="97" key="GridCell.Tab.0.right" timestamp="1583766815051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="191" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583763174918" />
+    <state width="1877" height="97" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583766815051" />
     <state width="1877" height="191" key="GridCell.Tab.1.bottom" timestamp="1583763174918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

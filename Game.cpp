@@ -65,8 +65,8 @@ void Game::run()
             this->window->draw();
         }
 
-        icon->unload();
-        backgroundSprite->unload();
+        delete icon;
+        delete backgroundSprite;
 
 	    this->fontLoader->unload();
 

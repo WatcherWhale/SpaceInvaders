@@ -7,13 +7,12 @@
 
 namespace SpaceInvaders::Assets::Sprites
 {
-    class SDLSprite : public SpaceInvaders::Assets::Sprites::Sprite
+    class SDLSprite : public Sprite
     {
     public:
         SDLSprite(std::string path) : Sprite(path) {};
-        ~SDLSprite();
+        virtual ~SDLSprite();
         void load() override;
-        void unload() override;
         void* display() override;
 
         void texturize(SDL_Renderer* renderer);

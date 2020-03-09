@@ -156,7 +156,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Game
+CMAKE_PROJECT_NAME:STATIC=SpaceInvaders
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/MinGW/mingw32/bin/ranlib.exe
@@ -246,6 +246,12 @@ Game_SOURCE_DIR:STATIC=C:/Users/Mathias/Projects/SpaceInvaders
 
 //The directory containing a CMake configuration file for SDL2.
 SDL2_DIR:PATH=C:/MinGW/mingw32/lib/cmake/SDL2
+
+//Value Computed by CMake
+SpaceInvaders_BINARY_DIR:STATIC=C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug
+
+//Value Computed by CMake
+SpaceInvaders_SOURCE_DIR:STATIC=C:/Users/Mathias/Projects/SpaceInvaders
 
 
 ########################

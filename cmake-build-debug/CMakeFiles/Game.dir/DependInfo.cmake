@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Alien.cpp" "C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/CMakeFiles/Game.dir/GameObjects/Alien.cpp.obj"
   "C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/GameObject.cpp" "C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/CMakeFiles/Game.dir/GameObjects/GameObject.cpp.obj"
   "C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Player.cpp" "C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/CMakeFiles/Game.dir/GameObjects/Player.cpp.obj"
+  "C:/Users/Mathias/Projects/SpaceInvaders/Scenes/GameScene.cpp" "C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/CMakeFiles/Game.dir/Scenes/GameScene.cpp.obj"
   "C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.cpp" "C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/CMakeFiles/Game.dir/Scenes/Scene.cpp.obj"
   "C:/Users/Mathias/Projects/SpaceInvaders/Sdl/AssetLoaders/SDLFontLoader.cpp" "C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/CMakeFiles/Game.dir/Sdl/AssetLoaders/SDLFontLoader.cpp.obj"
   "C:/Users/Mathias/Projects/SpaceInvaders/Sdl/AssetLoaders/Sprites/SDLSprite.cpp" "C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/CMakeFiles/Game.dir/Sdl/AssetLoaders/Sprites/SDLSprite.cpp.obj"
