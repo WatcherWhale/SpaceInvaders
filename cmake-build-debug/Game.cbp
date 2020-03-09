@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Game"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\MinGW\;CMake Files\..\..\..\MinGW\mingw32\;CMake Files\..\..\..\MinGW\mingw32\lib\;CMake Files\..\..\..\MinGW\mingw32\lib\cmake\;CMake Files\..\..\..\MinGW\mingw32\lib\cmake\SDL2\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Projects/cpp/Game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Game">
+				<Option output="C:/Projects/cpp/Game/cmake-build-debug/Game.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Projects/cpp/Game/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 Game"/>
+					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Game/fast">
+				<Option output="C:/Projects/cpp/Game/cmake-build-debug/Game.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Projects/cpp/Game/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 Game/fast"/>
+					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Projects/cpp/Game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Projects/cpp/Game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/FontLoader.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/FontLoader.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/Sprites/Sprite.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/Sprites/Sprite.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/Sprites/SpriteLoader.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/Sprites/SpriteLoader.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/Sprites/SpriteMap.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/Sprites/SpriteMap.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Color.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Color.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Controllers/EnemyController.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Controllers/EnemyController.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Controllers/GameController.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Controllers/GameController.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Controllers/LevelController.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Controllers/LevelController.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Events/EventHandler.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Events/EventHandler.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Events/EventListener.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Events/EventListener.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Factories/Factory.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Factories/Factory.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Game.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Game.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/GameConstants.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/GameObjects/Alien.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/GameObjects/Alien.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/GameObjects/GameObject.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/GameObjects/GameObject.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/GameObjects/Player.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/GameObjects/Player.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Scenes/Scene.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Scenes/Scene.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/SDLFontLoader.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/SDLFontLoader.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/Sprites/SDLSprite.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/Sprites/SDLSprite.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/Sprites/SDLSpriteLoader.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/Sprites/SDLSpriteLoader.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/Sprites/SDLText.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/Sprites/SDLText.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Sdl/Factories/SDLFactory.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Sdl/Factories/SDLFactory.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Sdl/Window/SDLWindow.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Sdl/Window/SDLWindow.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/UI/Text.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/UI/Text.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/UI/UIComponent.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/UI/UIComponent.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Windows/Window.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/Windows/Window.h">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/main.cpp">
+			<Option target="Game"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Projects/cpp/Game/../../../MinGW/mingw32/lib/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\MinGW\mingw32\lib\cmake\SDL2\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
