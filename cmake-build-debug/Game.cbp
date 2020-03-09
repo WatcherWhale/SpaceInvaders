@@ -5,21 +5,21 @@
 		<Option title="Game"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\MinGW\;CMake Files\..\..\..\MinGW\mingw32\;CMake Files\..\..\..\MinGW\mingw32\lib\;CMake Files\..\..\..\MinGW\mingw32\lib\cmake\;CMake Files\..\..\..\MinGW\mingw32\lib\cmake\SDL2\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\MinGW\;CMake Files\..\..\..\..\MinGW\mingw32\;CMake Files\..\..\..\..\MinGW\mingw32\lib\;CMake Files\..\..\..\..\MinGW\mingw32\lib\cmake\;CMake Files\..\..\..\..\MinGW\mingw32\lib\cmake\SDL2\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Projects/cpp/Game/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Game">
-				<Option output="C:/Projects/cpp/Game/cmake-build-debug/Game.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Projects/cpp/Game/cmake-build-debug"/>
+				<Option output="C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Game.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 Game"/>
-					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 Game"/>
+					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Game/fast">
-				<Option output="C:/Projects/cpp/Game/cmake-build-debug/Game.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Projects/cpp/Game/cmake-build-debug"/>
+				<Option output="C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Game.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,194 +53,194 @@
 					<Add directory="C:/MinGW/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 Game/fast"/>
-					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 Game/fast"/>
+					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Projects/cpp/Game/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Projects/cpp/Game/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Projects/cpp/Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Mathias/Projects/SpaceInvaders/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/FontLoader.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/FontLoader.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/FontLoader.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/FontLoader.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/Sprites/Sprite.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/Sprite.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/Sprites/Sprite.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/Sprite.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/Sprites/SpriteLoader.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/SpriteLoader.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/Sprites/SpriteLoader.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/SpriteLoader.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/Sprites/SpriteMap.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/SpriteMap.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/AssetLoaders/Sprites/SpriteMap.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/SpriteMap.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Color.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Color.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Color.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Color.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Controllers/EnemyController.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Controllers/EnemyController.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Controllers/EnemyController.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Controllers/EnemyController.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Controllers/GameController.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Controllers/GameController.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Controllers/GameController.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Controllers/GameController.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Controllers/LevelController.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Controllers/LevelController.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Controllers/LevelController.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Controllers/LevelController.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Events/EventHandler.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Events/EventHandler.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Events/EventHandler.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Events/EventHandler.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Events/EventListener.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Events/EventListener.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Factories/Factory.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Factories/Factory.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Factories/Factory.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Factories/Factory.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Game.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Game.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Game.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Game.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/GameConstants.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/GameConstants.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/GameObjects/Alien.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Alien.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/GameObjects/Alien.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Alien.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/GameObjects/GameObject.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/GameObject.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/GameObjects/GameObject.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/GameObject.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/GameObjects/Player.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Player.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/GameObjects/Player.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Player.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Scenes/Scene.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Scenes/Scene.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/SDLFontLoader.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Sdl/AssetLoaders/SDLFontLoader.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/SDLFontLoader.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Sdl/AssetLoaders/SDLFontLoader.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/Sprites/SDLSprite.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Sdl/AssetLoaders/Sprites/SDLSprite.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/Sprites/SDLSprite.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Sdl/AssetLoaders/Sprites/SDLSprite.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/Sprites/SDLSpriteLoader.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Sdl/AssetLoaders/Sprites/SDLSpriteLoader.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/Sprites/SDLSpriteLoader.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Sdl/AssetLoaders/Sprites/SDLSpriteLoader.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/Sprites/SDLText.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Sdl/AssetLoaders/Sprites/SDLText.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Sdl/AssetLoaders/Sprites/SDLText.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Sdl/AssetLoaders/Sprites/SDLText.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Sdl/Factories/SDLFactory.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Sdl/Factories/SDLFactory.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Sdl/Factories/SDLFactory.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Sdl/Factories/SDLFactory.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Sdl/Window/SDLWindow.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Sdl/Window/SDLWindow.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Sdl/Window/SDLWindow.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Sdl/Window/SDLWindow.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/UI/Text.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/UI/Text.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/UI/Text.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/UI/Text.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/UI/UIComponent.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/UI/UIComponent.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/UI/UIComponent.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/UI/UIComponent.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Windows/Window.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Windows/Window.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/Windows/Window.h">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Windows/Window.h">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/main.cpp">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/main.cpp">
 			<Option target="Game"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/CMakeLists.txt">
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Projects/cpp/Game/../../../MinGW/mingw32/lib/cmake/SDL2/sdl2-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\MinGW\mingw32\lib\cmake\SDL2\"/>
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/../../../../MinGW/mingw32/lib/cmake/SDL2/sdl2-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\MinGW\mingw32\lib\cmake\SDL2\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

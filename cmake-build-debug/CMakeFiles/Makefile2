@@ -43,10 +43,10 @@ RM = C:\Users\Mathias\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.3
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Projects\cpp\Game
+CMAKE_SOURCE_DIR = C:\Users\Mathias\Projects\SpaceInvaders
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Projects\cpp\Game\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Mathias\Projects\SpaceInvaders\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -73,14 +73,14 @@ preinstall:
 CMakeFiles/Game.dir/all:
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/depend
 	$(MAKE) -f CMakeFiles\Game.dir\build.make CMakeFiles/Game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Projects\cpp\Game\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27 "Built target Game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Mathias\Projects\SpaceInvaders\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27 "Built target Game"
 .PHONY : CMakeFiles/Game.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projects\cpp\Game\cmake-build-debug\CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Mathias\Projects\SpaceInvaders\cmake-build-debug\CMakeFiles 27
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projects\cpp\Game\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Mathias\Projects\SpaceInvaders\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/Game.dir/rule
 
 # Convenience name for target.
