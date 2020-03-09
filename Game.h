@@ -6,6 +6,7 @@
 #include "Events/EventHandler.h"
 #include "GameObjects/GameObject.h"
 #include "Controllers/LevelController.h"
+#include "Controllers/GameController.h"
 
 #include <vector>
 
@@ -21,21 +22,15 @@ namespace SpaceInvaders
         void run();
         void stop();
 
-        EventHandler* getEventHandler();
+        Events::EventHandler* getEventHandler();
 
-	private:
-		void createObjects();
+    private:
 
 		GameFactory* factory;
 		Windows::Window* window;
-		EventHandler eventHandler;
-		Controllers::LevelController controller;
-		Assets::Sprites::SpriteLoader* spriteLoader;
-		Assets::FontLoader* fontLoader;
-
 		bool isRunning = false;
-		std::vector<GameObjects::GameObject*> gameObjects;
-	};
+		Controllers::GameController* controller;
+    };
 }
 
 #endif // !GAME_H

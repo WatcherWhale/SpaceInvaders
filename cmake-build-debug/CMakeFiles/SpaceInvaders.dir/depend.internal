@@ -34,8 +34,26 @@ CMakeFiles/SpaceInvaders.dir/Controllers/EnemyController.cpp.obj
  C:/Users/Mathias/Projects/SpaceInvaders/UI/Text.h
  C:/Users/Mathias/Projects/SpaceInvaders/Windows/Window.h
 CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj
+ C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/FontLoader.h
+ C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/Sprite.h
+ C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/SpriteLoader.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Color.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Controllers/EnemyController.h
  C:/Users/Mathias/Projects/SpaceInvaders/Controllers/GameController.cpp
  C:/Users/Mathias/Projects/SpaceInvaders/Controllers/GameController.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Controllers/LevelController.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Events/EventHandler.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Factories/Factory.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameConstants.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Alien.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/GameObject.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Player.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Scenes/GameScene.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.h
+ C:/Users/Mathias/Projects/SpaceInvaders/UI/Text.h
+ C:/Users/Mathias/Projects/SpaceInvaders/UI/UIComponent.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Windows/Window.h
 CMakeFiles/SpaceInvaders.dir/Controllers/LevelController.cpp.obj
  C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/FontLoader.h
  C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/Sprite.h
@@ -81,6 +99,7 @@ CMakeFiles/SpaceInvaders.dir/Game.cpp.obj
  C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/SpriteLoader.h
  C:/Users/Mathias/Projects/SpaceInvaders/Color.h
  C:/Users/Mathias/Projects/SpaceInvaders/Controllers/EnemyController.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Controllers/GameController.h
  C:/Users/Mathias/Projects/SpaceInvaders/Controllers/LevelController.h
  C:/Users/Mathias/Projects/SpaceInvaders/Events/EventHandler.h
  C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.h
@@ -117,10 +136,18 @@ CMakeFiles/SpaceInvaders.dir/GameObjects/Player.cpp.obj
  C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Player.cpp
  C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Player.h
 CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj
+ C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/FontLoader.h
  C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/Sprite.h
  C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/SpriteLoader.h
  C:/Users/Mathias/Projects/SpaceInvaders/Color.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Controllers/EnemyController.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Controllers/LevelController.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Factories/Factory.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameConstants.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Alien.h
  C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/GameObject.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Player.h
  C:/Users/Mathias/Projects/SpaceInvaders/Scenes/GameScene.cpp
  C:/Users/Mathias/Projects/SpaceInvaders/Scenes/GameScene.h
  C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.h
@@ -128,10 +155,16 @@ CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj
  C:/Users/Mathias/Projects/SpaceInvaders/UI/UIComponent.h
  C:/Users/Mathias/Projects/SpaceInvaders/Windows/Window.h
 CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj
+ C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/FontLoader.h
  C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/Sprite.h
  C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/SpriteLoader.h
  C:/Users/Mathias/Projects/SpaceInvaders/Color.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Factories/Factory.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameConstants.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Alien.h
  C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/GameObject.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Player.h
  C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.cpp
  C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.h
  C:/Users/Mathias/Projects/SpaceInvaders/UI/Text.h
@@ -163,6 +196,7 @@ CMakeFiles/SpaceInvaders.dir/Sdl/Factories/SDLFactory.cpp.obj
  C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/SpriteLoader.h
  C:/Users/Mathias/Projects/SpaceInvaders/Color.h
  C:/Users/Mathias/Projects/SpaceInvaders/Controllers/EnemyController.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Controllers/GameController.h
  C:/Users/Mathias/Projects/SpaceInvaders/Controllers/LevelController.h
  C:/Users/Mathias/Projects/SpaceInvaders/Events/EventHandler.h
  C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.h
@@ -188,6 +222,7 @@ CMakeFiles/SpaceInvaders.dir/Sdl/Window/SDLWindow.cpp.obj
  C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/SpriteLoader.h
  C:/Users/Mathias/Projects/SpaceInvaders/Color.h
  C:/Users/Mathias/Projects/SpaceInvaders/Controllers/EnemyController.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Controllers/GameController.h
  C:/Users/Mathias/Projects/SpaceInvaders/Controllers/LevelController.h
  C:/Users/Mathias/Projects/SpaceInvaders/Events/EventHandler.h
  C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.h
@@ -223,6 +258,7 @@ CMakeFiles/SpaceInvaders.dir/main.cpp.obj
  C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/SpriteLoader.h
  C:/Users/Mathias/Projects/SpaceInvaders/Color.h
  C:/Users/Mathias/Projects/SpaceInvaders/Controllers/EnemyController.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Controllers/GameController.h
  C:/Users/Mathias/Projects/SpaceInvaders/Controllers/LevelController.h
  C:/Users/Mathias/Projects/SpaceInvaders/Events/EventHandler.h
  C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.h

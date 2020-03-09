@@ -36,3 +36,8 @@ void SpaceInvaders::Scenes::Scene::update(double deltaTime)
         go->update(deltaTime);
     }
 }
+
+std::vector<SpaceInvaders::Events::EventListener*>* SpaceInvaders::Scenes::Scene::getListeners()
+{
+    return &this->eventListeners;
+}

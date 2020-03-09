@@ -12,33 +12,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbcf06a3-5ae5-42cc-83a1-2feda02e0bee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Scenes/GameScene.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scenes/GameScene.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetLoaders/Sprites/Sprite.h" beforeDir="false" afterPath="$PROJECT_DIR$/AssetLoaders/Sprites/Sprite.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/GameController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/GameController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/GameController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/GameController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/LevelController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/LevelController.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameObjects/GameObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameObjects/GameObject.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameObjects/GameObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameObjects/GameObject.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/GameScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/GameScene.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/GameScene.h" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/GameScene.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/Scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Scene.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/Scene.h" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Scene.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sdl/AssetLoaders/Sprites/SDLSprite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Sdl/AssetLoaders/Sprites/SDLSprite.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sdl/AssetLoaders/Sprites/SDLSprite.h" beforeDir="false" afterPath="$PROJECT_DIR$/Sdl/AssetLoaders/Sprites/SDLSprite.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sdl/AssetLoaders/Sprites/SDLSpriteLoader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Sdl/AssetLoaders/Sprites/SDLSpriteLoader.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Game.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Game.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/depend.make" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +110,7 @@
       <workItem from="1583339115236" duration="2087000" />
       <workItem from="1583758109653" duration="5059000" />
       <workItem from="1583763302364" duration="92000" />
-      <workItem from="1583763689862" duration="3123000" />
+      <workItem from="1583763689862" duration="6235000" />
     </task>
     <servers />
   </component>
@@ -144,22 +130,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="476" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1583760184046" />
-    <state width="1877" height="97" key="GridCell.Tab.0.bottom" timestamp="1583766815051">
+    <state width="1877" height="97" key="GridCell.Tab.0.bottom" timestamp="1583769926866">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="97" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583766815051" />
-    <state width="1877" height="97" key="GridCell.Tab.0.center" timestamp="1583766815051">
+    <state width="1877" height="97" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583769926866" />
+    <state width="1877" height="97" key="GridCell.Tab.0.center" timestamp="1583769926866">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="97" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583766815051" />
-    <state width="1877" height="97" key="GridCell.Tab.0.left" timestamp="1583766815050">
+    <state width="1877" height="97" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583769926866" />
+    <state width="1877" height="97" key="GridCell.Tab.0.left" timestamp="1583769926866">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="97" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583766815050" />
-    <state width="1877" height="97" key="GridCell.Tab.0.right" timestamp="1583766815051">
+    <state width="1877" height="97" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583769926866" />
+    <state width="1877" height="97" key="GridCell.Tab.0.right" timestamp="1583769926866">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="97" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583766815051" />
+    <state width="1877" height="97" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583769926866" />
     <state width="1877" height="191" key="GridCell.Tab.1.bottom" timestamp="1583763174918">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -184,10 +170,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="172" y="118" width="1379" height="883" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583164548555" />
-    <state x="701" y="169" key="refactoring.ChangeSignatureDialog" timestamp="1583157422919">
+    <state x="701" y="169" key="refactoring.ChangeSignatureDialog" timestamp="1583769811791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="701" y="169" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583157422919" />
+    <state x="701" y="169" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583769811791" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1583250280032">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -19,7 +19,6 @@ namespace SpaceInvaders::Controllers
         bool isLevelStarted();
 
     private:
-        std::vector<Scenes::Scene*> scenes;
         GameObjects::Player* player;
         EnemyController enemyController;
         bool levelStarted = false;

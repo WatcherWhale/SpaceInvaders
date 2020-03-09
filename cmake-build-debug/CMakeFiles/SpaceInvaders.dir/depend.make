@@ -33,8 +33,26 @@ CMakeFiles/SpaceInvaders.dir/Controllers/EnemyController.cpp.obj: ../GameObjects
 CMakeFiles/SpaceInvaders.dir/Controllers/EnemyController.cpp.obj: ../UI/Text.h
 CMakeFiles/SpaceInvaders.dir/Controllers/EnemyController.cpp.obj: ../Windows/Window.h
 
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../AssetLoaders/FontLoader.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../AssetLoaders/Sprites/Sprite.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../AssetLoaders/Sprites/SpriteLoader.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../Color.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../Controllers/EnemyController.h
 CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../Controllers/GameController.cpp
 CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../Controllers/GameController.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../Controllers/LevelController.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../Events/EventHandler.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../Events/EventListener.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../Factories/Factory.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../GameConstants.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../GameObjects/Alien.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../GameObjects/GameObject.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../GameObjects/Player.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../Scenes/GameScene.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../Scenes/Scene.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../UI/Text.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../UI/UIComponent.h
+CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj: ../Windows/Window.h
 
 CMakeFiles/SpaceInvaders.dir/Controllers/LevelController.cpp.obj: ../AssetLoaders/FontLoader.h
 CMakeFiles/SpaceInvaders.dir/Controllers/LevelController.cpp.obj: ../AssetLoaders/Sprites/Sprite.h
@@ -80,6 +98,7 @@ CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../AssetLoaders/Sprites/Sprite.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../AssetLoaders/Sprites/SpriteLoader.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Color.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Controllers/EnemyController.h
+CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Controllers/GameController.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Controllers/LevelController.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Events/EventHandler.h
 CMakeFiles/SpaceInvaders.dir/Game.cpp.obj: ../Events/EventListener.h
@@ -116,10 +135,18 @@ CMakeFiles/SpaceInvaders.dir/GameObjects/Player.cpp.obj: ../GameObjects/GameObje
 CMakeFiles/SpaceInvaders.dir/GameObjects/Player.cpp.obj: ../GameObjects/Player.cpp
 CMakeFiles/SpaceInvaders.dir/GameObjects/Player.cpp.obj: ../GameObjects/Player.h
 
+CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../AssetLoaders/FontLoader.h
 CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../AssetLoaders/Sprites/Sprite.h
 CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../AssetLoaders/Sprites/SpriteLoader.h
 CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../Color.h
+CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../Controllers/EnemyController.h
+CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../Controllers/LevelController.h
+CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../Events/EventListener.h
+CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../Factories/Factory.h
+CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../GameConstants.h
+CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../GameObjects/Alien.h
 CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../GameObjects/GameObject.h
+CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../GameObjects/Player.h
 CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../Scenes/GameScene.cpp
 CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../Scenes/GameScene.h
 CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../Scenes/Scene.h
@@ -127,10 +154,16 @@ CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../UI/Text.h
 CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../UI/UIComponent.h
 CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj: ../Windows/Window.h
 
+CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj: ../AssetLoaders/FontLoader.h
 CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj: ../AssetLoaders/Sprites/Sprite.h
 CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj: ../AssetLoaders/Sprites/SpriteLoader.h
 CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj: ../Color.h
+CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj: ../Events/EventListener.h
+CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj: ../Factories/Factory.h
+CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj: ../GameConstants.h
+CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj: ../GameObjects/Alien.h
 CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj: ../GameObjects/GameObject.h
+CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj: ../GameObjects/Player.h
 CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj: ../Scenes/Scene.cpp
 CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj: ../Scenes/Scene.h
 CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj: ../UI/Text.h
@@ -162,6 +195,7 @@ CMakeFiles/SpaceInvaders.dir/Sdl/Factories/SDLFactory.cpp.obj: ../AssetLoaders/S
 CMakeFiles/SpaceInvaders.dir/Sdl/Factories/SDLFactory.cpp.obj: ../AssetLoaders/Sprites/SpriteLoader.h
 CMakeFiles/SpaceInvaders.dir/Sdl/Factories/SDLFactory.cpp.obj: ../Color.h
 CMakeFiles/SpaceInvaders.dir/Sdl/Factories/SDLFactory.cpp.obj: ../Controllers/EnemyController.h
+CMakeFiles/SpaceInvaders.dir/Sdl/Factories/SDLFactory.cpp.obj: ../Controllers/GameController.h
 CMakeFiles/SpaceInvaders.dir/Sdl/Factories/SDLFactory.cpp.obj: ../Controllers/LevelController.h
 CMakeFiles/SpaceInvaders.dir/Sdl/Factories/SDLFactory.cpp.obj: ../Events/EventHandler.h
 CMakeFiles/SpaceInvaders.dir/Sdl/Factories/SDLFactory.cpp.obj: ../Events/EventListener.h
@@ -187,6 +221,7 @@ CMakeFiles/SpaceInvaders.dir/Sdl/Window/SDLWindow.cpp.obj: ../AssetLoaders/Sprit
 CMakeFiles/SpaceInvaders.dir/Sdl/Window/SDLWindow.cpp.obj: ../AssetLoaders/Sprites/SpriteLoader.h
 CMakeFiles/SpaceInvaders.dir/Sdl/Window/SDLWindow.cpp.obj: ../Color.h
 CMakeFiles/SpaceInvaders.dir/Sdl/Window/SDLWindow.cpp.obj: ../Controllers/EnemyController.h
+CMakeFiles/SpaceInvaders.dir/Sdl/Window/SDLWindow.cpp.obj: ../Controllers/GameController.h
 CMakeFiles/SpaceInvaders.dir/Sdl/Window/SDLWindow.cpp.obj: ../Controllers/LevelController.h
 CMakeFiles/SpaceInvaders.dir/Sdl/Window/SDLWindow.cpp.obj: ../Events/EventHandler.h
 CMakeFiles/SpaceInvaders.dir/Sdl/Window/SDLWindow.cpp.obj: ../Events/EventListener.h
@@ -222,6 +257,7 @@ CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../AssetLoaders/Sprites/Sprite.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../AssetLoaders/Sprites/SpriteLoader.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Color.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Controllers/EnemyController.h
+CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Controllers/GameController.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Controllers/LevelController.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Events/EventHandler.h
 CMakeFiles/SpaceInvaders.dir/main.cpp.obj: ../Events/EventListener.h
