@@ -1,7 +1,7 @@
 #include "Player.h"
 #include "../GameConstants.h"
 #include <cmath>
-#include "../Controllers/GameController.h";
+#include "../Controllers/GameController.h"
 #include "Bullet.h"
 
 using namespace SpaceInvaders::GameObjects;
