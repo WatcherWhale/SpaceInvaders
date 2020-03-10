@@ -79,3 +79,13 @@ GameObject::~GameObject()
         delete sprite;
     }
 }
+
+bool GameObject::isOutOfScreenY()
+{
+    return this->position[1] < std::lround(this->bounds[3]) || this->position[1] > std::lround(this->bounds[3]) + WINDOW_SIZE_Y;
+}
+
+GameObjectTag GameObject::getTag()
+{
+    return this->tag;
+}

@@ -4,6 +4,8 @@
 
 const int WINDOW_SIZE_X = 1920;
 const int WINDOW_SIZE_Y = 1080;
+const bool WINDOW_IS_MAXIMIZED = false;
+
 const int DEFAULT_WINDOW_SIZE_X = 1280;
 const int DEFAULT_WINDOW_SIZE_Y = 720;
 
@@ -13,8 +15,6 @@ const int SPRITE_SCALE = DEFAULT_SPRITE_SIZE / IMPORT_SPRITE_SIZE;
 
 const double SCALE_X = WINDOW_SIZE_X / static_cast<double>(DEFAULT_WINDOW_SIZE_X);
 const double SCALE_Y = WINDOW_SIZE_Y / static_cast<double>(DEFAULT_WINDOW_SIZE_Y);
-
-const bool WINDOW_IS_MAXIMIZED = true;
 
 const uint32_t TIME_30FPS = 1000 / 30;
 const uint32_t TIME_60FPS = 1000 / 60;

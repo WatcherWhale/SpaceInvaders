@@ -9,3 +9,8 @@ SpaceInvaders::GameObjects::Alien* SpaceInvaders::Factories::GameFactory::create
 {
     return new SpaceInvaders::GameObjects::Alien(x, y, row, type);
 }
+
+SpaceInvaders::GameObjects::Bullet* SpaceInvaders::Factories::GameFactory::createBullet(int position[], int type)
+{
+    return new GameObjects::Bullet(position, type);
+}

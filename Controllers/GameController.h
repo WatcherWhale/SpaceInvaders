@@ -12,7 +12,6 @@ namespace SpaceInvaders::Controllers
     {
     public:
         GameController();
-        ~GameController();
 
         // Define a singleton
         static GameController& getInstance()
@@ -33,6 +32,10 @@ namespace SpaceInvaders::Controllers
         Assets::Sprites::SpriteLoader* getSpriteLoader();
         Assets::FontLoader* getFontLoader();
 
+        void stopGame();
+        bool isRunning();
+        void unload();
+
     private:
         Events::EventHandler* eventHandler;
         Scenes::Scene* currentScene = nullptr;
@@ -40,6 +43,7 @@ namespace SpaceInvaders::Controllers
         Assets::Sprites::SpriteLoader* spriteLoader;
         Assets::FontLoader* fontLoader;
         int currentLevel = 0;
+        bool running = true;
     };
 }
 #endif

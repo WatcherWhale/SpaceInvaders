@@ -3,6 +3,8 @@
 
 SpaceInvaders::GameObjects::Alien::Alien(int x, int y, int row, int type) : GameObject()
 {
+    this->tag = GameObjectTag::ENEMY;
+
     this->position[0] = x;
     this->position[1] = y;
     this->dPosition[0] = x;

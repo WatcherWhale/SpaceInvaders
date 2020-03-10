@@ -16,14 +16,10 @@ void SpaceInvaders::Controllers::GameController::setFactory(Factories::GameFacto
     this->fontLoader = factory->createFontLoader();
 }
 
-
-SpaceInvaders::Controllers::GameController::~GameController()
-{
-    delete this->eventHandler;
-}
-
 void SpaceInvaders::Controllers::GameController::loadScene(SpaceInvaders::Controllers::SceneEnum scene)
 {
+    if(!this->running) return;
+
     if(this->currentScene != nullptr)
     {
         delete this->currentScene;
@@ -72,4 +68,22 @@ SpaceInvaders::Assets::Sprites::SpriteLoader* SpaceInvaders::Controllers::GameCo
 SpaceInvaders::Assets::FontLoader* SpaceInvaders::Controllers::GameController::getFontLoader()
 {
     return this->fontLoader;
+}
+
+void SpaceInvaders::Controllers::GameController::unload()
+{
+    delete this->eventHandler;
+    delete this->currentScene;
+    delete this->fontLoader;
+    delete this->spriteLoader;
+}
+
+void SpaceInvaders::Controllers::GameController::stopGame()
+{
+    this->running = false;
+}
+
+bool SpaceInvaders::Controllers::GameController::isRunning()
+{
+    return this->running;
 }

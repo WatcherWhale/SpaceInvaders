@@ -3,6 +3,8 @@
 
 SpaceInvaders::GameObjects::Bullet::Bullet(int position[], int type)
 {
+    this->tag = GameObjectTag::BULLET;
+
     this->dPosition[0] = position[0];
     this->dPosition[1] = position[1];
 

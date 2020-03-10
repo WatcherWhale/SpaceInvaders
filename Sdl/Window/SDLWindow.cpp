@@ -40,7 +40,7 @@ bool SDLWindow::create()
 
         this->renderer = SDL_CreateRenderer( this->window, -1, SDL_RENDERER_ACCELERATED );
 
-        SDL_SetWindowFullscreen(this->window, 1);
+        if(this->isMaximized) SDL_SetWindowFullscreen(this->window, 1);
 
         SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, 0);
         this->surface = SDL_GetWindowSurface(this->window);
@@ -58,8 +58,9 @@ bool SDLWindow::create()
 
 void SDLWindow::destroy()
 {
-    Mix_FreeMusic(this->backgroundMusic);
+    if(this->backgroundMusic != nullptr) Mix_FreeMusic(this->backgroundMusic);
 
+    SDL_SetWindowFullscreen(this->window, 0);
     SDL_DestroyWindow(this->window);
 
     TTF_Quit();
@@ -71,14 +72,13 @@ void SDLWindow::destroy()
 void SDLWindow::pollEvents()
 {
     SDL_Event e;
-    Game* game = reinterpret_cast<Game*>(this->game);
 
     while( SDL_PollEvent(&e) != 0 )
     {
         switch (e.type)
         {
             case SDL_QUIT:
-                game->stop();
+                Controllers::GameController::getInstance().stopGame();
                 break;
             case SDL_KEYUP:
                 this->HandleKeyEvent(false, e.key.keysym.sym);
@@ -172,8 +172,6 @@ void SDLWindow::draw()
 
 void SDLWindow::HandleKeyEvent(bool down, SDL_Keycode keycode)
 {
-    Game* game = reinterpret_cast<Game*>(this->game);
-
     Key key = Key::NONE;
 
     switch (keycode)
@@ -199,7 +197,7 @@ void SDLWindow::HandleKeyEvent(bool down, SDL_Keycode keycode)
             break;
 
         case SDLK_ESCAPE:
-            game->stop();
+            Controllers::GameController::getInstance().stopGame();
             break;
 
         default:
@@ -209,11 +207,11 @@ void SDLWindow::HandleKeyEvent(bool down, SDL_Keycode keycode)
 
     if(down)
     {
-        game->getEventHandler()->onKeyDown(key);
+        Controllers::GameController::getInstance().getEventHandler()->onKeyDown(key);
     }
     else
     {
-        game->getEventHandler()->onKeyUp(key);
+        Controllers::GameController::getInstance().getEventHandler()->onKeyUp(key);
     }
 }
 

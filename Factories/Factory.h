@@ -9,6 +9,7 @@
 #include "../GameObjects/Player.h"
 #include "../GameObjects/Alien.h"
 #include "../UI/Text.h"
+#include "../GameObjects/Bullet.h"
 
 namespace SpaceInvaders::Factories
 {
@@ -22,6 +23,7 @@ namespace SpaceInvaders::Factories
 
         GameObjects::Player* createPlayer();
         GameObjects::Alien* createAlien(int x, int y, int row, int type);
+        GameObjects::Bullet* createBullet(int position[], int type);
     };
 }
 

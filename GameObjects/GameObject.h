@@ -18,6 +18,7 @@ namespace SpaceInvaders::GameObjects
         void loadSprites(Assets::Sprites::Sprite* sprite, int amount);
         virtual Assets::Sprites::Sprite* getSprite();
         virtual void update(double deltaTime) = 0;
+        bool isOutOfScreenY();
 
         int* getPosition();
         double* getBounds();
@@ -26,6 +27,8 @@ namespace SpaceInvaders::GameObjects
 
         static bool checkCollison(GameObject* go1, GameObject* go2);
 
+        GameObjectTag getTag();
+
     protected:
         int position[2];
         double dPosition[2];
@@ -33,6 +36,7 @@ namespace SpaceInvaders::GameObjects
         int collider[4];
         int currentSprite = 0;
         std::vector<Assets::Sprites::Sprite*> sprites;
+        GameObjectTag tag;
 
         void move(double dx, double dy);
     private:

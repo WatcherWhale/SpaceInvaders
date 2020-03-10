@@ -22,13 +22,10 @@ namespace SpaceInvaders
         void run();
         void stop();
 
-        Events::EventHandler* getEventHandler();
-
     private:
 
 		GameFactory* factory;
 		Windows::Window* window;
-		bool isRunning = false;
     };
 }
 

@@ -11,6 +11,8 @@ using namespace SpaceInvaders::Controllers;
 
 Player::Player() : GameObject()
 {
+    this->tag = GameObjectTag::PLAYER;
+
     this->position[0] = WINDOW_SIZE_X / 2;
     this->position[1] = std::lround(WINDOW_SIZE_Y - 50 * SCALE_Y);
 
@@ -21,6 +23,21 @@ Player::Player() : GameObject()
 void Player::update(double deltaTime)
 {
     this->move(this->moveDirection * deltaTime * this->speed, 0);
+
+    double minX = 20 * SCALE_X + this->bounds[2];
+    double maxX = WINDOW_SIZE_X - this->bounds[2] - 20 * SCALE_X;
+
+    if(this->dPosition[0] < minX)
+    {
+        this->dPosition[0] = minX;
+        this->position[0] = std::lround(minX);
+    }
+
+    if(this->dPosition[0] > maxX)
+    {
+        this->dPosition[0] = maxX;
+        this->position[0] = std::lround(maxX);
+    }
 }
 
 void Player::onKeyDown(Key key)
@@ -69,7 +86,8 @@ void Player::shoot()
     if(this->shooting) return;
     this->shooting = true;
 
-    GameController::getInstance().getCurrentScene()->instantiateGameObject(new Bullet(this->position, 0));
+    auto* bullet = GameController::getInstance().getFactory()->createBullet(this->position, 0);
+    GameController::getInstance().getCurrentScene()->instantiateGameObject(bullet);
 }
 
 void Player::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)
