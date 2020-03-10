@@ -15,15 +15,12 @@ namespace SpaceInvaders::Controllers
         GameObjects::Player* getPlayer();
         EnemyController* getEnemyController();
 
-        void startLevel(Factories::GameFactory* factory, Assets::Sprites::SpriteLoader* loader);
-        bool isLevelStarted();
+        void startLevel(int level, Factories::GameFactory* factory, Assets::Sprites::SpriteLoader* loader);
 
     private:
-        GameObjects::Player* player;
+        GameObjects::Player* player = nullptr;
         EnemyController enemyController;
-        bool levelStarted = false;
         int currentLevel = 0;
-        int currentScene = 0;
     };
 }
 

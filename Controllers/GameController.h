@@ -23,6 +23,7 @@ namespace SpaceInvaders::Controllers
         Scenes::Scene* currentScene = nullptr;
         Factories::GameFactory* factory;
         Assets::Sprites::SpriteLoader* spriteLoader;
+        int currentLevel = 0;
     };
 }
 #endif

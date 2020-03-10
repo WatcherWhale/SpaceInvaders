@@ -15,6 +15,8 @@ namespace SpaceInvaders::Scenes
         void load(Factories::GameFactory* factory, Assets::Sprites::SpriteLoader* loader) override;
         void draw(Windows::Window* window) override;
 
+        Controllers::LevelController* getLvlController();
+
     private:
         Controllers::LevelController* lvlController;
         Assets::Sprites::Sprite* background;

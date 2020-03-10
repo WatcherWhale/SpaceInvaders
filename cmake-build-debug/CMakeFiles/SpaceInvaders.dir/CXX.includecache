@@ -32,29 +32,15 @@ vector
 ../Factories/Factory.h
 C:/Users/Mathias/Projects/SpaceInvaders/Factories/Factory.h
 
-C:/Users/Mathias/Projects/SpaceInvaders/Controllers/GameController.cpp
-GameController.h
-C:/Users/Mathias/Projects/SpaceInvaders/Controllers/GameController.h
-../Scenes/GameScene.h
-C:/Users/Mathias/Projects/SpaceInvaders/Scenes/GameScene.h
-
-C:/Users/Mathias/Projects/SpaceInvaders/Controllers/GameController.h
-../Events/EventHandler.h
-C:/Users/Mathias/Projects/SpaceInvaders/Events/EventHandler.h
-../Scenes/Scene.h
-C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.h
+C:/Users/Mathias/Projects/SpaceInvaders/Controllers/LevelController.cpp
+LevelController.h
+C:/Users/Mathias/Projects/SpaceInvaders/Controllers/LevelController.h
 
 C:/Users/Mathias/Projects/SpaceInvaders/Controllers/LevelController.h
 EnemyController.h
 C:/Users/Mathias/Projects/SpaceInvaders/Controllers/EnemyController.h
 ../Scenes/Scene.h
 C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.h
-
-C:/Users/Mathias/Projects/SpaceInvaders/Events/EventHandler.h
-vector
--
-EventListener.h
-C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.h
 
 C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.h
 
@@ -95,12 +81,6 @@ C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/GameObject.h
 C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.h
 ../GameConstants.h
 C:/Users/Mathias/Projects/SpaceInvaders/GameConstants.h
-
-C:/Users/Mathias/Projects/SpaceInvaders/Scenes/GameScene.h
-Scene.h
-C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.h
-../Controllers/LevelController.h
-C:/Users/Mathias/Projects/SpaceInvaders/Controllers/LevelController.h
 
 C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.h
 vector
