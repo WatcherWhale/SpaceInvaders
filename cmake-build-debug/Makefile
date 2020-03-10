@@ -38,10 +38,10 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\Mathias\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3.3\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = C:\Users\Mathias\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2019.3.3\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\Mathias\Projects\SpaceInvaders\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	C:\Users\Mathias\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2019.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	C:\Users\Mathias\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6494.38\bin\cmake\win\bin\cmake.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2019.3.3\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -554,6 +554,33 @@ Scenes/GameScene.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.s
 .PHONY : Scenes/GameScene.cpp.s
 
+Scenes/LoadScene.obj: Scenes/LoadScene.cpp.obj
+
+.PHONY : Scenes/LoadScene.obj
+
+# target to build an object file
+Scenes/LoadScene.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Scenes/LoadScene.cpp.obj
+.PHONY : Scenes/LoadScene.cpp.obj
+
+Scenes/LoadScene.i: Scenes/LoadScene.cpp.i
+
+.PHONY : Scenes/LoadScene.i
+
+# target to preprocess a source file
+Scenes/LoadScene.cpp.i:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Scenes/LoadScene.cpp.i
+.PHONY : Scenes/LoadScene.cpp.i
+
+Scenes/LoadScene.s: Scenes/LoadScene.cpp.s
+
+.PHONY : Scenes/LoadScene.s
+
+# target to generate assembly for a file
+Scenes/LoadScene.cpp.s:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Scenes/LoadScene.cpp.s
+.PHONY : Scenes/LoadScene.cpp.s
+
 Scenes/Scene.obj: Scenes/Scene.cpp.obj
 
 .PHONY : Scenes/Scene.obj
@@ -908,6 +935,9 @@ help:
 	@echo ... Scenes/GameScene.obj
 	@echo ... Scenes/GameScene.i
 	@echo ... Scenes/GameScene.s
+	@echo ... Scenes/LoadScene.obj
+	@echo ... Scenes/LoadScene.i
+	@echo ... Scenes/LoadScene.s
 	@echo ... Scenes/Scene.obj
 	@echo ... Scenes/Scene.i
 	@echo ... Scenes/Scene.s

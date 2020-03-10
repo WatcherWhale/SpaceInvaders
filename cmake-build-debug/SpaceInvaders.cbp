@@ -179,6 +179,12 @@
 		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Scenes/GameScene.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Scenes/LoadScene.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Scenes/LoadScene.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
 		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>

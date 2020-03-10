@@ -1,4 +1,5 @@
 #include "GameScene.h"
+#include "../Controllers/GameController.h"
 
 SpaceInvaders::Scenes::GameScene::GameScene()
 {
@@ -20,8 +21,9 @@ void SpaceInvaders::Scenes::GameScene::update(double deltaTime)
     this->lvlController->getEnemyController()->update(deltaTime);
 }
 
-void SpaceInvaders::Scenes::GameScene::load(Factories::GameFactory* factory, Assets::Sprites::SpriteLoader* loader)
+void SpaceInvaders::Scenes::GameScene::load()
 {
+    auto* loader = Controllers::GameController::getInstance().getSpriteLoader();
     auto* player = new GameObjects::Player();
     player->loadSprites(loader);
 

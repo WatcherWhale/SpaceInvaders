@@ -50,6 +50,7 @@ CMakeFiles/SpaceInvaders.dir/Controllers/GameController.cpp.obj
  C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/GameObject.h
  C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Player.h
  C:/Users/Mathias/Projects/SpaceInvaders/Scenes/GameScene.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Scenes/LoadScene.h
  C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.h
  C:/Users/Mathias/Projects/SpaceInvaders/UI/Text.h
  C:/Users/Mathias/Projects/SpaceInvaders/UI/UIComponent.h
@@ -141,7 +142,9 @@ CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj
  C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/SpriteLoader.h
  C:/Users/Mathias/Projects/SpaceInvaders/Color.h
  C:/Users/Mathias/Projects/SpaceInvaders/Controllers/EnemyController.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Controllers/GameController.h
  C:/Users/Mathias/Projects/SpaceInvaders/Controllers/LevelController.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Events/EventHandler.h
  C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.h
  C:/Users/Mathias/Projects/SpaceInvaders/Factories/Factory.h
  C:/Users/Mathias/Projects/SpaceInvaders/GameConstants.h
@@ -150,6 +153,25 @@ CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj
  C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Player.h
  C:/Users/Mathias/Projects/SpaceInvaders/Scenes/GameScene.cpp
  C:/Users/Mathias/Projects/SpaceInvaders/Scenes/GameScene.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.h
+ C:/Users/Mathias/Projects/SpaceInvaders/UI/Text.h
+ C:/Users/Mathias/Projects/SpaceInvaders/UI/UIComponent.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Windows/Window.h
+CMakeFiles/SpaceInvaders.dir/Scenes/LoadScene.cpp.obj
+ C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/FontLoader.h
+ C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/Sprite.h
+ C:/Users/Mathias/Projects/SpaceInvaders/AssetLoaders/Sprites/SpriteLoader.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Color.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Controllers/GameController.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Events/EventHandler.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Events/EventListener.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Factories/Factory.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameConstants.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Alien.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/GameObject.h
+ C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Player.h
+ C:/Users/Mathias/Projects/SpaceInvaders/Scenes/LoadScene.cpp
+ C:/Users/Mathias/Projects/SpaceInvaders/Scenes/LoadScene.h
  C:/Users/Mathias/Projects/SpaceInvaders/Scenes/Scene.h
  C:/Users/Mathias/Projects/SpaceInvaders/UI/Text.h
  C:/Users/Mathias/Projects/SpaceInvaders/UI/UIComponent.h

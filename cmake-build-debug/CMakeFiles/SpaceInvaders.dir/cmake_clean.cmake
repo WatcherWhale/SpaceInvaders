@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SpaceInvaders.dir/GameObjects/GameObject.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/GameObjects/Player.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj"
+  "CMakeFiles/SpaceInvaders.dir/Scenes/LoadScene.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Scenes/Scene.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Sdl/AssetLoaders/SDLFontLoader.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Sdl/AssetLoaders/Sprites/SDLSprite.cpp.obj"

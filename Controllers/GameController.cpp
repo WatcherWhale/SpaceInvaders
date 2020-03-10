@@ -1,12 +1,21 @@
 #include "GameController.h"
 #include "../Scenes/GameScene.h"
+#include "../Scenes/LoadScene.h"
 
-SpaceInvaders::Controllers::GameController::GameController(SpaceInvaders::Factories::GameFactory* factory)
+SpaceInvaders::Controllers::GameController::GameController()
 {
-    this->factory = factory;
-    this->spriteLoader = factory->createSpriteLoader();
     this->eventHandler = new Events::EventHandler();
 }
+
+void SpaceInvaders::Controllers::GameController::setFactory(Factories::GameFactory* factory)
+{
+    this->factory = factory;
+
+    // Create asset loaders
+    this->spriteLoader = factory->createSpriteLoader();
+    this->fontLoader = factory->createFontLoader();
+}
+
 
 SpaceInvaders::Controllers::GameController::~GameController()
 {
@@ -23,7 +32,7 @@ void SpaceInvaders::Controllers::GameController::loadScene(SpaceInvaders::Contro
     if(scene == SceneEnum::GAME)
     {
         auto* scene = new Scenes::GameScene();
-        scene->load(this->factory, this->spriteLoader);
+        scene->load();
 
         for(auto* listener : *scene->getListeners())
         {
@@ -32,6 +41,11 @@ void SpaceInvaders::Controllers::GameController::loadScene(SpaceInvaders::Contro
 
         scene->getLvlController()->startLevel(this->currentLevel, this->factory, this->spriteLoader);
         this->currentScene = scene;
+    }
+    else if(scene == SceneEnum::LOAD)
+    {
+        this->currentScene = new Scenes::LoadScene();
+        this->currentScene->load();
     }
 }
 
@@ -43,4 +57,19 @@ SpaceInvaders::Events::EventHandler* SpaceInvaders::Controllers::GameController:
 SpaceInvaders::Scenes::Scene* SpaceInvaders::Controllers::GameController::getCurrentScene()
 {
     return this->currentScene;
+}
+
+SpaceInvaders::Factories::GameFactory* SpaceInvaders::Controllers::GameController::getFactory()
+{
+    return this->factory;
+}
+
+SpaceInvaders::Assets::Sprites::SpriteLoader* SpaceInvaders::Controllers::GameController::getSpriteLoader()
+{
+    return this->spriteLoader;
+}
+
+SpaceInvaders::Assets::FontLoader* SpaceInvaders::Controllers::GameController::getFontLoader()
+{
+    return this->fontLoader;
 }

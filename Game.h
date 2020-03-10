@@ -29,7 +29,6 @@ namespace SpaceInvaders
 		GameFactory* factory;
 		Windows::Window* window;
 		bool isRunning = false;
-		Controllers::GameController* controller;
     };
 }
 

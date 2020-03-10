@@ -1,10 +1,11 @@
 #include "Game.h"
 using namespace SpaceInvaders;
+using namespace SpaceInvaders::Controllers;
 
 Game::Game(GameFactory* factory)
 {
 	this->factory = factory;
-	this->controller = new Controllers::GameController(this->factory);
+	GameController::getInstance().setFactory(this->factory);
 }
 
 void Game::run()
@@ -32,14 +33,14 @@ void Game::run()
         {
             this->window->pollEvents();
 
-            if(this->controller->getCurrentScene() != nullptr)
+            if(GameController::getInstance().getCurrentScene() != nullptr)
             {
-                this->controller->getCurrentScene()->update(this->window->getDeltaTime());
-                this->controller->getCurrentScene()->draw(this->window);
+                GameController::getInstance().getCurrentScene()->update(this->window->getDeltaTime());
+                GameController::getInstance().getCurrentScene()->draw(this->window);
             }
             else
             {
-                this->controller->loadScene(SpaceInvaders::Controllers::SceneEnum::GAME);
+                GameController::getInstance().loadScene(SpaceInvaders::Controllers::SceneEnum::LOAD);
             }
 
             this->window->draw();
@@ -49,7 +50,7 @@ void Game::run()
         this->window->draw();
     }
 
-    delete controller;
+    delete &GameController::getInstance();
     this->window->destroy();
 }
 
@@ -60,5 +61,5 @@ void Game::stop()
 
 SpaceInvaders::Events::EventHandler* Game::getEventHandler()
 {
-    return this->controller->getEventHandler();
+    return GameController::getInstance().getEventHandler();
 }
