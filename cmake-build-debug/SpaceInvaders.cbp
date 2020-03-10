@@ -161,6 +161,12 @@
 		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Alien.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Bullet.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/Bullet.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
 		<Unit filename="C:/Users/Mathias/Projects/SpaceInvaders/GameObjects/GameObject.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>

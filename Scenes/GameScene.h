@@ -19,7 +19,6 @@ namespace SpaceInvaders::Scenes
 
     private:
         Controllers::LevelController* lvlController;
-        Assets::Sprites::Sprite* background;
     };
 }
 #endif

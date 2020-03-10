@@ -1,9 +1,13 @@
 #include "Player.h"
 #include "../GameConstants.h"
 #include <cmath>
+#include "../Controllers/GameController.h";
+#include "Bullet.h"
 
 using namespace SpaceInvaders::GameObjects;
 using namespace SpaceInvaders::Events;
+using namespace SpaceInvaders::Controllers;
+
 
 Player::Player() : GameObject()
 {
@@ -62,7 +66,10 @@ void Player::onKeyUp(Key key)
 
 void Player::shoot()
 {
+    if(this->shooting) return;
     this->shooting = true;
+
+    GameController::getInstance().getCurrentScene()->instantiateGameObject(new Bullet(this->position, 0));
 }
 
 void Player::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)

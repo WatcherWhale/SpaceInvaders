@@ -24,7 +24,7 @@ void SpaceInvaders::Scenes::LoadScene::draw(SpaceInvaders::Windows::Window* wind
     if(this->progress >= 1)
     {
         auto* spriteLoader = SpaceInvaders::Controllers::GameController::getInstance().getSpriteLoader();
-        window->setBackground(spriteLoader->loadSprite(R"(Assets\Sprites\Background.png)"));
+        window->setBackground(spriteLoader->loadSprite("Assets/Sprites/Background.png"));
     }
 }
 
@@ -33,19 +33,28 @@ void loadAssetsAsync(SpaceInvaders::Scenes::LoadScene* loadScene)
     auto* spriteLoader = SpaceInvaders::Controllers::GameController::getInstance().getSpriteLoader();
     auto* fontLoader = SpaceInvaders::Controllers::GameController::getInstance().getFontLoader();
 
-    spriteLoader->loadSprite(R"(Assets\Sprites\Background.png)");
+    // Pre load sprites
+    spriteLoader->loadSprite("Assets/Sprites/Background.png");
     loadScene->addProgress();
 
-    spriteLoader->loadSprite(R"(Assets\Sprites\Player\Player.png)");
+    spriteLoader->loadSprite("Assets/Sprites/Player/Player.png");
     loadScene->addProgress();
 
-    spriteLoader->loadSprite(R"(Assets\Sprites\Enemies\Enemy1.png)");
+    spriteLoader->loadSprite("Assets/Sprites/Enemies/Enemy1.png");
     loadScene->addProgress();
 
+    spriteLoader->loadSprite("Assets/Sprites/Player/Bullet.png");
+    loadScene->addProgress();
+
+    // Pre load fonts
     fontLoader->loadFont("regular", "Assets/Fonts/8bitRegular.ttf");
     loadScene->addProgress();
     fontLoader->loadFont("bold", "Assets/Fonts/8bitBold.ttf");
     loadScene->addProgress();
 
+    // Pre load audio
+    // TODO
+
+    // Wait for a second for aesthetics
     std::this_thread::sleep_for (std::chrono::seconds(1));
 }

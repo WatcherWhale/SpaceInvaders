@@ -1,4 +1,5 @@
 #include "Scene.h"
+#include "../Controllers/GameController.h"
 
 SpaceInvaders::Scenes::Scene::~Scene()
 {
@@ -40,4 +41,10 @@ void SpaceInvaders::Scenes::Scene::update(double deltaTime)
 std::vector<SpaceInvaders::Events::EventListener*>* SpaceInvaders::Scenes::Scene::getListeners()
 {
     return &this->eventListeners;
+}
+
+void SpaceInvaders::Scenes::Scene::instantiateGameObject(SpaceInvaders::GameObjects::GameObject* go)
+{
+    go->loadSprites(Controllers::GameController::getInstance().getSpriteLoader());
+    this->gameObjects.push_back(go);
 }

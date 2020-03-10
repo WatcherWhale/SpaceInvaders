@@ -47,8 +47,8 @@ namespace SpaceInvaders::Windows
         std::queue<SpriteContainer*> spriteQueue;
         std::queue<Assets::Sprites::Text*> textQueue;
         Color clearColor = Color(0xFF, 0xFF, 0xFF);
-        Assets::Sprites::Sprite* background;
-        Assets::Sprites::Sprite* icon;
+        Assets::Sprites::Sprite* background = nullptr;
+        Assets::Sprites::Sprite* icon = nullptr;
         bool isMaximized;
         std::string backgroundMusicPath;
     };

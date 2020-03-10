@@ -29,13 +29,10 @@ void SpaceInvaders::Scenes::GameScene::load()
 
     this->gameObjects.push_back(player);
     this->eventListeners.push_back(player);
-
-    this->background = loader->loadSprite("Assets\\Sprites\\Background.png");
 }
 
 void SpaceInvaders::Scenes::GameScene::draw(Windows::Window* window)
 {
-    window->setBackground(this->background);
     Scene::draw(window);
 
     for(auto* enemy : *this->lvlController->getEnemyController()->getEnemies())

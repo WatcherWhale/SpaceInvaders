@@ -1,0 +1,23 @@
+
+#ifndef SPACEINVADERS_BULLET_H
+#define SPACEINVADERS_BULLET_H
+
+#include "GameObject.h"
+#include "../Events/EventListener.h"
+
+namespace SpaceInvaders::GameObjects
+{
+    class Bullet : public GameObject
+    {
+    public:
+        Bullet(int position[], int type);
+        void update(double deltaTime) override;
+        void loadSprites(Assets::Sprites::SpriteLoader* loader) override;
+
+        bool isPlayerBullet();
+
+    private:
+        int type;
+    };
+}
+#endif

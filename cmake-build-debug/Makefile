@@ -473,6 +473,33 @@ GameObjects/Alien.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/GameObjects/Alien.cpp.s
 .PHONY : GameObjects/Alien.cpp.s
 
+GameObjects/Bullet.obj: GameObjects/Bullet.cpp.obj
+
+.PHONY : GameObjects/Bullet.obj
+
+# target to build an object file
+GameObjects/Bullet.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/GameObjects/Bullet.cpp.obj
+.PHONY : GameObjects/Bullet.cpp.obj
+
+GameObjects/Bullet.i: GameObjects/Bullet.cpp.i
+
+.PHONY : GameObjects/Bullet.i
+
+# target to preprocess a source file
+GameObjects/Bullet.cpp.i:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/GameObjects/Bullet.cpp.i
+.PHONY : GameObjects/Bullet.cpp.i
+
+GameObjects/Bullet.s: GameObjects/Bullet.cpp.s
+
+.PHONY : GameObjects/Bullet.s
+
+# target to generate assembly for a file
+GameObjects/Bullet.cpp.s:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/GameObjects/Bullet.cpp.s
+.PHONY : GameObjects/Bullet.cpp.s
+
 GameObjects/GameObject.obj: GameObjects/GameObject.cpp.obj
 
 .PHONY : GameObjects/GameObject.obj
@@ -926,6 +953,9 @@ help:
 	@echo ... GameObjects/Alien.obj
 	@echo ... GameObjects/Alien.i
 	@echo ... GameObjects/Alien.s
+	@echo ... GameObjects/Bullet.obj
+	@echo ... GameObjects/Bullet.i
+	@echo ... GameObjects/Bullet.s
 	@echo ... GameObjects/GameObject.obj
 	@echo ... GameObjects/GameObject.i
 	@echo ... GameObjects/GameObject.s

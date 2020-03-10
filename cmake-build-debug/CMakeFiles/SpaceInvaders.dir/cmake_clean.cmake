@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SpaceInvaders.dir/Factories/Factory.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Game.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/GameObjects/Alien.cpp.obj"
+  "CMakeFiles/SpaceInvaders.dir/GameObjects/Bullet.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/GameObjects/GameObject.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/GameObjects/Player.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Scenes/GameScene.cpp.obj"

@@ -1,7 +1,6 @@
 #ifndef GAME_SCENE_H
 #define GAME_SCENE_H
 
-
 #include <vector>
 #include "../Factories/Factory.h"
 #include "../GameObjects/GameObject.h"
@@ -21,6 +20,8 @@ namespace SpaceInvaders::Scenes
         virtual void update(double deltaTime);
 
         std::vector<Events::EventListener*>* getListeners();
+
+        void instantiateGameObject(GameObjects::GameObject* go);
 
     protected:
         std::vector<GameObjects::GameObject*> gameObjects;
