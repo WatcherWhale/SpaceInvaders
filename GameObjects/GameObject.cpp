@@ -16,6 +16,8 @@ GameObject::GameObject()
     this->bounds[1] = -0.5; // Top y coor = y - 1/2 * h
     this->bounds[2] = SPRITE_SCALE * SCALE_X; // w
     this->bounds[3] = SPRITE_SCALE * SCALE_Y; // h
+
+    this->calculateCollider();
 }
 
 int* GameObject::getPosition()
@@ -41,26 +43,32 @@ SpaceInvaders::Assets::Sprites::Sprite* GameObject::getSprite()
     return this->sprites.at(this->currentSprite);
 }
 
-int* GameObject::getCollider()
+double* GameObject::getCollider()
 {
-    this->calculateCollider();
     return this->collider;
 }
 
 void GameObject::calculateCollider()
 {
-    collider[0] = std::lround(this->position[0] - this->bounds[2] * this->bounds[0]);
-    collider[1] = std::lround(this->position[1] - this->bounds[3] * this->bounds[1]);
-    collider[2] = std::lround(this->position[0] - this->bounds[2] * this->bounds[0]);
-    collider[3] = std::lround(this->position[1] - this->bounds[3] * this->bounds[1]);
+    collider[0] = this->bounds[2] * this->bounds[0];
+    collider[1] = this->bounds[3] * this->bounds[1];
+    collider[2] = this->bounds[2] * this->bounds[0];
+    collider[3] = this->bounds[3] * this->bounds[1];
 }
 
 bool GameObject::checkCollison(GameObject* go1, GameObject* go2)
 {
-    return ((go1->collider[0] >= go2->collider[0] && go1->collider[0] >= go2->collider[2]) ||
-            (go1->collider[2] >= go2->collider[0] && go1->collider[2] >= go2->collider[2])) &&
-            ((go1->collider[1] >= go2->collider[1] && go1->collider[1] >= go2->collider[3]) ||
-            (go1->collider[3] >= go2->collider[1] && go1->collider[3] >= go2->collider[3]));
+    bool x = (go1->position[0] + go1->collider[0] >= go2->position[0] + go2->collider[0]
+        && go1->position[0] + go1->collider[0] <= go2->position[0] + go2->collider[2])
+        || (go1->position[0] + go1->collider[2] >= go2->position[0] + go2->collider[0]
+        && go1->position[0] + go1->collider[2] <= go2->position[0] + go2->collider[2]);
+
+    bool y = (go1->position[1] + go1->collider[1] >= go2->position[1] + go2->collider[1]
+        && go1->position[1] + go1->collider[1] <= go2->position[1] + go2->collider[3])
+        || (go1->position[1] + go1->collider[3] >= go2->position[1] + go2->collider[1]
+        && go1->position[1] + go1->collider[3] <= go2->position[1] + go2->collider[3]);
+
+    return x && y;
 }
 
 void GameObject::move(double dx, double dy)
@@ -88,4 +96,9 @@ bool GameObject::isOutOfScreenY()
 GameObjectTag GameObject::getTag()
 {
     return this->tag;
+}
+
+bool GameObject::isRemovable()
+{
+    return this->remove;
 }

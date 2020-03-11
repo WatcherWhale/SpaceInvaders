@@ -15,6 +15,9 @@ namespace SpaceInvaders::GameObjects
         void onKeyUp(Events::Key key) override;
         void onKeyDown(Events::Key key) override;
 
+        void onCollision(GameObject* collided) override ;
+
+
         void loadSprites(Assets::Sprites::SpriteLoader* loader) override;
 
     private:

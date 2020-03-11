@@ -18,20 +18,6 @@ void SpaceInvaders::Scenes::GameScene::update(double deltaTime)
     // Call default update method
     Scene::update(deltaTime);
 
-    int i = 0;
-    while(i < this->gameObjects.size())
-    {
-        auto* go = this->gameObjects.at(i);
-        if(go->getTag() == GameObjects::GameObjectTag::BULLET && go->isOutOfScreenY())
-        {
-            this->gameObjects.erase(this->gameObjects.begin() + i);
-        }
-        else
-        {
-            i++;
-        }
-    }
-
     // Update Enemy controller
     this->lvlController->getEnemyController()->update(deltaTime);
 }
@@ -46,17 +32,34 @@ void SpaceInvaders::Scenes::GameScene::load()
     this->eventListeners.push_back(player);
 }
 
-void SpaceInvaders::Scenes::GameScene::draw(Windows::Window* window)
-{
-    Scene::draw(window);
-
-    for(auto* enemy : *this->lvlController->getEnemyController()->getEnemies())
-    {
-        window->queueSprite(enemy->getSprite(), enemy->getPosition(), enemy->getBounds());
-    }
-}
-
 SpaceInvaders::Controllers::LevelController* SpaceInvaders::Scenes::GameScene::getLvlController()
 {
     return this->lvlController;
+}
+
+void SpaceInvaders::Scenes::GameScene::startLevel(int level, Factories::GameFactory* factory,
+                                                  Assets::Sprites::SpriteLoader* spriteLoader)
+{
+    this->getLvlController()->startLevel(level, factory, spriteLoader);
+    for(auto* enemy : *this->lvlController->getEnemyController()->getEnemies())
+    {
+        this->gameObjects.push_back(enemy);
+    }
+}
+
+void SpaceInvaders::Scenes::GameScene::lateUpdate()
+{
+    int i = 0;
+    while(i < this->gameObjects.size())
+    {
+        auto* go = this->gameObjects.at(i);
+        if(go->getTag() == GameObjects::GameObjectTag::BULLET && (go->isOutOfScreenY() || go->isRemovable()) )
+        {
+            this->gameObjects.erase(this->gameObjects.begin() + i);
+        }
+        else
+        {
+            i++;
+        }
+    }
 }

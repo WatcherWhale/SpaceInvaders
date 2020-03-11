@@ -32,9 +32,19 @@ void SpaceInvaders::Scenes::Scene::draw(SpaceInvaders::Windows::Window* win)
 
 void SpaceInvaders::Scenes::Scene::update(double deltaTime)
 {
-    for(auto* go : this->gameObjects)
+    for(auto* go1 : this->gameObjects)
     {
-        go->update(deltaTime);
+        go1->update(deltaTime);
+
+        for(auto* go2 : this->gameObjects)
+        {
+            if(go1 != go2 && GameObjects::GameObject::checkCollison(go1, go2))
+            {
+                // Collided
+                go1->onCollision(go2);
+                go2->onCollision(go1);
+            }
+        }
     }
 }
 

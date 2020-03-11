@@ -12,8 +12,10 @@ namespace SpaceInvaders::Scenes
         GameScene();
         ~GameScene() override;
         void update(double deltaTime) override;
+        void lateUpdate() override;
         void load() override;
-        void draw(Windows::Window* window) override;
+
+        void startLevel(int level, Factories::GameFactory* factory, Assets::Sprites::SpriteLoader* spriteLoader);
 
         Controllers::LevelController* getLvlController();
 

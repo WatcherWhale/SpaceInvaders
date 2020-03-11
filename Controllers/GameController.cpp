@@ -35,7 +35,7 @@ void SpaceInvaders::Controllers::GameController::loadScene(SpaceInvaders::Contro
             this->eventHandler->addListener(listener);
         }
 
-        scene->getLvlController()->startLevel(this->currentLevel, this->factory, this->spriteLoader);
+        scene->startLevel(this->currentLevel, this->factory, this->spriteLoader);
         this->currentScene = scene;
     }
     else if(scene == SceneEnum::LOAD)

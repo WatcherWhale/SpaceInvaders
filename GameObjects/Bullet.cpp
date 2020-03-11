@@ -7,6 +7,8 @@ SpaceInvaders::GameObjects::Bullet::Bullet(int position[], int type)
 
     this->dPosition[0] = position[0];
     this->dPosition[1] = position[1];
+    this->position[0] = position[0];
+    this->position[1] = position[1];
 
     this->type = type;
 }
@@ -24,4 +26,13 @@ void SpaceInvaders::GameObjects::Bullet::loadSprites(SpaceInvaders::Assets::Spri
 bool SpaceInvaders::GameObjects::Bullet::isPlayerBullet()
 {
     return this->type == 0;
+}
+
+void SpaceInvaders::GameObjects::Bullet::onCollision(SpaceInvaders::GameObjects::GameObject* collided)
+{
+    if((collided->getTag() == GameObjectTag::PLAYER && !this->isPlayerBullet()) ||
+        (collided->getTag() == GameObjectTag::ENEMY && this->isPlayerBullet()))
+    {
+        this->remove = true;
+    }
 }

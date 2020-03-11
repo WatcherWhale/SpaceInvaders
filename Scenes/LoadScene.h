@@ -13,6 +13,7 @@ namespace SpaceInvaders::Scenes
         void load() override;
         void draw(Windows::Window* window) override;
         void addProgress();
+        void lateUpdate() override {};
     private:
         int progress = 0;
         int maxProgress = 2;

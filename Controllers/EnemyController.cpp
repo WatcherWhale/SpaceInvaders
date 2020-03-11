@@ -39,7 +39,6 @@ void SpaceInvaders::Controllers::EnemyController::update(double deltaTime)
         }
         else
         {
-            enemy->update(deltaTime);
             updateMovement = updateMovement || enemy->isTouchingWall();
             i++;
         }

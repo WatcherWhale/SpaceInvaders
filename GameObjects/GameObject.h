@@ -16,29 +16,33 @@ namespace SpaceInvaders::GameObjects
         virtual ~GameObject();
         virtual void loadSprites(Assets::Sprites::SpriteLoader* loader) = 0;
         void loadSprites(Assets::Sprites::Sprite* sprite, int amount);
-        virtual Assets::Sprites::Sprite* getSprite();
         virtual void update(double deltaTime) = 0;
+        virtual void onCollision(GameObject* collided) = 0;
+
         bool isOutOfScreenY();
+        virtual Assets::Sprites::Sprite* getSprite();
 
         int* getPosition();
         double* getBounds();
+        double* getCollider();
+        GameObjectTag getTag();
 
-        int* getCollider();
+        bool isRemovable();
 
         static bool checkCollison(GameObject* go1, GameObject* go2);
-
-        GameObjectTag getTag();
 
     protected:
         int position[2];
         double dPosition[2];
         double bounds[4];
-        int collider[4];
+        double collider[4];
         int currentSprite = 0;
         std::vector<Assets::Sprites::Sprite*> sprites;
         GameObjectTag tag;
 
         void move(double dx, double dy);
+
+        bool remove = false;
     private:
         void calculateCollider();
     };

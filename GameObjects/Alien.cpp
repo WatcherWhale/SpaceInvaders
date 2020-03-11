@@ -1,5 +1,6 @@
 #include "Alien.h"
 #include "../GameConstants.h"
+#include "Bullet.h"
 
 SpaceInvaders::GameObjects::Alien::Alien(int x, int y, int row, int type) : GameObject()
 {
@@ -50,4 +51,16 @@ void SpaceInvaders::GameObjects::Alien::movePosition(int direction, bool down)
 {
     this->moveDirection = direction;
     this->down = down;
+}
+
+void SpaceInvaders::GameObjects::Alien::onCollision(SpaceInvaders::GameObjects::GameObject* collided)
+{
+    if(collided->getTag() == GameObjectTag::BULLET)
+    {
+        auto* bullet = dynamic_cast<Bullet*>(collided);
+        if(bullet->isPlayerBullet())
+        {
+            this->dead = true;
+        }
+    }
 }

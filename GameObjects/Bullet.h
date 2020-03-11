@@ -16,6 +16,8 @@ namespace SpaceInvaders::GameObjects
 
         bool isPlayerBullet();
 
+        void onCollision(GameObject* collided) override ;
+
     private:
         int type;
     };

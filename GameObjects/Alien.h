@@ -14,6 +14,7 @@ namespace SpaceInvaders::GameObjects
         bool isDead();
         bool isTouchingWall();
         void movePosition(int direction, bool down);
+        void onCollision(GameObject* collided) override;
     private:
         int type;
         bool dead = false;

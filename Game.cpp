@@ -33,6 +33,9 @@ void Game::run()
 
             this->window->draw();
             this->window->pollEvents();
+
+            if(GameController::getInstance().getCurrentScene() != nullptr)
+                GameController::getInstance().getCurrentScene()->lateUpdate();
         }
     }
 

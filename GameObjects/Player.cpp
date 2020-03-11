@@ -94,3 +94,15 @@ void Player::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)
 {
     this->sprites.push_back(loader->loadSprite(R"(Assets\Sprites\Player\Player.png)"));
 }
+
+void Player::onCollision(GameObject* collided)
+{
+    if(collided->getTag() == GameObjectTag::BULLET)
+    {
+        auto* bullet = dynamic_cast<Bullet*>(collided);
+        if(!bullet->isPlayerBullet())
+        {
+            
+        }
+    }
+}
