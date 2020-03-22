@@ -49,11 +49,17 @@ void SpaceInvaders::Scenes::GameScene::startLevel(int level, Factories::GameFact
 
 void SpaceInvaders::Scenes::GameScene::lateUpdate()
 {
+    this->lvlController->getEnemyController()->lateUpdate();
+
     int i = 0;
     while(i < this->gameObjects.size())
     {
         auto* go = this->gameObjects.at(i);
         if(go->getTag() == GameObjects::GameObjectTag::BULLET && (go->isOutOfScreenY() || go->isRemovable()) )
+        {
+            this->gameObjects.erase(this->gameObjects.begin() + i);
+        }
+        else if(go->getTag() == GameObjects::GameObjectTag::ENEMY && go->isRemovable())
         {
             this->gameObjects.erase(this->gameObjects.begin() + i);
         }

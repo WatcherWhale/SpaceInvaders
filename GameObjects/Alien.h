@@ -15,11 +15,14 @@ namespace SpaceInvaders::GameObjects
         bool isTouchingWall();
         void movePosition(int direction, bool down);
         void onCollision(GameObject* collided) override;
+        void updateMult(double mult);
+
     private:
         int type;
         bool dead = false;
         bool down = false;
         int moveDirection = 0;
+        double speedMult = 1;
 
         int row = 0;
     };

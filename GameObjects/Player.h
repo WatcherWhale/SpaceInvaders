@@ -22,6 +22,9 @@ namespace SpaceInvaders::GameObjects
 
     private:
         void shoot();
+        void endShoot();
+
+        bool spaceDown = false;
         bool shooting = false;
         int bulletSpawn[2] = {0, 0};
 

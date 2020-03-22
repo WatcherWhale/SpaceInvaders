@@ -8,16 +8,19 @@ namespace SpaceInvaders::Assets::Sprites
     class Sprite
     {
     public:
-        Sprite(std::string path);
+        Sprite(std::string path, bool optimize);
         virtual void load() = 0;
         virtual void* display() = 0;
 
-        virtual int getWidth() = 0;
-        virtual int getHeight() = 0;
+        int getWidth();
+        int getHeight();
+
+        bool isOptimized();
 
     protected:
         std::string path;
         int width, height;
+        bool optimized = false;
     };
 }
 

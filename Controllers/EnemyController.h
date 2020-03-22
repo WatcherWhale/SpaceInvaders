@@ -14,6 +14,7 @@ namespace SpaceInvaders::Controllers
     public:
         void createEnemies(int level, Factories::GameFactory* factory);
         void update(double deltaTime);
+        void lateUpdate();
         void loadSprites(Assets::Sprites::SpriteLoader* loader);
 
         std::vector<SpaceInvaders::GameObjects::Alien*>* getEnemies();
@@ -25,6 +26,7 @@ namespace SpaceInvaders::Controllers
         int direction = -1;
         int currentRow = 0;
         bool handledMovementUpdate = false;
+        double speedMult = 1;
     };
 }
 

@@ -13,6 +13,7 @@ namespace SpaceInvaders::UI
         void setSize(int w, int h);
         int* getPosition();
         int* getSize();
+
     protected:
         int position[2];
         int size[2];

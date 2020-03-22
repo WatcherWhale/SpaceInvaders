@@ -1,5 +1,6 @@
 
 #include "Bullet.h"
+#include "../GameConstants.h"
 
 SpaceInvaders::GameObjects::Bullet::Bullet(int position[], int type)
 {
@@ -10,17 +11,23 @@ SpaceInvaders::GameObjects::Bullet::Bullet(int position[], int type)
     this->position[0] = position[0];
     this->position[1] = position[1];
 
+    this->collider[0] = -0.1875;
+    this->collider[1] = -0.265625;
+    this->collider[2] = 0.1875;
+    this->collider[3] = 0.265625;
+
     this->type = type;
+    this->killed = nullptr;
 }
 
 void SpaceInvaders::GameObjects::Bullet::update(double deltaTime)
 {
-    this->move(0, -1 * deltaTime);
+    this->move(0, -1 * deltaTime * BULLET_SPEED);
 }
 
 void SpaceInvaders::GameObjects::Bullet::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)
 {
-    this->sprites.push_back(loader->loadSprite("Assets/Sprites/Player/Bullet.png"));
+    this->sprites.push_back(loader->loadSprite("Assets/Sprites/Player/Bullet.png", true));
 }
 
 bool SpaceInvaders::GameObjects::Bullet::isPlayerBullet()
@@ -34,5 +41,11 @@ void SpaceInvaders::GameObjects::Bullet::onCollision(SpaceInvaders::GameObjects:
         (collided->getTag() == GameObjectTag::ENEMY && this->isPlayerBullet()))
     {
         this->remove = true;
+        this->killed = collided;
     }
+}
+
+SpaceInvaders::GameObjects::GameObject* SpaceInvaders::GameObjects::Bullet::getKilled()
+{
+    return this->killed;
 }

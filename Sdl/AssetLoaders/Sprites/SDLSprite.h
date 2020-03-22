@@ -10,19 +10,12 @@ namespace SpaceInvaders::Assets::Sprites
     class SDLSprite : public Sprite
     {
     public:
-        SDLSprite(std::string path) : Sprite(path) {};
+        SDLSprite(std::string path, bool optimize) : Sprite(path, optimize) {};
         virtual ~SDLSprite();
         void load() override;
         void* display() override;
 
-        void texturize(SDL_Renderer* renderer);
-        bool hasTexture();
-
-        int getWidth() override;
-        int getHeight() override;
-
     private:
-        bool isTexture = false;
         SDL_Surface* surface = nullptr;
         SDL_Texture* texture = nullptr;
     };

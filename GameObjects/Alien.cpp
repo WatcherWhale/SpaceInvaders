@@ -10,11 +10,14 @@ SpaceInvaders::GameObjects::Alien::Alien(int x, int y, int row, int type) : Game
     this->position[1] = y;
     this->dPosition[0] = x;
     this->dPosition[1] = y;
+
+    this->collider[0] = -0.33;
+    this->collider[1] = -0.10;
+    this->collider[2] = 0.33;
+    this->collider[3] = 0.10;
+
     this->type = type;
     this->row = row;
-
-    this->bounds[2] *= 0.9;
-    this->bounds[3] *= 0.9;
 }
 
 void SpaceInvaders::GameObjects::Alien::update(double deltaTime)
@@ -27,13 +30,13 @@ void SpaceInvaders::GameObjects::Alien::update(double deltaTime)
         y = (DEFAULT_SPRITE_SIZE/2);
     }
 
-    this->move(deltaTime * this->moveDirection * ENEMY_SPEED, y);
+    this->move(deltaTime * this->moveDirection * ENEMY_SPEED * this->speedMult, y);
 }
 
 void SpaceInvaders::GameObjects::Alien::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)
 {
     this->sprites.push_back(
-            loader->loadSprite(R"(Assets\Sprites\Enemies\Enemy)"+ std::to_string(this->type) + ".png"));
+            loader->loadSprite(R"(Assets\Sprites\Enemies\Enemy)"+ std::to_string(this->type) + ".png", true));
 }
 
 bool SpaceInvaders::GameObjects::Alien::isDead()
@@ -58,9 +61,15 @@ void SpaceInvaders::GameObjects::Alien::onCollision(SpaceInvaders::GameObjects::
     if(collided->getTag() == GameObjectTag::BULLET)
     {
         auto* bullet = dynamic_cast<Bullet*>(collided);
-        if(bullet->isPlayerBullet())
+        if(bullet->isPlayerBullet() && (bullet->getKilled() == this || bullet->getKilled() == nullptr))
         {
             this->dead = true;
+            this->remove = true;
         }
     }
+}
+
+void SpaceInvaders::GameObjects::Alien::updateMult(double mult)
+{
+    this->speedMult = mult;
 }

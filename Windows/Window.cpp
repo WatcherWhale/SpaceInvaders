@@ -23,9 +23,9 @@ void Window::queueSprite(Assets::Sprites::Sprite* sprite, int* position, double*
     this->spriteQueue.push(container);
 }
 
-void Window::queueText(Assets::Sprites::Text* sprite)
+void Window::queueUI(UI::UIComponent* component)
 {
-    this->textQueue.push(sprite);
+    this->uiQueue.push(component);
 }
 
 void Window::setClearColor(Color col)

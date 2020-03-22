@@ -30,6 +30,8 @@ namespace SpaceInvaders::Windows
         uint32_t getDeltaTime() override;
         void setIcon(Assets::Sprites::Sprite* sprite) override;
 
+        SDL_Renderer* getRenderer();
+
     private:
         void HandleKeyEvent(bool down, SDL_Keycode keycode);
 

@@ -20,11 +20,14 @@ const uint32_t TIME_30FPS = 1000 / 30;
 const uint32_t TIME_60FPS = 1000 / 60;
 const uint32_t TIME_120FPS = 1000 / 120;
 
-const double PLAYER_SPEED = 0.5;
+const double PLAYER_SPEED = 200;
+const unsigned long PLAYER_TIMEOUT = 200;
 
-const int ENEMY_SPACING_X = 200;
+const double BULLET_SPEED = 1000;
+
+const int ENEMY_SPACING_X = 64;
 const int ENEMY_SPACING_Y = -10;
 const int ENEMY_OFFSET_Y = 25;
-const double ENEMY_SPEED = 0.1;
+const double ENEMY_SPEED = 100;
 
 #endif //GAME_GAMECONSTANTS_H

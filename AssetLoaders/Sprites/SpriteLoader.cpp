@@ -6,7 +6,7 @@ std::map<std::string, Sprite*>* SpriteLoader::getSpriteMap()
     return &this->sprites;
 }
 
-Sprite* SpriteLoader::loadSprite(std::string path)
+Sprite* SpriteLoader::loadSprite(std::string path, bool optimize)
 {
     if(this->sprites[path] != nullptr)
     {

@@ -2,21 +2,20 @@
 #define GAME_SDLTEXT_H
 
 #include <SDL2/SDL.h>
-#include "../../../UI/Text.h"
+#include "../../UI/Text.h"
 
-namespace SpaceInvaders::Assets::Sprites
+namespace SpaceInvaders::UI
 {
     class SDLText : public Text
     {
     public:
         SDLText(std::string text, void* font, Color textColor, int x, int y);
+        virtual ~SDLText();
 
-        void* getTextTexture() override;
-
-        void unload() override;
+        void* display() override;
 
     private:
-        SDL_Surface* surface;
+        SDL_Texture* texture;
     };
 }
 #endif //GAME_SDLTEXT_H

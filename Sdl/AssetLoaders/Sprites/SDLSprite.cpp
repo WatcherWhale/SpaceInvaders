@@ -1,6 +1,6 @@
 #include "SDLSprite.h"
-
-#include <iostream>
+#include "../../../Controllers/GameController.h"
+#include "../../Window/SDLWindow.h"
 
 using namespace SpaceInvaders::Assets::Sprites;
 
@@ -12,45 +12,34 @@ SDLSprite::~SDLSprite()
 
 void SDLSprite::load()
 {
-    this->isTexture = false;
     this->surface = IMG_Load(this->path.c_str());
 
-    this->width = this->surface->w;
-    this->height = this->surface->h;
-}
+    if(this->optimized)
+    {
+        auto* win = Controllers::GameController::getInstance().getWindow();
+        auto* sdlWin = dynamic_cast<Windows::SDLWindow*>(win);
 
-void SDLSprite::texturize(SDL_Renderer* renderer)
-{
-    this->texture = SDL_CreateTextureFromSurface(renderer, this->surface);
-    SDL_FreeSurface(this->surface);
-    this->surface = nullptr;
+        this->texture = SDL_CreateTextureFromSurface(sdlWin->getRenderer(), surface);
+        SDL_QueryTexture(this->texture, nullptr, nullptr, &this->width, &this->height);
 
-    this->isTexture = true;
+        SDL_FreeSurface(this->surface);
+        this->surface = nullptr;
+    }
+    else
+    {
+        this->width = this->surface->w;
+        this->height = this->surface->h;
+    }
 }
 
 void* SDLSprite::display()
 {
-    if(this->isTexture)
+    if(this->optimized)
     {
-        return reinterpret_cast<void*>(this->texture);
+        return this->texture;
     }
     else
     {
-        return reinterpret_cast<void*>(this->surface);
+        return this->surface;
     }
-}
-
-bool SDLSprite::hasTexture()
-{
-    return this->isTexture;
-}
-
-int SDLSprite::getWidth()
-{
-    return this->width;
-}
-
-int SDLSprite::getHeight()
-{
-    return this->height;
 }

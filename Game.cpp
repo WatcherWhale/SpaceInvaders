@@ -13,17 +13,20 @@ void Game::run()
 	// Create Windows
 	this->window = this->factory->createWindow(reinterpret_cast<void*>(this),
 	        "SpaceInvaders", WINDOW_SIZE_X, WINDOW_SIZE_Y);
-    this->window->setClearColor(0,0,0);
+    this->window->setClearColor(0, 0, 0);
 
 	if(this->window->create())
     {
+        GameController::getInstance().setWindow(this->window);
+
 	    while(GameController::getInstance().isRunning())
         {
             this->window->clear();
 
             if(GameController::getInstance().getCurrentScene() != nullptr)
             {
-                GameController::getInstance().getCurrentScene()->update(this->window->getDeltaTime());
+                GameController::getInstance().getTimer()->update(this->window->getDeltaTime());
+                GameController::getInstance().getCurrentScene()->update(this->window->getDeltaTime() / 1000.0);
                 GameController::getInstance().getCurrentScene()->draw(this->window);
             }
             else

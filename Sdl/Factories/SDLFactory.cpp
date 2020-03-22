@@ -17,7 +17,7 @@ SpaceInvaders::Assets::FontLoader* SDLFactory::createFontLoader()
     return new Assets::SDLFontLoader();
 }
 
-SpaceInvaders::Assets::Sprites::Text* SDLFactory::createText(std::string text, void* font, Color color, int x, int y)
+SpaceInvaders::UI::Text* SDLFactory::createText(std::string text, void* font, Color color, int x, int y)
 {
-    return new SpaceInvaders::Assets::Sprites::SDLText(text, font, color, x, y);
+    return new SpaceInvaders::UI::SDLText(text, font, color, x, y);
 }

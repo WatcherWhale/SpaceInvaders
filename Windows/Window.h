@@ -32,7 +32,7 @@ namespace SpaceInvaders::Windows
         virtual uint32_t getDeltaTime() = 0;
 
         void queueSprite(Assets::Sprites::Sprite* sprite, int* position, double* bounds);
-        void queueText(Assets::Sprites::Text* sprite);
+        void queueUI(UI::UIComponent* component);
 
         virtual void draw() = 0;
         virtual void clear() = 0;
@@ -45,7 +45,7 @@ namespace SpaceInvaders::Windows
         int width, height;
         void* game;
         std::queue<SpriteContainer*> spriteQueue;
-        std::queue<Assets::Sprites::Text*> textQueue;
+        std::queue<UI::UIComponent*> uiQueue;
         Color clearColor = Color(0xFF, 0xFF, 0xFF);
         Assets::Sprites::Sprite* background = nullptr;
         Assets::Sprites::Sprite* icon = nullptr;

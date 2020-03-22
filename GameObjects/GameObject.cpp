@@ -17,7 +17,10 @@ GameObject::GameObject()
     this->bounds[2] = SPRITE_SCALE * SCALE_X; // w
     this->bounds[3] = SPRITE_SCALE * SCALE_Y; // h
 
-    this->calculateCollider();
+    collider[0] = -0.5;
+    collider[1] = -0.5;
+    collider[2] = 0.5;
+    collider[3] = 0.5;
 }
 
 int* GameObject::getPosition()
@@ -48,25 +51,22 @@ double* GameObject::getCollider()
     return this->collider;
 }
 
-void GameObject::calculateCollider()
-{
-    collider[0] = this->bounds[2] * this->bounds[0];
-    collider[1] = this->bounds[3] * this->bounds[1];
-    collider[2] = this->bounds[2] * this->bounds[0];
-    collider[3] = this->bounds[3] * this->bounds[1];
-}
-
 bool GameObject::checkCollison(GameObject* go1, GameObject* go2)
 {
-    bool x = (go1->position[0] + go1->collider[0] >= go2->position[0] + go2->collider[0]
-        && go1->position[0] + go1->collider[0] <= go2->position[0] + go2->collider[2])
-        || (go1->position[0] + go1->collider[2] >= go2->position[0] + go2->collider[0]
-        && go1->position[0] + go1->collider[2] <= go2->position[0] + go2->collider[2]);
+    double x11 = go1->dPosition[0] + go1->collider[0] * go1->bounds[2] * IMPORT_SPRITE_SIZE;
+    double x12 = go1->dPosition[0] + go1->collider[2] * go1->bounds[2] * IMPORT_SPRITE_SIZE;
+    double x21 = go2->dPosition[0] + go2->collider[0] * go2->bounds[2] * IMPORT_SPRITE_SIZE;
+    double x22 = go2->dPosition[0] + go2->collider[2] * go2->bounds[2] * IMPORT_SPRITE_SIZE;
 
-    bool y = (go1->position[1] + go1->collider[1] >= go2->position[1] + go2->collider[1]
-        && go1->position[1] + go1->collider[1] <= go2->position[1] + go2->collider[3])
-        || (go1->position[1] + go1->collider[3] >= go2->position[1] + go2->collider[1]
-        && go1->position[1] + go1->collider[3] <= go2->position[1] + go2->collider[3]);
+    double test = x12 - x11;
+
+    double y11 = go1->dPosition[1] + go1->collider[1] * go1->bounds[3] * IMPORT_SPRITE_SIZE;
+    double y12 = go1->dPosition[1] + go1->collider[3] * go1->bounds[3] * IMPORT_SPRITE_SIZE;
+    double y21 = go2->dPosition[1] + go2->collider[1] * go2->bounds[3] * IMPORT_SPRITE_SIZE;
+    double y22 = go2->dPosition[1] + go2->collider[3] * go2->bounds[3] * IMPORT_SPRITE_SIZE;
+
+    bool x = (x11 >= x21 && x11 <= x22) || (x12 >= x21 && x12 <= x22);
+    bool y = (y11 >= y21 && y11 <= y22) || (y12 >= y21 && y12 <= y22);
 
     return x && y;
 }

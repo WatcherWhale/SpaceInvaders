@@ -16,10 +16,13 @@ namespace SpaceInvaders::GameObjects
 
         bool isPlayerBullet();
 
+        GameObject* getKilled();
+
         void onCollision(GameObject* collided) override ;
 
     private:
         int type;
+        GameObject* killed;
     };
 }
 #endif

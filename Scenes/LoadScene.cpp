@@ -24,7 +24,7 @@ void SpaceInvaders::Scenes::LoadScene::draw(SpaceInvaders::Windows::Window* wind
     if(this->progress >= 1)
     {
         auto* spriteLoader = SpaceInvaders::Controllers::GameController::getInstance().getSpriteLoader();
-        window->setBackground(spriteLoader->loadSprite("Assets/Sprites/Background.png"));
+        window->setBackground(spriteLoader->loadSprite("Assets/Sprites/Background.png", true));
     }
 }
 
@@ -34,16 +34,16 @@ void loadAssetsAsync(SpaceInvaders::Scenes::LoadScene* loadScene)
     auto* fontLoader = SpaceInvaders::Controllers::GameController::getInstance().getFontLoader();
 
     // Pre load sprites
-    spriteLoader->loadSprite("Assets/Sprites/Background.png");
+    spriteLoader->loadSprite("Assets/Sprites/Background.png", true);
     loadScene->addProgress();
 
-    spriteLoader->loadSprite("Assets/Sprites/Player/Player.png");
+    spriteLoader->loadSprite("Assets/Sprites/Player/Player.png", true);
     loadScene->addProgress();
 
-    spriteLoader->loadSprite("Assets/Sprites/Enemies/Enemy1.png");
+    spriteLoader->loadSprite("Assets/Sprites/Enemies/Enemy1.png", true);
     loadScene->addProgress();
 
-    spriteLoader->loadSprite("Assets/Sprites/Player/Bullet.png");
+    spriteLoader->loadSprite("Assets/Sprites/Player/Bullet.png", true);
     loadScene->addProgress();
 
     // Pre load fonts

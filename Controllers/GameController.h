@@ -3,6 +3,7 @@
 
 #include "../Events/EventHandler.h"
 #include "../Scenes/Scene.h"
+#include "../Utils/Timer.h"
 
 namespace SpaceInvaders::Controllers
 {
@@ -28,9 +29,12 @@ namespace SpaceInvaders::Controllers
         Events::EventHandler* getEventHandler();
 
         void setFactory(Factories::GameFactory* factory);
+        void setWindow(Windows::Window* window);
         Factories::GameFactory* getFactory();
+        Windows::Window* getWindow();
         Assets::Sprites::SpriteLoader* getSpriteLoader();
         Assets::FontLoader* getFontLoader();
+        Utils::Timer* getTimer();
 
         void stopGame();
         bool isRunning();
@@ -40,10 +44,12 @@ namespace SpaceInvaders::Controllers
         Events::EventHandler* eventHandler;
         Scenes::Scene* currentScene = nullptr;
         Factories::GameFactory* factory;
+        Windows::Window* window;
         Assets::Sprites::SpriteLoader* spriteLoader;
         Assets::FontLoader* fontLoader;
         int currentLevel = 0;
         bool running = true;
+        Utils::Timer timer;
     };
 }
 #endif

@@ -43,8 +43,6 @@ namespace SpaceInvaders::GameObjects
         void move(double dx, double dy);
 
         bool remove = false;
-    private:
-        void calculateCollider();
     };
 }
 

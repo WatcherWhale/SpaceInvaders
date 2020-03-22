@@ -25,31 +25,22 @@ void SpaceInvaders::Controllers::EnemyController::createEnemies(int level,
 
 void SpaceInvaders::Controllers::EnemyController::update(double deltaTime)
 {
-    int i = 0;
-
     bool updateMovement = false;
 
-    while(i < this->enemies.size())
+    for(auto* enemy : this->enemies)
     {
-        auto* enemy = this->enemies.at(i);
-        if(enemy->isDead())
-        {
-            this->enemies.erase(this->enemies.begin() + i);
-            delete enemy;
-        }
-        else
-        {
-            updateMovement = updateMovement || enemy->isTouchingWall();
-            i++;
-        }
+        updateMovement = updateMovement || enemy->isTouchingWall();
     }
 
     if(updateMovement && !this->handledMovementUpdate)
     {
-        direction *= -1;
+        this->direction *= -1;
+        this->speedMult += 0.2;
+
         for (auto* enemy : this->enemies)
         {
-            enemy->movePosition(direction, true);
+            enemy->movePosition(this->direction, true);
+            enemy->updateMult(this->speedMult);
         }
 
         this->currentRow++;
@@ -82,4 +73,19 @@ void SpaceInvaders::Controllers::EnemyController::loadSprites(SpaceInvaders::Ass
 int SpaceInvaders::Controllers::EnemyController::getCurrentRow()
 {
     return this->currentRow;
+}
+
+void SpaceInvaders::Controllers::EnemyController::lateUpdate()
+{
+    int i = 0;
+    while(i < this->enemies.size())
+    {
+        auto* enemy = this->enemies.at(i);
+        if(enemy->isDead())
+        {
+            this->enemies.erase(this->enemies.begin() + i);
+        }
+
+        i++;
+    }
 }

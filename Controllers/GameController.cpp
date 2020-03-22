@@ -87,3 +87,18 @@ bool SpaceInvaders::Controllers::GameController::isRunning()
 {
     return this->running;
 }
+
+SpaceInvaders::Utils::Timer* SpaceInvaders::Controllers::GameController::getTimer()
+{
+    return &this->timer;
+}
+
+void SpaceInvaders::Controllers::GameController::setWindow(Windows::Window* window)
+{
+    this->window = window;
+}
+
+SpaceInvaders::Windows::Window* SpaceInvaders::Controllers::GameController::getWindow()
+{
+    return this->window;
+}

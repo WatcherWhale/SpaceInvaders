@@ -6,7 +6,7 @@
 #include "../Window/SDLWindow.h"
 #include "../AssetLoaders/SDLFontLoader.h"
 #include "../AssetLoaders/Sprites/SDLSpriteLoader.h"
-#include "../AssetLoaders/Sprites/SDLText.h"
+#include "../UI/SDLText.h"
 
 using namespace SpaceInvaders::Factories;
 
@@ -18,7 +18,7 @@ namespace SpaceInvaders::Factories
         Windows::Window* createWindow(void* game, std::string title, int width, int height) override;
         Assets::Sprites::SpriteLoader* createSpriteLoader() override;
         Assets::FontLoader* createFontLoader() override;
-        Assets::Sprites::Text* createText(std::string text, void* font, Color color, int x, int y) override;
+        UI::Text* createText(std::string text, void* font, Color color, int x, int y) override;
     };
 }
 #endif // !SDLFACTORY_H

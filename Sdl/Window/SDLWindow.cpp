@@ -106,7 +106,6 @@ void SDLWindow::draw()
     if(this->background != nullptr)
     {
         auto* backgroundSprite = dynamic_cast<Assets::Sprites::SDLSprite*>(this->background);
-        if(!backgroundSprite->hasTexture()) backgroundSprite->texturize(this->renderer);
 
         SDL_Rect backRect;
         backRect.x = 0;
@@ -121,10 +120,7 @@ void SDLWindow::draw()
     {
         auto container = spriteQueue.front();
 
-        auto* sprite = dynamic_cast<Assets::Sprites::SDLSprite*>(container->sprite);
-
-        if(!sprite->hasTexture()) sprite->texturize(this->renderer);
-
+        auto* sprite = container->sprite;
         SDL_Texture* texture = reinterpret_cast<SDL_Texture*>(sprite->display());
         SDL_Rect stretchRect;
 
@@ -141,11 +137,11 @@ void SDLWindow::draw()
         spriteQueue.pop();
     }
 
-    while(!this->textQueue.empty())
+    while(!this->uiQueue.empty())
     {
-        auto* txt = textQueue.front();
+        auto* txt = uiQueue.front();
 
-        auto* txtSurface = reinterpret_cast<SDL_Surface*>(txt->getTextTexture());
+        auto* txtSurface = reinterpret_cast<SDL_Surface*>(txt->display());
         auto* txtTexture = SDL_CreateTextureFromSurface( this->renderer, txtSurface );
 
         SDL_Rect stretchRect;
@@ -156,7 +152,7 @@ void SDLWindow::draw()
 
         SDL_RenderCopy(this->renderer, txtTexture, nullptr, &stretchRect);
 
-        textQueue.pop();
+        uiQueue.pop();
     }
 
     SDL_RenderPresent(this->renderer);
@@ -223,6 +219,12 @@ uint32_t SDLWindow::getDeltaTime()
 void SDLWindow::setIcon(SpaceInvaders::Assets::Sprites::Sprite* sprite)
 {
     Window::setIcon(sprite);
-    SDL_SetWindowIcon(this->window, reinterpret_cast<SDL_Surface*>(this->icon->display()));
+    // TODO: FIX
+    //SDL_SetWindowIcon(this->window, reinterpret_cast<SDL_Surface*>(this->icon->display()));
+}
+
+SDL_Renderer* SDLWindow::getRenderer()
+{
+    return this->renderer;
 }
 

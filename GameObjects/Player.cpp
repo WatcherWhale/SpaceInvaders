@@ -73,8 +73,8 @@ void Player::onKeyUp(Key key)
         break;
 
         case Key::SPACE:
-            this->shooting = false;
-        break;
+            this->spaceDown = false;
+            break;
 
         default:
             break;
@@ -83,16 +83,22 @@ void Player::onKeyUp(Key key)
 
 void Player::shoot()
 {
-    if(this->shooting) return;
+    if(this->shooting || this->spaceDown) return;
     this->shooting = true;
+    this->spaceDown = true;
 
     auto* bullet = GameController::getInstance().getFactory()->createBullet(this->position, 0);
     GameController::getInstance().getCurrentScene()->instantiateGameObject(bullet);
+
+    // Create callback
+    GameController::getInstance().getTimer()->requestCallback([](void* arg) {
+        reinterpret_cast<Player*>(arg)->endShoot();
+    }, this, PLAYER_TIMEOUT);
 }
 
 void Player::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)
 {
-    this->sprites.push_back(loader->loadSprite(R"(Assets\Sprites\Player\Player.png)"));
+    this->sprites.push_back(loader->loadSprite(R"(Assets\Sprites\Player\Player.png)", true));
 }
 
 void Player::onCollision(GameObject* collided)
@@ -105,4 +111,9 @@ void Player::onCollision(GameObject* collided)
             
         }
     }
+}
+
+void Player::endShoot()
+{
+    this->shooting = false;
 }

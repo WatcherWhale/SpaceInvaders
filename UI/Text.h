@@ -3,31 +3,20 @@
 
 #include <string>
 #include "../Color.h"
+#include "UIComponent.h"
 
-namespace SpaceInvaders::Assets::Sprites
+namespace SpaceInvaders::UI
 {
-    class Text
+    class Text: public UIComponent
     {
     public:
         Text(std::string text, void* font, Color color, int x, int y);
-
-        virtual void unload() = 0;
-
-        virtual void* getTextTexture() = 0;
-
-        int* getSize();
-
-        int* getPosition();
-
-        void setPosition(int x, int y);
 
 
     protected:
         std::string text;
         void* font;
         Color* color;
-        int position[2];
-        int size[2];
     };
 }
 

@@ -9,7 +9,7 @@ class SDLSpriteLoader : public SpaceInvaders::Assets::Sprites::SpriteLoader
     {
     public:
         ~SDLSpriteLoader();
-        Sprite* loadSprite(std::string path) override;
+        Sprite* loadSprite(std::string path, bool optimize) override;
     };
 }
 

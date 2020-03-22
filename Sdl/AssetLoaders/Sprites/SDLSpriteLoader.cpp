@@ -12,16 +12,16 @@ SDLSpriteLoader::~SDLSpriteLoader()
 }
 
 
-Sprite* SDLSpriteLoader::loadSprite(std::string path)
+Sprite* SDLSpriteLoader::loadSprite(std::string path, bool optimize)
 {
-    auto* loadedSprite = SpriteLoader::loadSprite(path);
+    auto* loadedSprite = SpriteLoader::loadSprite(path, optimize);
     
     if(loadedSprite != nullptr)
     {
         return loadedSprite;
     }
 
-    Sprite* sprite = new SDLSprite(path);
+    Sprite* sprite = new SDLSprite(path, optimize);
     sprite->load();
 
     this->sprites[path] = sprite;
