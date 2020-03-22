@@ -9,7 +9,6 @@ namespace SpaceInvaders::Scenes
     class GameOverScene : public Scene
     {
     public:
-        ~GameOverScene() override;
         void load() override;
     private:
 

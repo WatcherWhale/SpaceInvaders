@@ -8,9 +8,9 @@ SpaceInvaders::Scenes::Scene::~Scene()
         delete go;
     }
 
-    for(auto* ui : this->ui)
+    for(auto* component : this->ui)
     {
-        delete ui;
+        delete component;
     }
 
     this->gameObjects.clear();
@@ -24,9 +24,9 @@ void SpaceInvaders::Scenes::Scene::draw(SpaceInvaders::Windows::Window* win)
         win->queueSprite(go->getSprite(), go->getPosition(), go->getBounds());
     }
 
-    for(auto* ui : this->ui)
+    for(auto* component : this->ui)
     {
-        //TODO
+        win->queueUI(component);
     }
 }
 
@@ -57,4 +57,9 @@ void SpaceInvaders::Scenes::Scene::instantiateGameObject(SpaceInvaders::GameObje
 {
     go->loadSprites(Controllers::GameController::getInstance().getSpriteLoader());
     this->gameObjects.push_back(go);
+}
+
+void SpaceInvaders::Scenes::Scene::lateUpdate()
+{
+
 }

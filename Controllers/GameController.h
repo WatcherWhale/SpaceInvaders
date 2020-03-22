@@ -7,7 +7,7 @@
 
 namespace SpaceInvaders::Controllers
 {
-    enum SceneEnum {LOAD, MENU, GAME};
+    enum SceneEnum {LOAD, MENU, GAME, GAMEOVER};
 
     class GameController
     {

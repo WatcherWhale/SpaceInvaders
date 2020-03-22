@@ -1,6 +1,7 @@
 #include "GameController.h"
 #include "../Scenes/GameScene.h"
 #include "../Scenes/LoadScene.h"
+#include "../Scenes/GameOverScene.h"
 
 SpaceInvaders::Controllers::GameController::GameController()
 {
@@ -41,6 +42,11 @@ void SpaceInvaders::Controllers::GameController::loadScene(SpaceInvaders::Contro
     else if(scene == SceneEnum::LOAD)
     {
         this->currentScene = new Scenes::LoadScene();
+        this->currentScene->load();
+    }
+    else if(scene == SceneEnum::GAMEOVER)
+    {
+        this->currentScene = new Scenes::GameOverScene();
         this->currentScene->load();
     }
 }

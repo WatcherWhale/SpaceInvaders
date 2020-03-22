@@ -1,5 +1,14 @@
 #include "UIComponent.h"
 
+SpaceInvaders::UI::UIComponent::UIComponent(int x, int y)
+{
+    this->position[0] = x;
+    this->position[1] = y;
+
+    this->size[0] = 1;
+    this->size[1] = 1;
+}
+
 void SpaceInvaders::UI::UIComponent::setPosition(int x, int y)
 {
     this->position[0] = x;
@@ -21,4 +30,3 @@ int* SpaceInvaders::UI::UIComponent::getSize()
 {
     return this->size;
 }
-

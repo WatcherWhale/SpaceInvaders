@@ -6,7 +6,8 @@ namespace SpaceInvaders::UI
     class UIComponent
     {
     public:
-
+        UIComponent(int x, int y);
+        virtual ~UIComponent() = 0;
         virtual void* display() = 0;
 
         void setPosition(int x, int y);

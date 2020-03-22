@@ -18,7 +18,7 @@ namespace SpaceInvaders::Scenes
         virtual void draw(Windows::Window* win);
 
         virtual void update(double deltaTime);
-        virtual void lateUpdate() = 0;
+        virtual void lateUpdate();
 
         std::vector<Events::EventListener*>* getListeners();
 
