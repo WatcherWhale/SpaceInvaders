@@ -26,10 +26,9 @@ namespace SpaceInvaders::GameObjects
 
         bool spaceDown = false;
         bool shooting = false;
-        int bulletSpawn[2] = {0, 0};
 
         int moveDirection = 0;
-        double speed = PLAYER_SPEED;
+        double speed = PLAYER_SPEED * SCALE_X;
     };
 }
 

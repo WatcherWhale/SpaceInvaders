@@ -58,8 +58,6 @@ bool GameObject::checkCollison(GameObject* go1, GameObject* go2)
     double x21 = go2->dPosition[0] + go2->collider[0] * go2->bounds[2] * IMPORT_SPRITE_SIZE;
     double x22 = go2->dPosition[0] + go2->collider[2] * go2->bounds[2] * IMPORT_SPRITE_SIZE;
 
-    double test = x12 - x11;
-
     double y11 = go1->dPosition[1] + go1->collider[1] * go1->bounds[3] * IMPORT_SPRITE_SIZE;
     double y12 = go1->dPosition[1] + go1->collider[3] * go1->bounds[3] * IMPORT_SPRITE_SIZE;
     double y21 = go2->dPosition[1] + go2->collider[1] * go2->bounds[3] * IMPORT_SPRITE_SIZE;
@@ -78,14 +76,6 @@ void GameObject::move(double dx, double dy)
 
     this->position[0] = std::lround(this->dPosition[0]);
     this->position[1] = std::lround(this->dPosition[1]);
-}
-
-GameObject::~GameObject()
-{
-    for(auto* sprite : this->sprites)
-    {
-        delete sprite;
-    }
 }
 
 bool GameObject::isOutOfScreenY()

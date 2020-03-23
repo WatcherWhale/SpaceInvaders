@@ -1,5 +1,6 @@
 #include <cmath>
 #include "EnemyController.h"
+#include "GameController.h"
 
 void SpaceInvaders::Controllers::EnemyController::createEnemies(int level,
         SpaceInvaders::Factories::GameFactory* factory)
@@ -49,6 +50,7 @@ void SpaceInvaders::Controllers::EnemyController::update(double deltaTime)
         if(currentRow == 11)
         {
             // Game Over
+            GameController::getInstance().loadScene(SceneEnum::GAMEOVER);
         }
     }
     else if(!updateMovement && this->handledMovementUpdate)

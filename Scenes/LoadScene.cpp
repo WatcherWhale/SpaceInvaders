@@ -5,7 +5,7 @@ void SpaceInvaders::Scenes::LoadScene::update(double deltaTime)
 {
     if(this->loadThread.wait_for(std::chrono::seconds(0)) == std::future_status::ready)
     {
-        Controllers::GameController::getInstance().loadScene(Controllers::SceneEnum::GAMEOVER);
+        Controllers::GameController::getInstance().loadScene(Controllers::SceneEnum::GAME);
     }
 }
 

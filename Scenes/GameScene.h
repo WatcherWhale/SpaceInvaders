@@ -10,7 +10,7 @@ namespace SpaceInvaders::Scenes
     {
     public:
         GameScene();
-        ~GameScene() override;
+        ~GameScene() override = default;
         void update(double deltaTime) override;
         void lateUpdate() override;
         void load() override;
@@ -20,7 +20,7 @@ namespace SpaceInvaders::Scenes
         Controllers::LevelController* getLvlController();
 
     private:
-        Controllers::LevelController* lvlController;
+        Controllers::LevelController lvlController;
     };
 }
 #endif

@@ -4,12 +4,7 @@
 
 SpaceInvaders::Scenes::GameScene::GameScene()
 {
-    this->lvlController = new SpaceInvaders::Controllers::LevelController();
-}
-
-SpaceInvaders::Scenes::GameScene::~GameScene()
-{
-    delete this->lvlController;
+    this->lvlController = SpaceInvaders::Controllers::LevelController();
 }
 
 
@@ -19,7 +14,7 @@ void SpaceInvaders::Scenes::GameScene::update(double deltaTime)
     Scene::update(deltaTime);
 
     // Update Enemy controller
-    this->lvlController->getEnemyController()->update(deltaTime);
+    this->lvlController.getEnemyController()->update(deltaTime);
 }
 
 void SpaceInvaders::Scenes::GameScene::load()
@@ -34,14 +29,14 @@ void SpaceInvaders::Scenes::GameScene::load()
 
 SpaceInvaders::Controllers::LevelController* SpaceInvaders::Scenes::GameScene::getLvlController()
 {
-    return this->lvlController;
+    return &this->lvlController;
 }
 
 void SpaceInvaders::Scenes::GameScene::startLevel(int level, Factories::GameFactory* factory,
                                                   Assets::Sprites::SpriteLoader* spriteLoader)
 {
     this->getLvlController()->startLevel(level, factory, spriteLoader);
-    for(auto* enemy : *this->lvlController->getEnemyController()->getEnemies())
+    for(auto* enemy : *this->lvlController.getEnemyController()->getEnemies())
     {
         this->gameObjects.push_back(enemy);
     }
@@ -49,7 +44,7 @@ void SpaceInvaders::Scenes::GameScene::startLevel(int level, Factories::GameFact
 
 void SpaceInvaders::Scenes::GameScene::lateUpdate()
 {
-    this->lvlController->getEnemyController()->lateUpdate();
+    this->lvlController.getEnemyController()->lateUpdate();
 
     int i = 0;
     while(i < this->gameObjects.size())

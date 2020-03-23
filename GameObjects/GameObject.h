@@ -13,7 +13,7 @@ namespace SpaceInvaders::GameObjects
     {
     public:
         GameObject();
-        virtual ~GameObject();
+        virtual ~GameObject() = default;
         virtual void loadSprites(Assets::Sprites::SpriteLoader* loader) = 0;
         void loadSprites(Assets::Sprites::Sprite* sprite, int amount);
         virtual void update(double deltaTime) = 0;

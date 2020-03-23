@@ -78,8 +78,8 @@ SpaceInvaders::Assets::FontLoader* SpaceInvaders::Controllers::GameController::g
 
 void SpaceInvaders::Controllers::GameController::unload()
 {
-    delete this->eventHandler;
     delete this->currentScene;
+    delete this->eventHandler;
     delete this->fontLoader;
     delete this->spriteLoader;
 }
