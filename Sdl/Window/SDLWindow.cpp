@@ -139,16 +139,15 @@ void SDLWindow::draw()
 
     while(!this->uiQueue.empty())
     {
-        auto* txt = uiQueue.front();
+        auto* component = uiQueue.front();
 
-        auto* txtSurface = reinterpret_cast<SDL_Surface*>(txt->display());
-        auto* txtTexture = SDL_CreateTextureFromSurface( this->renderer, txtSurface );
+        auto* txtTexture = reinterpret_cast<SDL_Texture*>(component->display());
 
         SDL_Rect stretchRect;
-        stretchRect.x = txt->getPosition()[0];
-        stretchRect.y = txt->getPosition()[1];
-        stretchRect.w = std::lround(SCALE_X * txt->getSize()[0]);
-        stretchRect.h = std::lround(SCALE_Y * txt->getSize()[1]);
+        stretchRect.x = component->getPosition()[0];
+        stretchRect.y = component->getPosition()[1];
+        stretchRect.w = std::lround(component->getSize()[0]);
+        stretchRect.h = std::lround(component->getSize()[1]);
 
         SDL_RenderCopy(this->renderer, txtTexture, nullptr, &stretchRect);
 

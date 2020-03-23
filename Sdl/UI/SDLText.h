@@ -10,7 +10,8 @@ namespace SpaceInvaders::UI
     {
     public:
         SDLText(std::string text, void* font, Color textColor, int x, int y);
-        virtual ~SDLText();
+        SDLText(std::string text, void* font, Color textColor, int x, int y, double w, double h);
+        ~SDLText() override;
 
         void* display() override;
 

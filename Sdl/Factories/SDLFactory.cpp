@@ -21,3 +21,8 @@ SpaceInvaders::UI::Text* SDLFactory::createText(std::string text, void* font, Co
 {
     return new SpaceInvaders::UI::SDLText(text, font, color, x, y);
 }
+
+SpaceInvaders::UI::Text* SDLFactory::createText(std::string text, void* font, Color color, int x, int y, int w, int h)
+{
+    return new SpaceInvaders::UI::SDLText(text, font, color, x, y, w, h);
+}

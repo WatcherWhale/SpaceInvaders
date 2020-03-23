@@ -11,7 +11,7 @@ namespace SpaceInvaders::UI
     {
     public:
         Text(std::string text, void* font, Color color, int x, int y);
-
+        Text(std::string text, void* font, Color color, int x, int y, double w, double h);
 
     protected:
         std::string text;

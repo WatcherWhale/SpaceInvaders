@@ -10,7 +10,10 @@ SDLText::SDLText(std::string text, void* font, Color textColor, int x, int y) : 
 {
     // Create surface
     SDL_Color col = {textColor.getR(), textColor.getG(), textColor.getB()};
-    auto* surface = TTF_RenderText_Solid(reinterpret_cast<TTF_Font*>(font), text.c_str(), col);
+    auto* surface = TTF_RenderUTF8_Solid(reinterpret_cast<TTF_Font*>(font), text.c_str(), col);
+
+    int w,h;
+    TTF_SizeUTF8(reinterpret_cast<TTF_Font*>(font), text.c_str(), &w, &h);
 
     // Get the window
     auto* win = Controllers::GameController::getInstance().getWindow();
@@ -18,11 +21,38 @@ SDLText::SDLText(std::string text, void* font, Color textColor, int x, int y) : 
 
     // Optimize the surface
     this->texture = SDL_CreateTextureFromSurface(sdlWin->getRenderer(), surface);
-    SDL_QueryTexture(this->texture, nullptr, nullptr, this->size, this->size + 1);
+
+    this->size[0] = w * SCALE_X;
+    this->size[1] = h * SCALE_Y;
 
     // Free the surface
     SDL_FreeSurface(surface);
 }
+
+SDLText::SDLText(std::string text, void* font, Color textColor,
+        int x, int y, double w, double h) : Text(text, font, textColor, x, y, w, h)
+{
+    // Create surface
+    SDL_Color col = {textColor.getR(), textColor.getG(), textColor.getB()};
+    auto* surface = TTF_RenderUTF8_Solid(reinterpret_cast<TTF_Font*>(font), text.c_str(), col);
+
+    int tW,tH;
+    TTF_SizeUTF8(reinterpret_cast<TTF_Font*>(font), text.c_str(), &tW, &tH);
+
+    // Get the window
+    auto* win = Controllers::GameController::getInstance().getWindow();
+    auto* sdlWin = dynamic_cast<Windows::SDLWindow*>(win);
+
+    // Optimize the surface
+    this->texture = SDL_CreateTextureFromSurface(sdlWin->getRenderer(), surface);
+
+    this->size[0] = tW * this->size[0] * SCALE_X;
+    this->size[1] = tH * this->size[1] * SCALE_Y;
+
+    // Free the surface
+    SDL_FreeSurface(surface);
+}
+
 
 SDLText::~SDLText()
 {

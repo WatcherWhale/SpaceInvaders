@@ -7,17 +7,18 @@ namespace SpaceInvaders::UI
     {
     public:
         UIComponent(int x, int y);
-        virtual ~UIComponent() = 0;
+        UIComponent(int x, int y, double w, double h);
+        virtual ~UIComponent() = default;
         virtual void* display() = 0;
 
         void setPosition(int x, int y);
         void setSize(int w, int h);
         int* getPosition();
-        int* getSize();
+        double* getSize();
 
     protected:
         int position[2];
-        int size[2];
+        double size[2];
     };
 }
 

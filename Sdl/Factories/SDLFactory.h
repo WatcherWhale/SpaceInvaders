@@ -19,6 +19,7 @@ namespace SpaceInvaders::Factories
         Assets::Sprites::SpriteLoader* createSpriteLoader() override;
         Assets::FontLoader* createFontLoader() override;
         UI::Text* createText(std::string text, void* font, Color color, int x, int y) override;
+        UI::Text* createText(std::string text, void* font, Color color, int x, int y, int w, int h) override;
     };
 }
 #endif // !SDLFACTORY_H

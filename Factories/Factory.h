@@ -20,6 +20,7 @@ namespace SpaceInvaders::Factories
         virtual Assets::Sprites::SpriteLoader* createSpriteLoader() = 0;
         virtual Assets::FontLoader* createFontLoader() = 0;
         virtual UI::Text* createText(std::string text, void* font, Color color, int x, int y) = 0;
+        virtual UI::Text* createText(std::string text, void* font, Color color, int x, int y, int w, int h) = 0;
 
         GameObjects::Player* createPlayer();
         GameObjects::Alien* createAlien(int x, int y, int row, int type);
