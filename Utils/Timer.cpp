@@ -19,7 +19,7 @@ void SpaceInvaders::Utils::Timer::update(unsigned long ticks)
     {
         if(it->tick <= this->ticks)
         {
-            it->func(it->arg);
+            it->func(it->listener);
             callbacks.erase(it);
         }
         else
@@ -29,13 +29,13 @@ void SpaceInvaders::Utils::Timer::update(unsigned long ticks)
     }
 }
 
-void SpaceInvaders::Utils::Timer::requestCallback(Function func, void* arg, unsigned long duration)
+void SpaceInvaders::Utils::Timer::requestCallback(CallbackFunction func, void* arg, unsigned long duration)
 {
-    CallbackObject cb;
+    TimerCallbackObject cb;
 
     cb.func = func;
     cb.tick = duration + this->ticks;
-    cb.arg = arg;
+    cb.listener = arg;
 
     this->callbacks.push_back(cb);
 }

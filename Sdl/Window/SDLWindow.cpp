@@ -122,11 +122,11 @@ void SDLWindow::draw()
 
         auto* sprite = container->sprite;
         SDL_Texture* texture = reinterpret_cast<SDL_Texture*>(sprite->display());
-        SDL_Rect stretchRect;
 
         double offsetX = container->bounds[2] * container->bounds[0] * sprite->getWidth();
         double offsetY = container->bounds[3] * container->bounds[1] * sprite->getHeight();
 
+        SDL_Rect stretchRect;
         stretchRect.x = container->position[0] + std::lround(offsetX);
         stretchRect.y = container->position[1] + std::lround(offsetY);
         stretchRect.w = std::lround(container->bounds[2] * sprite->getWidth());
