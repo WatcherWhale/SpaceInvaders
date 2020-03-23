@@ -27,7 +27,10 @@ void SpaceInvaders::GameObjects::Bullet::update(double deltaTime)
 
 void SpaceInvaders::GameObjects::Bullet::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)
 {
-    this->sprites.push_back(loader->loadSprite("Assets/Sprites/Player/Bullet.png", true));
+    if(this->isPlayerBullet())
+        this->sprites.push_back(loader->loadSprite("Assets/Sprites/Player/Bullet.png", true));
+    else
+        this->sprites.push_back(loader->loadSprite("Assets/Sprites/Enemies/Bullet.png", true));
 }
 
 bool SpaceInvaders::GameObjects::Bullet::isPlayerBullet()

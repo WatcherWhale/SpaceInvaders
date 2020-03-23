@@ -46,6 +46,9 @@ void loadAssetsAsync(SpaceInvaders::Scenes::LoadScene* loadScene)
     spriteLoader->loadSprite("Assets/Sprites/Player/Bullet.png", true);
     loadScene->addProgress();
 
+    spriteLoader->loadSprite("Assets/Sprites/Enemies/Bullet.png", true);
+    loadScene->addProgress();
+
     // Pre load fonts
     fontLoader->loadFont("regular", "Assets/Fonts/8bitRegular.ttf");
     loadScene->addProgress();
