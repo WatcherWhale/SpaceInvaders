@@ -97,9 +97,7 @@ void SDLWindow::clear()
 
 void SDLWindow::draw()
 {
-    Uint32 ticks = SDL_GetTicks();
-
-    if(startime == 0) startime = ticks;
+    uint32_t ticks = SDL_GetTicks();
 
     this->clear();
 
@@ -159,13 +157,12 @@ void SDLWindow::draw()
 
     SDL_RenderPresent(this->renderer);
 
-    Uint32 frameTicks = SDL_GetTicks() - ticks;
-    if( frameTicks < TIME_120FPS )
-    {
-        SDL_Delay( TIME_120FPS - frameTicks );
-    }
-
     this->deltaTime = SDL_GetTicks() - ticks;
+
+    if( this->deltaTime < TIME_120FPS )
+    {
+        SDL_Delay( TIME_120FPS - this->deltaTime );
+    }
 }
 
 void SDLWindow::HandleKeyEvent(bool down, SDL_Keycode keycode)
@@ -211,11 +208,6 @@ void SDLWindow::HandleKeyEvent(bool down, SDL_Keycode keycode)
     {
         Controllers::GameController::getInstance().getEventHandler()->onKeyUp(key);
     }
-}
-
-uint32_t SDLWindow::getDeltaTime()
-{
-    return this->deltaTime;
 }
 
 void SDLWindow::setIcon(SpaceInvaders::Assets::Sprites::Sprite* sprite)

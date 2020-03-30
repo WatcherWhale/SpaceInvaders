@@ -22,3 +22,8 @@ void EventHandler::onKeyUp(Key key)
     for(auto listener : listeners)
         listener->onKeyUp(key);
 }
+
+void EventHandler::clearListeners()
+{
+    this->listeners.clear();
+}

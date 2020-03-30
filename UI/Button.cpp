@@ -56,7 +56,8 @@ bool SpaceInvaders::UI::Button::doneDisplaying()
 void SpaceInvaders::UI::Button::setText(std::string text, void* font, Color color)
 {
     if(this->txt != nullptr) delete this->txt;
-    this->txt = Controllers::GameController::getInstance().getFactory()->createText(text, font, color, 0, 0);
+    this->txt = Controllers::GameController::getInstance().getFactory()->getUiFactory()
+            ->createText(text, font, color, 0, 0);
 }
 
 SpaceInvaders::UI::Text* SpaceInvaders::UI::Button::getText()

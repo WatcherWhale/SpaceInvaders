@@ -1,6 +1,7 @@
 #include <cmath>
 #include "EnemyController.h"
 #include "GameController.h"
+#include "../Utils/Math.h";
 
 void SpaceInvaders::Controllers::EnemyController::createEnemies(int level,
         SpaceInvaders::Factories::GameFactory* factory)
@@ -56,6 +57,10 @@ void SpaceInvaders::Controllers::EnemyController::update(double deltaTime)
     else if(!updateMovement && this->handledMovementUpdate)
     {
         this->handledMovementUpdate = false;
+        GameController::getInstance().getTimer()->requestCallback([](void* alien)
+        {
+
+        }, nullptr, Utils::Math::getRandom().nextInt());
     }
 }
 

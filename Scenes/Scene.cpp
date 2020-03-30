@@ -3,19 +3,6 @@
 
 SpaceInvaders::Scenes::Scene::~Scene()
 {
-    auto it = this->gameObjects.begin();
-
-    while(it != this->gameObjects.end())
-    {
-        delete it.base();
-        this->gameObjects.erase(it);
-    }
-
-    for(auto* component : this->ui)
-    {
-        delete component;
-    }
-
     this->gameObjects.clear();
     this->ui.clear();
 }

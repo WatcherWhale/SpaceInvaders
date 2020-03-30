@@ -18,6 +18,8 @@ namespace SpaceInvaders::Events
         void onKeyDown(Key key);
         void onKeyUp(Key key);
 
+        void clearListeners();
+
     private:
         vector<EventListener*> listeners;
     };

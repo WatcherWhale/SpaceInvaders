@@ -10,7 +10,6 @@ namespace SpaceInvaders::Scenes
     {
     public:
         GameScene();
-        ~GameScene() override = default;
         void update(double deltaTime) override;
         void lateUpdate() override;
         void load() override;

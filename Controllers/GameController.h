@@ -26,6 +26,11 @@ namespace SpaceInvaders::Controllers
 
         void loadScene(SceneEnum scene);
         Scenes::Scene* getCurrentScene();
+
+        void addPoints(int points);
+        int getPoints();
+        void clearPoints();
+
         Events::EventHandler* getEventHandler();
 
         void setFactory(Factories::GameFactory* factory);
@@ -48,6 +53,7 @@ namespace SpaceInvaders::Controllers
         Assets::Sprites::SpriteLoader* spriteLoader;
         Assets::FontLoader* fontLoader;
         int currentLevel = 0;
+        int points = 0;
         bool running = true;
         Utils::Timer timer;
     };

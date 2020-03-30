@@ -27,7 +27,6 @@ namespace SpaceInvaders::Windows
         void pollEvents() override;
         void draw() override;
         void clear() override;
-        uint32_t getDeltaTime() override;
         void setIcon(Assets::Sprites::Sprite* sprite) override;
 
         SDL_Renderer* getRenderer();
@@ -39,8 +38,6 @@ namespace SpaceInvaders::Windows
         SDL_Surface* surface = nullptr;
         SDL_Renderer* renderer = nullptr;
         Mix_Music* backgroundMusic = nullptr;
-        Uint32 startime = 0;
-        Uint32 deltaTime = 0;
     };
 }
 

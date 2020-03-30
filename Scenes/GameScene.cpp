@@ -7,7 +7,6 @@ SpaceInvaders::Scenes::GameScene::GameScene()
     this->lvlController = SpaceInvaders::Controllers::LevelController();
 }
 
-
 void SpaceInvaders::Scenes::GameScene::update(double deltaTime)
 {
     // Call default update method
@@ -62,5 +61,10 @@ void SpaceInvaders::Scenes::GameScene::lateUpdate()
         {
             i++;
         }
+    }
+
+    if(this->lvlController.getEnemyController()->getEnemies()->size() == 0)
+    {
+        Controllers::GameController::getInstance().loadScene(Controllers::SceneEnum::GAME);
     }
 }

@@ -26,6 +26,8 @@ void SpaceInvaders::Controllers::GameController::loadScene(SpaceInvaders::Contro
         delete this->currentScene;
     }
 
+    this->eventHandler->clearListeners();
+
     if(scene == SceneEnum::GAME)
     {
         auto* scene = new Scenes::GameScene();
@@ -36,6 +38,7 @@ void SpaceInvaders::Controllers::GameController::loadScene(SpaceInvaders::Contro
             this->eventHandler->addListener(listener);
         }
 
+        this->currentLevel++;
         scene->startLevel(this->currentLevel, this->factory, this->spriteLoader);
         this->currentScene = scene;
     }
@@ -107,4 +110,19 @@ void SpaceInvaders::Controllers::GameController::setWindow(Windows::Window* wind
 SpaceInvaders::Windows::Window* SpaceInvaders::Controllers::GameController::getWindow()
 {
     return this->window;
+}
+
+void SpaceInvaders::Controllers::GameController::addPoints(int points)
+{
+    this->points += points;
+}
+
+int SpaceInvaders::Controllers::GameController::getPoints()
+{
+    return this->points;
+}
+
+void SpaceInvaders::Controllers::GameController::clearPoints()
+{
+    this->points = 0;
 }

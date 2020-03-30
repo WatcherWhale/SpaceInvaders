@@ -9,7 +9,7 @@ void SpaceInvaders::Scenes::GameOverScene::load()
     auto* fontLoader = GameController::getInstance().getFontLoader();
 
     // Create game over title
-    auto* gameOverTxt = GameController::getInstance().getFactory()
+    auto* gameOverTxt = GameController::getInstance().getFactory()->getUiFactory()
             ->createText("Game Over",fontLoader->getFont("bold"), Color(255,255,255), 0, 0);
 
     gameOverTxt->scale(2);
@@ -17,7 +17,7 @@ void SpaceInvaders::Scenes::GameOverScene::load()
             gameOverTxt->getPosition()[1]);
 
     // Create points scored text
-    auto* pointsTxt = GameController::getInstance().getFactory()
+    auto* pointsTxt = GameController::getInstance().getFactory()->getUiFactory()
             ->createText("You scored: 0 pts",fontLoader->getFont("regular"), Color(255,255,255), 0,
                     std::lround(gameOverTxt->getSize()[1]));
 
