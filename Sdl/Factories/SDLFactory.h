@@ -15,11 +15,11 @@ namespace SpaceInvaders::Factories
     class SDLFactory : public GameFactory
     {
     public:
+        SDLFactory();
+
         Windows::Window* createWindow(void* game, std::string title, int width, int height) override;
         Assets::Sprites::SpriteLoader* createSpriteLoader() override;
         Assets::FontLoader* createFontLoader() override;
-        UI::Text* createText(std::string text, void* font, Color color, int x, int y) override;
-        UI::Text* createText(std::string text, void* font, Color color, int x, int y, int w, int h) override;
     };
 }
 #endif // !SDLFACTORY_H

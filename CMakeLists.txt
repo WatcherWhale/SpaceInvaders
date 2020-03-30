@@ -62,7 +62,7 @@ add_executable(SpaceInvaders
 		UI/Text.cpp
 		UI/Text.h
 		Sdl/UI/SDLText.cpp
-		Sdl/UI/SDLText.h Scenes/Scene.cpp Scenes/Scene.h UI/UIComponent.h UI/UIComponent.cpp AssetLoaders/Sprites/SpriteMap.cpp AssetLoaders/Sprites/SpriteMap.h Controllers/GameController.cpp Controllers/GameController.h Scenes/GameScene.cpp Scenes/GameScene.h Scenes/LoadScene.cpp Scenes/LoadScene.h GameObjects/Bullet.cpp GameObjects/Bullet.h Utils/Timer.cpp Utils/Timer.h Scenes/GameOverScene.cpp Scenes/GameOverScene.h UI/Button.cpp UI/Button.h Utils/FunctionDefinitions.h)
+		Sdl/UI/SDLText.h Scenes/Scene.cpp Scenes/Scene.h UI/UIComponent.h UI/UIComponent.cpp AssetLoaders/Sprites/SpriteMap.cpp AssetLoaders/Sprites/SpriteMap.h Controllers/GameController.cpp Controllers/GameController.h Scenes/GameScene.cpp Scenes/GameScene.h Scenes/LoadScene.cpp Scenes/LoadScene.h GameObjects/Bullet.cpp GameObjects/Bullet.h Utils/Timer.cpp Utils/Timer.h Scenes/GameOverScene.cpp Scenes/GameOverScene.h UI/Button.cpp UI/Button.h Utils/FunctionDefinitions.h Factories/UIFactory.cpp Factories/UIFactory.h Sdl/Factories/SDLUIFactory.cpp Sdl/Factories/SDLUIFactory.h)
 
 
 target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)

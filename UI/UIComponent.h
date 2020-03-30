@@ -10,6 +10,10 @@ namespace SpaceInvaders::UI
         UIComponent(int x, int y, double w, double h);
         virtual ~UIComponent() = default;
         virtual void* display() = 0;
+        virtual bool doneDisplaying() { return true; };
+
+        void scale(double f);
+        void scale(double x, double y);
 
         void setPosition(int x, int y);
         void setSize(int w, int h);

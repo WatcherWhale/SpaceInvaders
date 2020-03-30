@@ -1,4 +1,5 @@
 #include "SDLFactory.h"
+#include "SDLUIFactory.h"
 
 using namespace SpaceInvaders::Windows;
 
@@ -17,12 +18,8 @@ SpaceInvaders::Assets::FontLoader* SDLFactory::createFontLoader()
     return new Assets::SDLFontLoader();
 }
 
-SpaceInvaders::UI::Text* SDLFactory::createText(std::string text, void* font, Color color, int x, int y)
-{
-    return new SpaceInvaders::UI::SDLText(text, font, color, x, y);
-}
 
-SpaceInvaders::UI::Text* SDLFactory::createText(std::string text, void* font, Color color, int x, int y, int w, int h)
+SDLFactory::SDLFactory()
 {
-    return new SpaceInvaders::UI::SDLText(text, font, color, x, y, w, h);
+    this->uiFactory = new SDLUIFactory();
 }

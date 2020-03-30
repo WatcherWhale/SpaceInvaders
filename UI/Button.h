@@ -16,19 +16,24 @@ namespace SpaceInvaders::UI
     {
     public:
         Button(int x, int y, double w, double h);
-        void addClickListener(void* listener, CallbackFunction action);
+        ~Button() override;
 
         void setText(std::string text, void* font, Color color);
         Text* getText();
 
+        void* display() override;
+        bool doneDisplaying() override;
+
         void setSprite(Assets::Sprites::Sprite* sprite);
 
         void click(int x, int y);
+        void addClickListener(void* listener, CallbackFunction action);
 
     private:
         std::vector<CallbackObject> clickListeners;
         Assets::Sprites::Sprite* sprite;
-        Text* txt;
+        Text* txt = nullptr;
+        bool displayText = false;
     };
 }
 #endif

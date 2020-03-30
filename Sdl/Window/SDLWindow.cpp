@@ -121,7 +121,7 @@ void SDLWindow::draw()
         auto container = spriteQueue.front();
 
         auto* sprite = container->sprite;
-        SDL_Texture* texture = reinterpret_cast<SDL_Texture*>(sprite->display());
+        auto* texture = reinterpret_cast<SDL_Texture*>(sprite->display());
 
         double offsetX = container->bounds[2] * container->bounds[0] * sprite->getWidth();
         double offsetY = container->bounds[3] * container->bounds[1] * sprite->getHeight();
@@ -141,15 +141,18 @@ void SDLWindow::draw()
     {
         auto* component = uiQueue.front();
 
-        auto* txtTexture = reinterpret_cast<SDL_Texture*>(component->display());
+        SDL_Texture* uiTexture = nullptr;
+        do
+        {
+            uiTexture = static_cast<SDL_Texture*>(component->display());
+            SDL_Rect stretchRect;
+            stretchRect.x = component->getPosition()[0];
+            stretchRect.y = component->getPosition()[1];
+            stretchRect.w = std::lround(component->getSize()[0]);
+            stretchRect.h = std::lround(component->getSize()[1]);
 
-        SDL_Rect stretchRect;
-        stretchRect.x = component->getPosition()[0];
-        stretchRect.y = component->getPosition()[1];
-        stretchRect.w = std::lround(component->getSize()[0]);
-        stretchRect.h = std::lround(component->getSize()[1]);
-
-        SDL_RenderCopy(this->renderer, txtTexture, nullptr, &stretchRect);
+            SDL_RenderCopy(this->renderer, uiTexture, nullptr, &stretchRect);
+        } while(!component->doneDisplaying());
 
         uiQueue.pop();
     }

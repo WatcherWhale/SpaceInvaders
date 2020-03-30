@@ -1,5 +1,10 @@
 #include "Factory.h"
 
+SpaceInvaders::Factories::UIFactory* SpaceInvaders::Factories::GameFactory::getUiFactory()
+{
+    return this->uiFactory;
+}
+
 SpaceInvaders::GameObjects::Player* SpaceInvaders::Factories::GameFactory::createPlayer()
 {
     return new SpaceInvaders::GameObjects::Player();

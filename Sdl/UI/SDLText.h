@@ -17,6 +17,8 @@ namespace SpaceInvaders::UI
 
     private:
         SDL_Texture* texture;
+
+        void generateTexture() override;
     };
 }
 #endif //GAME_SDLTEXT_H

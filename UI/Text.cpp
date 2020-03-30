@@ -15,3 +15,9 @@ Text::Text(std::string text, void* font, Color textColor, int x, int y, double w
     this->font = font;
     this->color = new Color(textColor.getR(), textColor.getG(), textColor.getB());
 }
+
+void Text::setText(std::string text)
+{
+    this->text = text;
+    this->generateTexture();
+}
