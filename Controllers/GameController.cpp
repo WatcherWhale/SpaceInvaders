@@ -15,6 +15,7 @@ void SpaceInvaders::Controllers::GameController::setFactory(Factories::GameFacto
     // Create asset loaders
     this->spriteLoader = factory->createSpriteLoader();
     this->fontLoader = factory->createFontLoader();
+    this->timer = factory->createTimer();
 }
 
 void SpaceInvaders::Controllers::GameController::loadScene(SpaceInvaders::Controllers::SceneEnum scene)
@@ -99,7 +100,7 @@ bool SpaceInvaders::Controllers::GameController::isRunning()
 
 SpaceInvaders::Utils::Timer* SpaceInvaders::Controllers::GameController::getTimer()
 {
-    return &this->timer;
+    return this->timer;
 }
 
 void SpaceInvaders::Controllers::GameController::setWindow(Windows::Window* window)

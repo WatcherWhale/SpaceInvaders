@@ -20,6 +20,7 @@ namespace SpaceInvaders::Factories
         Windows::Window* createWindow(void* game, std::string title, int width, int height) override;
         Assets::Sprites::SpriteLoader* createSpriteLoader() override;
         Assets::FontLoader* createFontLoader() override;
+        Utils::Timer* createTimer() override;
     };
 }
 #endif // !SDLFACTORY_H

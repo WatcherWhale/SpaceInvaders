@@ -21,12 +21,14 @@ void Game::run()
 
 	    while(GameController::getInstance().isRunning())
         {
+            GameController::getInstance().getTimer()->start();
             this->window->clear();
 
             if(GameController::getInstance().getCurrentScene() != nullptr)
             {
-                GameController::getInstance().getTimer()->update(this->window->getDeltaTime());
-                GameController::getInstance().getCurrentScene()->update(this->window->getDeltaTime() / 1000.0);
+                GameController::getInstance().getCurrentScene()
+                    ->update(GameController::getInstance().getTimer()->getDeltaTime());
+
                 GameController::getInstance().getCurrentScene()->draw(this->window);
             }
             else
@@ -39,6 +41,8 @@ void Game::run()
 
             if(GameController::getInstance().getCurrentScene() != nullptr)
                 GameController::getInstance().getCurrentScene()->lateUpdate();
+
+            GameController::getInstance().getTimer()->stop();
         }
     }
 

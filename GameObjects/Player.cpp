@@ -96,6 +96,12 @@ void Player::shoot()
     }, this, PLAYER_TIMEOUT);
 }
 
+void Player::endShoot()
+{
+    this->shooting = false;
+}
+
+
 void Player::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)
 {
     this->sprites.push_back(loader->loadSprite(R"(Assets\Sprites\Player\Player.png)", true));
@@ -111,9 +117,4 @@ void Player::onCollision(GameObject* collided)
             
         }
     }
-}
-
-void Player::endShoot()
-{
-    this->shooting = false;
 }

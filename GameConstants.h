@@ -4,7 +4,7 @@
 
 const int WINDOW_SIZE_X = 1920;
 const int WINDOW_SIZE_Y = 1080;
-const bool WINDOW_IS_MAXIMIZED = false;
+const bool WINDOW_IS_MAXIMIZED = true;
 
 const int DEFAULT_WINDOW_SIZE_X = 1280;
 const int DEFAULT_WINDOW_SIZE_Y = 720;

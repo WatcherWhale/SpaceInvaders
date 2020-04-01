@@ -1,5 +1,6 @@
 #include "SDLFactory.h"
 #include "SDLUIFactory.h"
+#include "../Utils/SDLTimer.h"
 
 using namespace SpaceInvaders::Windows;
 
@@ -22,4 +23,9 @@ SpaceInvaders::Assets::FontLoader* SDLFactory::createFontLoader()
 SDLFactory::SDLFactory()
 {
     this->uiFactory = new SDLUIFactory();
+}
+
+SpaceInvaders::Utils::Timer* SDLFactory::createTimer()
+{
+    return new Utils::SDLTimer();
 }

@@ -29,8 +29,6 @@ namespace SpaceInvaders::Windows
 
         virtual void pollEvents() = 0;
 
-        virtual uint32_t getDeltaTime();
-
         void queueSprite(Assets::Sprites::Sprite* sprite, int* position, double* bounds);
         void queueUI(UI::UIComponent* component);
 
@@ -51,7 +49,6 @@ namespace SpaceInvaders::Windows
         Assets::Sprites::Sprite* icon = nullptr;
         bool isMaximized;
         std::string backgroundMusicPath;
-        uint32_t deltaTime = 0;
     };
 }
 

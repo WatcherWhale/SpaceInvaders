@@ -97,8 +97,6 @@ void SDLWindow::clear()
 
 void SDLWindow::draw()
 {
-    uint32_t ticks = SDL_GetTicks();
-
     this->clear();
 
     if(this->background != nullptr)
@@ -157,11 +155,12 @@ void SDLWindow::draw()
 
     SDL_RenderPresent(this->renderer);
 
-    this->deltaTime = SDL_GetTicks() - ticks;
+    auto deltaTime = Controllers::GameController::getInstance().getTimer()->interval();
 
-    if( this->deltaTime < TIME_120FPS )
+    if(deltaTime < TIME_120FPS )
     {
-        SDL_Delay( TIME_120FPS - this->deltaTime );
+        auto a = TIME_120FPS - deltaTime;
+        SDL_Delay( TIME_120FPS - deltaTime );
     }
 }
 

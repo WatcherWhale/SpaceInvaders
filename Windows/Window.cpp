@@ -59,8 +59,3 @@ void Window::setBackgroundMusic(std::string path)
 {
     this->backgroundMusicPath = path;
 }
-
-uint32_t Window::getDeltaTime()
-{
-    return this->deltaTime;
-}

@@ -46,16 +46,19 @@ namespace SpaceInvaders::Controllers
         void unload();
 
     private:
-        Events::EventHandler* eventHandler;
+        Events::EventHandler* eventHandler = nullptr;
+
+        Factories::GameFactory* factory = nullptr;
+        Assets::Sprites::SpriteLoader* spriteLoader = nullptr;
+        Assets::FontLoader* fontLoader = nullptr;
+        Utils::Timer* timer = nullptr;
+
+        Windows::Window* window = nullptr;
         Scenes::Scene* currentScene = nullptr;
-        Factories::GameFactory* factory;
-        Windows::Window* window;
-        Assets::Sprites::SpriteLoader* spriteLoader;
-        Assets::FontLoader* fontLoader;
+
         int currentLevel = 0;
         int points = 0;
         bool running = true;
-        Utils::Timer timer;
     };
 }
 #endif

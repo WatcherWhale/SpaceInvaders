@@ -10,9 +10,9 @@ SpaceInvaders::Utils::Timer::~Timer()
     this->callbacks.clear();
 }
 
-void SpaceInvaders::Utils::Timer::update(unsigned long ticks)
+void SpaceInvaders::Utils::Timer::update()
 {
-    this->ticks += ticks;
+    this->ticks += this->deltaTime;
 
     auto it = callbacks.begin();
     while(it != callbacks.end())
@@ -38,4 +38,14 @@ void SpaceInvaders::Utils::Timer::requestCallback(CallbackFunction func, void* a
     cb.listener = arg;
 
     this->callbacks.push_back(cb);
+}
+
+double SpaceInvaders::Utils::Timer::getDeltaTime()
+{
+    return this->deltaTime / 1000.0;
+}
+
+unsigned long SpaceInvaders::Utils::Timer::getDeltaTimeAbsolute()
+{
+    return this->deltaTime;
 }

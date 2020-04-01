@@ -16,8 +16,18 @@ namespace SpaceInvaders::Utils
         Timer();
         ~Timer();
 
-        void update(unsigned long ticks);
+        virtual void start() = 0;
+        virtual unsigned long interval() = 0;
+        virtual void stop() = 0;
+
+        double getDeltaTime();
+        unsigned long getDeltaTimeAbsolute();
+
         void requestCallback(CallbackFunction func, void* arg, unsigned long duration);
+
+    protected:
+        unsigned long deltaTime = 0;
+        void update();
     };
 }
 

@@ -10,6 +10,7 @@
 #include "../GameObjects/Alien.h"
 #include "../GameObjects/Bullet.h"
 #include "UIFactory.h"
+#include "../Utils/Timer.h"
 
 namespace SpaceInvaders::Factories
 {
@@ -21,6 +22,7 @@ namespace SpaceInvaders::Factories
         virtual Windows::Window* createWindow(void* game, std::string title, int width, int height) = 0;
         virtual Assets::Sprites::SpriteLoader* createSpriteLoader() = 0;
         virtual Assets::FontLoader* createFontLoader() = 0;
+        virtual Utils::Timer* createTimer() = 0;
 
         GameObjects::Player* createPlayer();
         GameObjects::Alien* createAlien(int x, int y, int row, int type);
