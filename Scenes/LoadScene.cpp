@@ -5,7 +5,7 @@ void SpaceInvaders::Scenes::LoadScene::update(double deltaTime)
 {
     if(this->loadThread.wait_for(std::chrono::seconds(0)) == std::future_status::ready)
     {
-        Controllers::GameController::getInstance().loadScene(Controllers::SceneEnum::GAME);
+        Controllers::GameController::getInstance().loadScene(Controllers::SceneEnum::GAMEOVER);
     }
 }
 
@@ -47,6 +47,9 @@ void loadAssetsAsync(SpaceInvaders::Scenes::LoadScene* loadScene)
     loadScene->addProgress();
 
     spriteLoader->loadSprite("Assets/Sprites/Enemies/Bullet.png", true);
+    loadScene->addProgress();
+
+    spriteLoader->loadSprite("Assets/Sprites/Button.png", true);
     loadScene->addProgress();
 
     // Pre load fonts

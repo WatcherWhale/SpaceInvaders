@@ -34,11 +34,6 @@ void SpaceInvaders::Controllers::GameController::loadScene(SpaceInvaders::Contro
         auto* scene = new Scenes::GameScene();
         scene->load();
 
-        for(auto* listener : *scene->getListeners())
-        {
-            this->eventHandler->addListener(listener);
-        }
-
         this->currentLevel++;
         scene->startLevel(this->currentLevel, this->factory, this->spriteLoader);
         this->currentScene = scene;
@@ -52,6 +47,11 @@ void SpaceInvaders::Controllers::GameController::loadScene(SpaceInvaders::Contro
     {
         this->currentScene = new Scenes::GameOverScene();
         this->currentScene->load();
+    }
+
+    for(auto* listener : *this->currentScene->getListeners())
+    {
+        this->eventHandler->addListener(listener);
     }
 }
 

@@ -13,7 +13,7 @@ namespace SpaceInvaders::UI
         SDLText(std::string text, void* font, Color textColor, int x, int y, double w, double h);
         ~SDLText() override;
 
-        void* display() override;
+        UISpriteContainer display() override;
 
     private:
         SDL_Texture* texture;

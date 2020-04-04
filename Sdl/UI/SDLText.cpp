@@ -43,7 +43,11 @@ SDLText::~SDLText()
     SDL_DestroyTexture(this->texture);
 }
 
-void* SDLText::display()
+UISpriteContainer SDLText::display()
 {
-    return this->texture;
+    UISpriteContainer container;
+    container.texture = this->texture;
+    container.position = this->position;
+    container.size = this->size;
+    return container;
 }

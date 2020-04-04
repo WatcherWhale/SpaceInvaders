@@ -14,8 +14,11 @@ namespace SpaceInvaders::UI
         Text(std::string text, void* font, Color color, int x, int y, double w, double h);
         void setText(std::string text);
 
-    protected:
         virtual void generateTexture() = 0;
+
+        double* getTextSize();
+
+    protected:
 
         double textSize[2];
         std::string text;

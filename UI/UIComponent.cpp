@@ -25,7 +25,7 @@ void SpaceInvaders::UI::UIComponent::setPosition(int x, int y)
     this->position[1] = y;
 }
 
-void SpaceInvaders::UI::UIComponent::setSize(int w, int h)
+void SpaceInvaders::UI::UIComponent::setSize(double w, double h)
 {
     this->size[0] = w;
     this->size[1] = h;

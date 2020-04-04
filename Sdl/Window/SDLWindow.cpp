@@ -3,6 +3,7 @@
 #include "../AssetLoaders/Sprites/SDLSprite.h"
 
 #include <cmath>
+#include <iostream>
 
 bool SDLWindow::create()
 {
@@ -73,6 +74,9 @@ void SDLWindow::pollEvents()
 {
     SDL_Event e;
 
+    int mouseX, mouseY;
+    SDL_GetMouseState(&mouseX, &mouseY);
+
     while( SDL_PollEvent(&e) != 0 )
     {
         switch (e.type)
@@ -85,6 +89,17 @@ void SDLWindow::pollEvents()
                 break;
             case SDL_KEYDOWN:
                 this->HandleKeyEvent(true, e.key.keysym.sym);
+                break;
+
+
+            case SDL_MOUSEMOTION:
+                Controllers::GameController::getInstance().getEventHandler()->mouseMove(mouseX, mouseY);
+                break;
+            case SDL_MOUSEBUTTONDOWN:
+                Controllers::GameController::getInstance().getEventHandler()->mouseDown(mouseX, mouseY);
+                break;
+            case SDL_MOUSEBUTTONUP:
+                Controllers::GameController::getInstance().getEventHandler()->mouseUp(mouseX, mouseY);
                 break;
         }
     }
@@ -140,12 +155,13 @@ void SDLWindow::draw()
         SDL_Texture* uiTexture = nullptr;
         do
         {
-            uiTexture = static_cast<SDL_Texture*>(component->display());
+            auto container = component->display();
+            uiTexture = static_cast<SDL_Texture*>(container.texture);
             SDL_Rect stretchRect;
-            stretchRect.x = component->getPosition()[0];
-            stretchRect.y = component->getPosition()[1];
-            stretchRect.w = std::lround(component->getSize()[0]);
-            stretchRect.h = std::lround(component->getSize()[1]);
+            stretchRect.x = container.position[0];
+            stretchRect.y = container.position[1];
+            stretchRect.w = std::lround(container.size[0]);
+            stretchRect.h = std::lround(container.size[1]);
 
             SDL_RenderCopy(this->renderer, uiTexture, nullptr, &stretchRect);
         } while(!component->doneDisplaying());
@@ -159,7 +175,6 @@ void SDLWindow::draw()
 
     if(deltaTime < TIME_120FPS )
     {
-        auto a = TIME_120FPS - deltaTime;
         SDL_Delay( TIME_120FPS - deltaTime );
     }
 }

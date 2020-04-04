@@ -3,20 +3,28 @@
 
 namespace SpaceInvaders::UI
 {
+    typedef struct
+    {
+        void* texture;
+        double* size;
+        int* position;
+    } UISpriteContainer;
+
     class UIComponent
     {
     public:
         UIComponent(int x, int y);
         UIComponent(int x, int y, double w, double h);
         virtual ~UIComponent() = default;
-        virtual void* display() = 0;
+
+        virtual UISpriteContainer display() = 0;
         virtual bool doneDisplaying() { return true; };
 
         void scale(double f);
         void scale(double x, double y);
 
         void setPosition(int x, int y);
-        void setSize(int w, int h);
+        void setSize(double w, double h);
         int* getPosition();
         double* getSize();
 

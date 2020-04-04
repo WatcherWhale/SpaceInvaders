@@ -18,6 +18,10 @@ namespace SpaceInvaders::Events
         void onKeyDown(Key key);
         void onKeyUp(Key key);
 
+        void mouseMove(int x, int y);
+        void mouseDown(int x, int y);
+        void mouseUp(int x, int y);
+
         void clearListeners();
 
     private:

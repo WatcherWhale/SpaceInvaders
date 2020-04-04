@@ -21,3 +21,8 @@ void Text::setText(std::string text)
     this->text = text;
     this->generateTexture();
 }
+
+double* Text::getTextSize()
+{
+    return textSize;
+}

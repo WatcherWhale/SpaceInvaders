@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Button.h"
 #include "../GameConstants.h"
 #include "../Controllers/GameController.h"
@@ -25,10 +26,10 @@ void SpaceInvaders::UI::Button::addClickListener(void* listener, CallbackFunctio
     this->clickListeners.push_back(cb);
 }
 
-void SpaceInvaders::UI::Button::click(int x, int y)
+void SpaceInvaders::UI::Button::mouseDown(int x, int y)
 {
-    if(this->position[0] >= x && x <= this->position[0] + this->size[0] &&
-       this->position[0] >= x && x <= this->position[0] + this->size[0] )
+    if(this->position[0] <= x && x <= this->position[0] + this->size[0] &&
+       this->position[1] <= y && y <= this->position[1] + this->size[1] )
     {
         for(auto listener : this->clickListeners)
         {
@@ -37,11 +38,15 @@ void SpaceInvaders::UI::Button::click(int x, int y)
     }
 }
 
-void* SpaceInvaders::UI::Button::display()
+SpaceInvaders::UI::UISpriteContainer SpaceInvaders::UI::Button::display()
 {
     if(!this->displayText)
     {
-        return this->sprite->display();
+        UISpriteContainer container;
+        container.texture = this->sprite->display();
+        container.size = this->size;
+        container.position = this->position;
+        return container;
     }
     else
         return this->txt->display();
@@ -59,6 +64,12 @@ void SpaceInvaders::UI::Button::setText(std::string text, void* font, Color colo
     this->txt = Controllers::GameController::getInstance().getFactory()->getUiFactory()
             ->createText(text, font, color, 0, 0);
 }
+
+void SpaceInvaders::UI::Button::setText(SpaceInvaders::UI::Text* text)
+{
+    this->txt = text;
+}
+
 
 SpaceInvaders::UI::Text* SpaceInvaders::UI::Button::getText()
 {
