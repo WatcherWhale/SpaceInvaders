@@ -227,8 +227,7 @@ void SDLWindow::HandleKeyEvent(bool down, SDL_Keycode keycode)
 void SDLWindow::setIcon(SpaceInvaders::Assets::Sprites::Sprite* sprite)
 {
     Window::setIcon(sprite);
-    // TODO: FIX
-    //SDL_SetWindowIcon(this->window, reinterpret_cast<SDL_Surface*>(this->icon->display()));
+    SDL_SetWindowIcon(this->window, reinterpret_cast<SDL_Surface*>(this->icon->display()));
 }
 
 SDL_Renderer* SDLWindow::getRenderer()

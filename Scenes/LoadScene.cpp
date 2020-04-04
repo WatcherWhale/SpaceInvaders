@@ -34,6 +34,10 @@ void loadAssetsAsync(SpaceInvaders::Scenes::LoadScene* loadScene)
     auto* fontLoader = SpaceInvaders::Controllers::GameController::getInstance().getFontLoader();
 
     // Pre load sprites
+    auto* icon = spriteLoader->loadSprite("Assets/Sprites/Icon.png", false);
+    loadScene->addProgress();
+    SpaceInvaders::Controllers::GameController::getInstance().getWindow()->setIcon(icon);
+
     spriteLoader->loadSprite("Assets/Sprites/Background.png", true);
     loadScene->addProgress();
 
