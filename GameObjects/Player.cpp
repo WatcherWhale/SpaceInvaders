@@ -114,7 +114,12 @@ void Player::onCollision(GameObject* collided)
         auto* bullet = dynamic_cast<Bullet*>(collided);
         if(!bullet->isPlayerBullet())
         {
-            
+            this->lives--;
         }
     }
+}
+
+int Player::getLives()
+{
+    return this->lives;
 }

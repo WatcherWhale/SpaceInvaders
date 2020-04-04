@@ -17,9 +17,10 @@ void SpaceInvaders::Scenes::GameOverScene::load()
             gameOverTxt->getPosition()[1]);
 
     // Create points scored text
+    std::string pointsStr = "You scored: " + std::to_string(Controllers::GameController::getInstance().getPoints()) + " pts";
     auto* pointsTxt = GameController::getInstance().getFactory()->getUiFactory()
-            ->createText("You scored: 0 pts",fontLoader->getFont("regular"), Color(255,255,255), 0,
-                    std::lround(gameOverTxt->getSize()[1]));
+            ->createText(pointsStr, fontLoader->getFont("regular"), Color(255, 255, 255), 0,
+                         std::lround(gameOverTxt->getSize()[1]));
 
     pointsTxt->setPosition(std::lround((WINDOW_SIZE_X - pointsTxt->getSize()[0])/2.0),
                            pointsTxt->getPosition()[1]);

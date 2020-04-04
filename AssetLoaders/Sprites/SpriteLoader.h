@@ -10,7 +10,7 @@ namespace SpaceInvaders::Assets::Sprites
     class SpriteLoader
     {
     public:
-        virtual Sprite* loadSprite(std::string path, bool opimize);
+        virtual Sprite* loadSprite(std::string path, bool optimize);
         std::map<std::string, Sprite*>* getSpriteMap();
 
 

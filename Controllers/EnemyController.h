@@ -16,10 +16,13 @@ namespace SpaceInvaders::Controllers
         void update(double deltaTime);
         void lateUpdate();
         void loadSprites(Assets::Sprites::SpriteLoader* loader);
+        void initiateShoot();
 
         std::vector<SpaceInvaders::GameObjects::Alien*>* getEnemies();
 
         int getCurrentRow();
+
+        unsigned long getShootCallbackId();
 
     private:
         std::vector<SpaceInvaders::GameObjects::Alien*> enemies;
@@ -27,6 +30,7 @@ namespace SpaceInvaders::Controllers
         int currentRow = 0;
         bool handledMovementUpdate = false;
         double speedMult = 1;
+        unsigned long shootCallbackId = 0;
     };
 }
 

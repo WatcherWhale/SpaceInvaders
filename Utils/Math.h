@@ -5,13 +5,13 @@
 
 namespace SpaceInvaders::Utils
 {
+    static Random Default_Random = Random();
+
     class Math
     {
     public:
         static Random getRandom();
         static Random getRandom(long seed);
-    private:
-
     };
 }
 #endif

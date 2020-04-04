@@ -10,9 +10,9 @@ SpaceInvaders::GameObjects::Player* SpaceInvaders::Factories::GameFactory::creat
     return new SpaceInvaders::GameObjects::Player();
 }
 
-SpaceInvaders::GameObjects::Alien* SpaceInvaders::Factories::GameFactory::createAlien(int x, int y, int row, int type)
+SpaceInvaders::GameObjects::Alien* SpaceInvaders::Factories::GameFactory::createAlien(int x, int y, int row, int column, int type)
 {
-    return new SpaceInvaders::GameObjects::Alien(x, y, row, type);
+    return new SpaceInvaders::GameObjects::Alien(x, y, row, column, type);
 }
 
 SpaceInvaders::GameObjects::Bullet* SpaceInvaders::Factories::GameFactory::createBullet(int position[], int type)

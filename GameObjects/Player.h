@@ -17,8 +17,9 @@ namespace SpaceInvaders::GameObjects
 
         void onCollision(GameObject* collided) override ;
 
-
         void loadSprites(Assets::Sprites::SpriteLoader* loader) override;
+
+        int getLives();
 
     private:
         void shoot();
@@ -28,6 +29,7 @@ namespace SpaceInvaders::GameObjects
         bool shooting = false;
 
         int moveDirection = 0;
+        int lives = 3;
         double speed = PLAYER_SPEED * SCALE_X;
     };
 }

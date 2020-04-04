@@ -25,7 +25,7 @@ namespace SpaceInvaders::Factories
         virtual Utils::Timer* createTimer() = 0;
 
         GameObjects::Player* createPlayer();
-        GameObjects::Alien* createAlien(int x, int y, int row, int type);
+        GameObjects::Alien* createAlien(int x, int y, int row, int column, int type);
         GameObjects::Bullet* createBullet(int position[], int type);
 
     protected:

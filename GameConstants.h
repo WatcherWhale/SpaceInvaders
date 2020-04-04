@@ -4,7 +4,7 @@
 
 const int WINDOW_SIZE_X = 1920;
 const int WINDOW_SIZE_Y = 1080;
-const bool WINDOW_IS_MAXIMIZED = true;
+const bool WINDOW_IS_MAXIMIZED = false;
 
 const int DEFAULT_WINDOW_SIZE_X = 1280;
 const int DEFAULT_WINDOW_SIZE_Y = 720;
@@ -25,9 +25,13 @@ const unsigned long PLAYER_TIMEOUT = 200;
 
 const double BULLET_SPEED = 1000;
 
+const int ENEMIES_X = 6;
+const int ENEMIES_Y = 6;
 const int ENEMY_SPACING_X = 64;
 const int ENEMY_SPACING_Y = -10;
 const int ENEMY_OFFSET_Y = 25;
 const double ENEMY_SPEED = 100;
+const int ENEMY_DELAY_MIN = 500;
+const int ENEMY_DELAY_MAX = 2000;
 
 #endif //GAME_GAMECONSTANTS_H

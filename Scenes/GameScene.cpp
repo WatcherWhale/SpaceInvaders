@@ -7,10 +7,23 @@ SpaceInvaders::Scenes::GameScene::GameScene()
     this->lvlController = SpaceInvaders::Controllers::LevelController();
 }
 
+SpaceInvaders::Scenes::GameScene::~GameScene()
+{
+    unsigned long callbackId = this->getLvlController()->getEnemyController()->getShootCallbackId();
+    Controllers::GameController::getInstance().getTimer()->stopCallback(callbackId);
+}
+
+
 void SpaceInvaders::Scenes::GameScene::update(double deltaTime)
 {
     // Call default update method
     Scene::update(deltaTime);
+
+    if(this->getLvlController()->getPlayer()->getLives() <= 0)
+    {
+        Controllers::GameController::getInstance().loadScene(Controllers::SceneEnum::GAMEOVER);
+        return;
+    }
 
     // Update Enemy controller
     this->lvlController.getEnemyController()->update(deltaTime);
@@ -21,6 +34,7 @@ void SpaceInvaders::Scenes::GameScene::load()
     auto* loader = Controllers::GameController::getInstance().getSpriteLoader();
     auto* player = new GameObjects::Player();
     player->loadSprites(loader);
+    this->lvlController.setPlayer(player);
 
     this->gameObjects.push_back(player);
     this->eventListeners.push_back(player);

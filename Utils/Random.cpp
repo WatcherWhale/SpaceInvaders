@@ -28,14 +28,14 @@ double SpaceInvaders::Utils::Random::next(double max)
     return this->next(0, max);
 }
 
-int SpaceInvaders::Utils::Random::nextInt()
+unsigned int SpaceInvaders::Utils::Random::nextInt()
 {
     return rand();
 }
 
 int SpaceInvaders::Utils::Random::nextInt(int min, int max)
 {
-    return this->nextInt() % (max - min + 1) + min;
+    return static_cast<uint16_t>(this->nextInt()) % (max - min + 1) + min;
 }
 
 int SpaceInvaders::Utils::Random::nextInt(int max)

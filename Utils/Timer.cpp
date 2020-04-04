@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Timer.h"
 
 SpaceInvaders::Utils::Timer::Timer()
@@ -14,30 +15,34 @@ void SpaceInvaders::Utils::Timer::update()
 {
     this->ticks += this->deltaTime;
 
-    auto it = callbacks.begin();
-    while(it != callbacks.end())
+    int i = 0;
+    while(i < callbacks.size())
     {
-        if(it->tick <= this->ticks)
+        auto cb = callbacks.at(i);
+
+        if(cb.tick <= this->ticks)
         {
-            it->func(it->listener);
-            callbacks.erase(it);
+            cb.func(cb.listener);
+            callbacks.erase(callbacks.begin() + i);
         }
         else
         {
-            it++;
+            i++;
         }
     }
 }
 
-void SpaceInvaders::Utils::Timer::requestCallback(CallbackFunction func, void* arg, unsigned long duration)
+unsigned long SpaceInvaders::Utils::Timer::requestCallback(CallbackFunction func, void* arg, unsigned long duration)
 {
     TimerCallbackObject cb;
 
     cb.func = func;
     cb.tick = duration + this->ticks;
     cb.listener = arg;
+    cb.id = this->ticks + this->callbacks.size();
 
     this->callbacks.push_back(cb);
+    return cb.id;
 }
 
 double SpaceInvaders::Utils::Timer::getDeltaTime()
@@ -48,4 +53,23 @@ double SpaceInvaders::Utils::Timer::getDeltaTime()
 unsigned long SpaceInvaders::Utils::Timer::getDeltaTimeAbsolute()
 {
     return this->deltaTime;
+}
+
+void SpaceInvaders::Utils::Timer::stopCallback(unsigned long id)
+{
+    int i = 0;
+    while(i < callbacks.size())
+    {
+        auto cb = callbacks.at(i);
+
+        if(cb.id == id)
+        {
+            callbacks.erase(callbacks.begin() + i);
+            break;
+        }
+        else
+        {
+            i++;
+        }
+    }
 }

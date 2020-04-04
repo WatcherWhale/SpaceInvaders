@@ -8,7 +8,7 @@ namespace SpaceInvaders::GameObjects
     class Alien : public GameObject
     {
     public:
-        Alien(int x, int y, int row, int type);
+        Alien(int x, int y, int row, int column, int type);
         void update(double deltaTime) override;
         void loadSprites(Assets::Sprites::SpriteLoader* loader) override;
         bool isDead();
@@ -16,6 +16,9 @@ namespace SpaceInvaders::GameObjects
         void movePosition(int direction, bool down);
         void onCollision(GameObject* collided) override;
         void updateMult(double mult);
+
+        int getRow();
+        int getColumn();
 
     private:
         int type;
@@ -25,6 +28,7 @@ namespace SpaceInvaders::GameObjects
         double speedMult = 1;
 
         int row = 0;
+        int column = 0;
     };
 }
 

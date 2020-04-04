@@ -23,7 +23,8 @@ namespace SpaceInvaders::Utils
         double getDeltaTime();
         unsigned long getDeltaTimeAbsolute();
 
-        void requestCallback(CallbackFunction func, void* arg, unsigned long duration);
+        unsigned long requestCallback(CallbackFunction func, void* arg, unsigned long duration);
+        void stopCallback(unsigned long id);
 
     protected:
         unsigned long deltaTime = 0;

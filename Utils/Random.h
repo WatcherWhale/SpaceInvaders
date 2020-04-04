@@ -15,7 +15,7 @@ namespace SpaceInvaders::Utils
         double next(double max);
         double next(double min, double max);
 
-        int nextInt();
+        unsigned int nextInt();
         int nextInt(int max);
         int nextInt(int min, int max);
 

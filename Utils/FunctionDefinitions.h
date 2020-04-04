@@ -7,6 +7,7 @@
         CallbackFunction func;
         unsigned long tick;
         void* listener;
+        unsigned long id;
     } TimerCallbackObject;
 
     typedef struct {

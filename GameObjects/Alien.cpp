@@ -2,7 +2,7 @@
 #include "../GameConstants.h"
 #include "Bullet.h"
 
-SpaceInvaders::GameObjects::Alien::Alien(int x, int y, int row, int type) : GameObject()
+SpaceInvaders::GameObjects::Alien::Alien(int x, int y, int row, int column, int type) : GameObject()
 {
     this->tag = GameObjectTag::ENEMY;
 
@@ -18,6 +18,7 @@ SpaceInvaders::GameObjects::Alien::Alien(int x, int y, int row, int type) : Game
 
     this->type = type;
     this->row = row;
+    this->column = column;
 }
 
 void SpaceInvaders::GameObjects::Alien::update(double deltaTime)
@@ -72,4 +73,14 @@ void SpaceInvaders::GameObjects::Alien::onCollision(SpaceInvaders::GameObjects::
 void SpaceInvaders::GameObjects::Alien::updateMult(double mult)
 {
     this->speedMult = mult;
+}
+
+int SpaceInvaders::GameObjects::Alien::getRow()
+{
+    return this->row;
+}
+
+int SpaceInvaders::GameObjects::Alien::getColumn()
+{
+    return this->column;
 }
