@@ -66,5 +66,5 @@ void loadAssetsAsync(SpaceInvaders::Scenes::LoadScene* loadScene)
     // TODO
 
     // Wait for a second for aesthetics
-    std::this_thread::sleep_for (std::chrono::seconds(1));
+    //std::this_thread::sleep_for (std::chrono::seconds(1));
 }

@@ -30,6 +30,7 @@ namespace SpaceInvaders::Controllers
         void addPoints(int points);
         int getPoints();
         void clearPoints();
+        void resetLevel();
 
         Events::EventHandler* getEventHandler();
 

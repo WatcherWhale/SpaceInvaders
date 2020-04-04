@@ -80,4 +80,8 @@ void SpaceInvaders::Scenes::GameOverScene::load()
 
     this->eventListeners.push_back(restartButton);
     this->eventListeners.push_back(menuButton);
+
+    // Clear everything
+    GameController::getInstance().clearPoints();
+    GameController::getInstance().resetLevel();
 }

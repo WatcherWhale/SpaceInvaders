@@ -127,3 +127,8 @@ void SpaceInvaders::Controllers::GameController::clearPoints()
 {
     this->points = 0;
 }
+
+void SpaceInvaders::Controllers::GameController::resetLevel()
+{
+    this->currentLevel = 0;
+}
