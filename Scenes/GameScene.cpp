@@ -77,7 +77,7 @@ void SpaceInvaders::Scenes::GameScene::lateUpdate()
         }
     }
 
-    if(this->lvlController.getEnemyController()->getEnemies()->size() == 0)
+    if(this->lvlController.getEnemyController()->getEnemies()->empty())
     {
         Controllers::GameController::getInstance().loadScene(Controllers::SceneEnum::GAME);
     }

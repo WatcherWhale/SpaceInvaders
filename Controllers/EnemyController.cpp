@@ -60,6 +60,9 @@ void SpaceInvaders::Controllers::EnemyController::update(double deltaTime)
     {
         this->handledMovementUpdate = false;
     }
+
+    if(this->enemies.size() == 1)
+        this->enemies.at(0)->updateMult(this->speedMult * 2);
 }
 
 std::vector<SpaceInvaders::GameObjects::Alien*>* SpaceInvaders::Controllers::EnemyController::getEnemies()
@@ -88,7 +91,8 @@ void SpaceInvaders::Controllers::EnemyController::lateUpdate()
         auto* enemy = this->enemies.at(i);
         if(enemy->isDead())
         {
-            Controllers::GameController::getInstance().addPoints( lround(this->speedMult) * enemy->getRow() + 100);
+            Controllers::GameController::getInstance().addPoints(lround((this->speedMult + 1) *  enemy->getRow()
+                * (Controllers::GameController::getInstance().getLevel() + 1) + 100));
             this->enemies.erase(this->enemies.begin() + i);
         }
 

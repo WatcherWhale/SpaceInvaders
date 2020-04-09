@@ -132,3 +132,8 @@ void SpaceInvaders::Controllers::GameController::resetLevel()
 {
     this->currentLevel = 0;
 }
+
+int SpaceInvaders::Controllers::GameController::getLevel()
+{
+    return this->currentLevel;
+}

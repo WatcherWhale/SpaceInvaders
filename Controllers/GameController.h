@@ -31,6 +31,7 @@ namespace SpaceInvaders::Controllers
         int getPoints();
         void clearPoints();
         void resetLevel();
+        int getLevel();
 
         Events::EventHandler* getEventHandler();
 

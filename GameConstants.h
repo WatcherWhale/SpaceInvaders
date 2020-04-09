@@ -21,7 +21,7 @@ const uint32_t TIME_60FPS = 1000 / 60;
 const uint32_t TIME_120FPS = 1000 / 120;
 
 const double PLAYER_SPEED = 200;
-const unsigned long PLAYER_TIMEOUT = 200;
+const unsigned long PLAYER_TIMEOUT = 500;
 
 const double BULLET_SPEED = 1000;
 
