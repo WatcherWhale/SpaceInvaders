@@ -21,6 +21,9 @@ namespace SpaceInvaders::Scenes
 
     private:
         Controllers::LevelController lvlController;
+        UI::Text* ptsText;
+        UI::Text* livesText;
+        UI::Text* levelText;
     };
 }
 #endif

@@ -1,5 +1,6 @@
 #include "GameScene.h"
 #include "../Controllers/GameController.h"
+#include <string>
 
 SpaceInvaders::Scenes::GameScene::GameScene()
 {
@@ -41,6 +42,37 @@ void SpaceInvaders::Scenes::GameScene::load()
 
     this->gameObjects.push_back(player);
     this->eventListeners.push_back(player);
+
+    ptsText = Controllers::GameController::getInstance().getFactory()->getUiFactory()
+            ->createText("0 pts",
+                Controllers::GameController::getInstance().getFontLoader()->getFont("regular"), Color(255, 255, 255),
+                0, 0);
+
+    auto* size = ptsText->getTextSize();
+    ptsText->setSize(size[0] / 2, size[1] / 2);
+    ptsText->setPosition(20, GameConstants::WINDOW_SIZE_Y - 2 * ptsText->getSize()[1] - 20);
+
+    livesText = Controllers::GameController::getInstance().getFactory()->getUiFactory()
+            ->createText("3 lives",
+                         Controllers::GameController::getInstance().getFontLoader()->getFont("regular"), Color(255, 255, 255),
+                         0, 0);
+
+    size = livesText->getTextSize();
+    livesText->setSize(size[0] / 2, size[1] / 2);
+    livesText->setPosition(20, GameConstants::WINDOW_SIZE_Y - livesText->getSize()[1] - 20);
+
+    levelText = Controllers::GameController::getInstance().getFactory()->getUiFactory()
+            ->createText("Level " + std::to_string(Controllers::GameController::getInstance().getLevel() + 1),
+                         Controllers::GameController::getInstance().getFontLoader()->getFont("regular"), Color(255, 255, 255),
+                         0, 0);
+
+    size = levelText->getTextSize();
+    levelText->setSize(size[0] / 2, size[1] / 2);
+    levelText->setPosition(20, GameConstants::WINDOW_SIZE_Y - 3 * levelText->getSize()[1] - 20);
+
+    this->ui.push_back(ptsText);
+    this->ui.push_back(livesText);
+    this->ui.push_back(levelText);
 }
 
 SpaceInvaders::Controllers::LevelController* SpaceInvaders::Scenes::GameScene::getLvlController()
@@ -79,6 +111,15 @@ void SpaceInvaders::Scenes::GameScene::lateUpdate()
             i++;
         }
     }
+
+    ptsText->setText(std::to_string(Controllers::GameController::getInstance().getPoints()) + " pts");
+    livesText->setText(std::to_string(Controllers::GameController::getInstance().getLives()) + " lives");
+
+    auto* size = ptsText->getTextSize();
+    ptsText->setSize(size[0] / 2, size[1] / 2);
+
+    size = livesText->getTextSize();
+    livesText->setSize(size[0] / 2, size[1] / 2);
 
     if(this->lvlController.getEnemyController()->getEnemies()->empty())
     {
