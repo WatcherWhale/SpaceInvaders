@@ -43,6 +43,7 @@ namespace SpaceInvaders::Controllers
         Windows::Window* getWindow();
         Assets::Sprites::SpriteLoader* getSpriteLoader();
         Assets::FontLoader* getFontLoader();
+        Assets::Audio::AudioLoader* getAudioLoader();
         Utils::Timer* getTimer();
 
         void stopGame();
@@ -54,6 +55,7 @@ namespace SpaceInvaders::Controllers
 
         Factories::GameFactory* factory = nullptr;
         Assets::Sprites::SpriteLoader* spriteLoader = nullptr;
+        Assets::Audio::AudioLoader* audioLoader = nullptr;
         Assets::FontLoader* fontLoader = nullptr;
         Utils::Timer* timer = nullptr;
 

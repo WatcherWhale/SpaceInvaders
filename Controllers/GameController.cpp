@@ -16,6 +16,8 @@ void SpaceInvaders::Controllers::GameController::setFactory(Factories::GameFacto
     // Create asset loaders
     this->spriteLoader = factory->createSpriteLoader();
     this->fontLoader = factory->createFontLoader();
+    this->audioLoader = factory->createAudioLoader();
+
     this->timer = factory->createTimer();
 }
 
@@ -153,4 +155,9 @@ int SpaceInvaders::Controllers::GameController::getLives()
 void SpaceInvaders::Controllers::GameController::setLives(int lives)
 {
     this->lives = lives;
+}
+
+SpaceInvaders::Assets::Audio::AudioLoader* SpaceInvaders::Controllers::GameController::getAudioLoader()
+{
+    return this->audioLoader;
 }

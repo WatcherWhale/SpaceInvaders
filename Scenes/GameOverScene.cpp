@@ -48,6 +48,7 @@ void SpaceInvaders::Scenes::GameOverScene::load()
 
     restartButton->addClickListener(this, [](void* listener)
     {
+        GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/button.wav")->play();
         GameController::getInstance().loadScene(SceneEnum::GAME);
     });
 
@@ -73,6 +74,7 @@ void SpaceInvaders::Scenes::GameOverScene::load()
 
     menuButton->addClickListener(this, [](void* listener)
     {
+        GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/button.wav")->play();
         GameController::getInstance().loadScene(SceneEnum::MENU);
     });
 

@@ -1,6 +1,7 @@
 #include "SDLFactory.h"
 #include "SDLUIFactory.h"
 #include "../Utils/SDLTimer.h"
+#include "../AssetLoaders/Audio/SDLAudioLoader.h"
 
 using namespace SpaceInvaders::Windows;
 
@@ -28,4 +29,9 @@ SDLFactory::SDLFactory()
 SpaceInvaders::Utils::Timer* SDLFactory::createTimer()
 {
     return new Utils::SDLTimer();
+}
+
+SpaceInvaders::Assets::Audio::AudioLoader* SDLFactory::createAudioLoader()
+{
+    return new Assets::Audio::SDLAudioLoader();
 }

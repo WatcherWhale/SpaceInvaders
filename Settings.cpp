@@ -31,6 +31,14 @@ Settings::Settings(vector<string> settings)
         {
             GameConstants::FPS_TIME = 1000 / atoi(settingValue.c_str());
         }
+        else if(settingKey == "volume")
+        {
+            GameConstants::MUSIC_VOLUME = atoi(settingValue.c_str());
+        }
+        else if(settingKey == "sfxvolume")
+        {
+            GameConstants::CLIP_VOLUME = atoi(settingValue.c_str());
+        }
     }
 }
 

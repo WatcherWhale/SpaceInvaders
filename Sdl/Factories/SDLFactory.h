@@ -21,6 +21,7 @@ namespace SpaceInvaders::Factories
         Assets::Sprites::SpriteLoader* createSpriteLoader() override;
         Assets::FontLoader* createFontLoader() override;
         Utils::Timer* createTimer() override;
+        Assets::Audio::AudioLoader* createAudioLoader() override;
     };
 }
 #endif // !SDLFACTORY_H

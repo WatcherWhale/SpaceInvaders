@@ -12,6 +12,7 @@
 #include "UIFactory.h"
 #include "../Utils/Timer.h"
 #include "../GameObjects/Bonus.h"
+#include "../AssetLoaders/Audio/AudioLoader.h"
 
 namespace SpaceInvaders::Factories
 {
@@ -24,6 +25,8 @@ namespace SpaceInvaders::Factories
         virtual Assets::Sprites::SpriteLoader* createSpriteLoader() = 0;
         virtual Assets::FontLoader* createFontLoader() = 0;
         virtual Utils::Timer* createTimer() = 0;
+
+        virtual Assets::Audio::AudioLoader* createAudioLoader() = 0;
 
         GameObjects::Player* createPlayer(int lives);
         GameObjects::Alien* createAlien(int x, int y, int row, int column, int type);

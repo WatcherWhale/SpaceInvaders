@@ -32,6 +32,7 @@ void loadAssetsAsync(SpaceInvaders::Scenes::LoadScene* loadScene)
 {
     auto* spriteLoader = SpaceInvaders::Controllers::GameController::getInstance().getSpriteLoader();
     auto* fontLoader = SpaceInvaders::Controllers::GameController::getInstance().getFontLoader();
+    auto* audioLoader = SpaceInvaders::Controllers::GameController::getInstance().getAudioLoader();
 
     // Pre load sprites
     auto* icon = spriteLoader->loadSprite("Assets/Sprites/Icon.png", false);
@@ -63,8 +64,10 @@ void loadAssetsAsync(SpaceInvaders::Scenes::LoadScene* loadScene)
     loadScene->addProgress();
 
     // Pre load audio
-    // TODO
+    auto mus = audioLoader->loadMusic("Assets/Audio/Music/we_are_number_one_8_bit.mp3");
+    mus->play(true);
 
-    // Wait for a second for aesthetics
-    //std::this_thread::sleep_for (std::chrono::seconds(1));
+    audioLoader->loadAudioClip("Assets/Audio/SFX/button.wav");
+    audioLoader->loadAudioClip("Assets/Audio/SFX/death.wav");
+    audioLoader->loadAudioClip("Assets/Audio/SFX/shoot.wav");
 }

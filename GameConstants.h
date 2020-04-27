@@ -38,6 +38,9 @@ public:
     static const int ENEMY_DELAY_MAX = 2000;
     static const int BONUS_DELAY_MIN = 10000;
     static const int BONUS_DELAY_MAX = 20000;
+
+    static int MUSIC_VOLUME;
+    static int CLIP_VOLUME;
 };
 
 #endif //GAME_GAMECONSTANTS_H

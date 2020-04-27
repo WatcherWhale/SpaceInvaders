@@ -46,6 +46,7 @@ void MenuScene::load()
 
     startButton->addClickListener(this, [](void* listener)
     {
+        GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/button.wav")->play();
         GameController::getInstance().loadScene(SceneEnum::GAME);
     });
 
@@ -71,6 +72,7 @@ void MenuScene::load()
 
     exitButton->addClickListener(this, [](void* listener)
     {
+        GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/button.wav")->play();
         GameController::getInstance().stopGame();
     });
 

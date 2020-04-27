@@ -96,6 +96,8 @@ void Player::shoot()
     GameController::getInstance().getTimer()->requestCallback([](void* arg) {
         reinterpret_cast<Player*>(arg)->endShoot();
     }, this, GameConstants::PLAYER_TIMEOUT);
+
+    GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/shoot.wav")->play();
 }
 
 void Player::endShoot()
@@ -117,6 +119,7 @@ void Player::onCollision(GameObject* collided)
         if(!bullet->isPlayerBullet())
         {
             this->lives--;
+            GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/death.wav")->play();
             Controllers::GameController::getInstance().setLives(this->lives);
         }
     }

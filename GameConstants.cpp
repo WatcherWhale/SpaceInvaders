@@ -9,6 +9,9 @@ double GameConstants::SCALE_Y = GameConstants::WINDOW_SIZE_Y / static_cast<doubl
 
 uint32_t GameConstants::FPS_TIME = 1000/60;
 
+int GameConstants::MUSIC_VOLUME = 100;
+int GameConstants::CLIP_VOLUME = 100;
+
 void GameConstants::recalculate()
 {
     GameConstants::SCALE_X = GameConstants::WINDOW_SIZE_X / static_cast<double>(GameConstants::DEFAULT_WINDOW_SIZE_X);
