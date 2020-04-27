@@ -144,3 +144,13 @@ int SpaceInvaders::Controllers::GameController::getLevel()
 {
     return this->currentLevel;
 }
+
+int SpaceInvaders::Controllers::GameController::getLives()
+{
+    return this->lives;
+}
+
+void SpaceInvaders::Controllers::GameController::setLives(int lives)
+{
+    this->lives = lives;
+}

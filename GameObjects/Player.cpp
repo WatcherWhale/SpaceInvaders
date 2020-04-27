@@ -9,8 +9,10 @@ using namespace SpaceInvaders::Events;
 using namespace SpaceInvaders::Controllers;
 
 
-Player::Player() : GameObject()
+Player::Player(int lives) : GameObject()
 {
+    this->lives = lives;
+
     this->tag = GameObjectTag::PLAYER;
 
     this->position[0] = GameConstants::WINDOW_SIZE_X / 2;
@@ -115,6 +117,7 @@ void Player::onCollision(GameObject* collided)
         if(!bullet->isPlayerBullet())
         {
             this->lives--;
+            Controllers::GameController::getInstance().setLives(this->lives);
         }
     }
 }

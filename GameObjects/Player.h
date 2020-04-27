@@ -10,7 +10,7 @@ namespace SpaceInvaders::GameObjects
     class Player : public GameObject, public SpaceInvaders::Events::EventListener
     {
     public:
-        Player();
+        Player(int lives);
         void update(double deltaTime) override;
         void onKeyUp(Events::Key key) override;
         void onKeyDown(Events::Key key) override;

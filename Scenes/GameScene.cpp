@@ -33,7 +33,9 @@ void SpaceInvaders::Scenes::GameScene::update(double deltaTime)
 void SpaceInvaders::Scenes::GameScene::load()
 {
     auto* loader = Controllers::GameController::getInstance().getSpriteLoader();
-    auto* player = new GameObjects::Player();
+    auto* player = Controllers::GameController::getInstance().getFactory()
+            ->createPlayer(Controllers::GameController::getInstance().getLives());
+
     player->loadSprites(loader);
     this->lvlController.setPlayer(player);
 

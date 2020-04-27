@@ -5,9 +5,9 @@ SpaceInvaders::Factories::UIFactory* SpaceInvaders::Factories::GameFactory::getU
     return this->uiFactory;
 }
 
-SpaceInvaders::GameObjects::Player* SpaceInvaders::Factories::GameFactory::createPlayer()
+SpaceInvaders::GameObjects::Player* SpaceInvaders::Factories::GameFactory::createPlayer(int lives)
 {
-    return new SpaceInvaders::GameObjects::Player();
+    return new SpaceInvaders::GameObjects::Player(lives);
 }
 
 SpaceInvaders::GameObjects::Alien* SpaceInvaders::Factories::GameFactory::createAlien(int x, int y, int row, int column, int type)

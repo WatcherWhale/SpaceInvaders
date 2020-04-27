@@ -25,7 +25,7 @@ namespace SpaceInvaders::Factories
         virtual Assets::FontLoader* createFontLoader() = 0;
         virtual Utils::Timer* createTimer() = 0;
 
-        GameObjects::Player* createPlayer();
+        GameObjects::Player* createPlayer(int lives);
         GameObjects::Alien* createAlien(int x, int y, int row, int column, int type);
         GameObjects::Bullet* createBullet(int position[], int type);
         GameObjects::Bonus* createBonus(double xPos, double direction);
