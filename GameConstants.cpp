@@ -7,6 +7,8 @@ bool GameConstants::WINDOW_FULLSCREEN = false;
 double GameConstants::SCALE_X = GameConstants::WINDOW_SIZE_X / static_cast<double>(GameConstants::DEFAULT_WINDOW_SIZE_X);
 double GameConstants::SCALE_Y = GameConstants::WINDOW_SIZE_Y / static_cast<double>(GameConstants::DEFAULT_WINDOW_SIZE_Y);
 
+uint32_t GameConstants::FPS_TIME = 1000/60;
+
 void GameConstants::recalculate()
 {
     GameConstants::SCALE_X = GameConstants::WINDOW_SIZE_X / static_cast<double>(GameConstants::DEFAULT_WINDOW_SIZE_X);

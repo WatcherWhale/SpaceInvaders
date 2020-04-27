@@ -14,15 +14,22 @@ Settings::Settings(vector<string> settings)
 
         if(settingKey == "resolution")
         {
+            int xPos = settingValue.find_first_of('x');
+            string width = settingValue.substr(0,xPos);
+            string height = settingValue.substr(xPos + 1);
 
+            GameConstants::WINDOW_SIZE_X = atoi(width.c_str());
+            GameConstants::WINDOW_SIZE_Y = atoi(height.c_str());
+
+            GameConstants::recalculate();
         }
         else if(settingKey == "fullscreen")
         {
-            //WINDOW_FULLSCREEN = settingValue == "true";
+            GameConstants::WINDOW_FULLSCREEN = settingValue == "true";
         }
         else if(settingKey == "fps")
         {
-
+            GameConstants::FPS_TIME = 1000 / atoi(settingValue.c_str());
         }
     }
 }

@@ -12,37 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbcf06a3-5ae5-42cc-83a1-2feda02e0bee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GameConstants.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameObjects/Bonus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameObjects/Bonus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scenes/MenuScene.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scenes/MenuScene.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Settings.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Settings.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/EnemyController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/EnemyController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/EnemyController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/EnemyController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Factories/Factory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Factories/Factory.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Factories/Factory.h" beforeDir="false" afterPath="$PROJECT_DIR$/Factories/Factory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameConstants.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameConstants.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameObjects/Alien.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameObjects/Alien.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameObjects/Bullet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameObjects/Bullet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameObjects/GameObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameObjects/GameObject.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameObjects/GameObject.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameObjects/GameObject.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameObjects/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameObjects/Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameObjects/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameObjects/Player.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/GameOverScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/GameOverScene.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/GameScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/GameScene.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sdl/Factories/SDLFactory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Sdl/Factories/SDLFactory.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sdl/Factories/SDLFactory.h" beforeDir="false" afterPath="$PROJECT_DIR$/Sdl/Factories/SDLFactory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sdl/UI/SDLText.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Sdl/UI/SDLText.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sdl/Window/SDLWindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Sdl/Window/SDLWindow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sdl/Window/SDLWindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/Sdl/Window/SDLWindow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/Button.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UI/Button.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/UIComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UIComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Settings.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Settings.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +41,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/cmake-build-debug/Assets" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -158,7 +129,7 @@
       <workItem from="1586438849474" duration="2394000" />
       <workItem from="1587383342507" duration="12591000" />
       <workItem from="1587397357968" duration="957000" />
-      <workItem from="1587976961703" duration="1359000" />
+      <workItem from="1587976961703" duration="1910000" />
     </task>
     <servers />
   </component>
@@ -299,12 +270,12 @@
     <state width="2517" height="190" key="GridCell.Tab.1.right/-1920.612.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1587396943222" />
     <state width="1237" height="191" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1583161405875" />
     <state width="1877" height="154" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583919736989" />
-    <state x="368" y="211" width="1379" height="883" key="SettingsEditor" timestamp="1587977197246">
+    <state x="368" y="211" width="1379" height="883" key="SettingsEditor" timestamp="1587978872296">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="276" y="216" key="SettingsEditor/-1920.382.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1584792263438" />
     <state x="172" y="118" width="1379" height="883" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583866276667" />
-    <state x="368" y="211" key="SettingsEditor/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1587977197246" />
+    <state x="368" y="211" key="SettingsEditor/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1587978872296" />
     <state x="605" y="110" width="710" height="819" key="find.popup" timestamp="1583859114881">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

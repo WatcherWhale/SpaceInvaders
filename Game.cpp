@@ -6,7 +6,6 @@ using namespace SpaceInvaders::Controllers;
 
 Game::Game(GameFactory* factory)
 {
-    GameConstants::load();
     Settings::load("settings.conf");
 
 	this->factory = factory;
