@@ -13,8 +13,8 @@ Player::Player() : GameObject()
 {
     this->tag = GameObjectTag::PLAYER;
 
-    this->position[0] = WINDOW_SIZE_X / 2;
-    this->position[1] = std::lround(WINDOW_SIZE_Y - 50 * SCALE_Y);
+    this->position[0] = GameConstants::WINDOW_SIZE_X / 2;
+    this->position[1] = std::lround(GameConstants::WINDOW_SIZE_Y - 50 * GameConstants::SCALE_Y);
 
     this->dPosition[0] = this->position[0];
     this->dPosition[1] = this->position[1];
@@ -24,8 +24,8 @@ void Player::update(double deltaTime)
 {
     this->move(this->moveDirection * deltaTime * this->speed, 0);
 
-    double minX = 20 * SCALE_X + this->bounds[2];
-    double maxX = WINDOW_SIZE_X - this->bounds[2] - 20 * SCALE_X;
+    double minX = 20 * GameConstants::SCALE_X + this->bounds[2];
+    double maxX = GameConstants::WINDOW_SIZE_X - this->bounds[2] - 20 * GameConstants::SCALE_X;
 
     if(this->dPosition[0] < minX)
     {
@@ -93,7 +93,7 @@ void Player::shoot()
     // Create callback
     GameController::getInstance().getTimer()->requestCallback([](void* arg) {
         reinterpret_cast<Player*>(arg)->endShoot();
-    }, this, PLAYER_TIMEOUT);
+    }, this, GameConstants::PLAYER_TIMEOUT);
 }
 
 void Player::endShoot()

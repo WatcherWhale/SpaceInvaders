@@ -11,6 +11,7 @@
 #include "../GameObjects/Bullet.h"
 #include "UIFactory.h"
 #include "../Utils/Timer.h"
+#include "../GameObjects/Bonus.h"
 
 namespace SpaceInvaders::Factories
 {
@@ -19,7 +20,7 @@ namespace SpaceInvaders::Factories
     public:
         UIFactory* getUiFactory();
 
-        virtual Windows::Window* createWindow(void* game, std::string title, int width, int height) = 0;
+        virtual Windows::Window* createWindow(void* game, std::string title, int width, int height, bool isMaximized) = 0;
         virtual Assets::Sprites::SpriteLoader* createSpriteLoader() = 0;
         virtual Assets::FontLoader* createFontLoader() = 0;
         virtual Utils::Timer* createTimer() = 0;
@@ -27,6 +28,7 @@ namespace SpaceInvaders::Factories
         GameObjects::Player* createPlayer();
         GameObjects::Alien* createAlien(int x, int y, int row, int column, int type);
         GameObjects::Bullet* createBullet(int position[], int type);
+        GameObjects::Bonus* createBonus(double xPos, double direction);
 
     protected:
         UIFactory* uiFactory;

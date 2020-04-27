@@ -30,7 +30,7 @@ namespace SpaceInvaders::GameObjects
 
         int moveDirection = 0;
         int lives = 3;
-        double speed = PLAYER_SPEED * SCALE_X;
+        double speed = GameConstants::PLAYER_SPEED * GameConstants::SCALE_X;
     };
 }
 

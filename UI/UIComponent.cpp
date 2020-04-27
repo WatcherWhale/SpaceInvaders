@@ -15,8 +15,8 @@ SpaceInvaders::UI::UIComponent::UIComponent(int x, int y, double w, double h)
     this->position[0] = x;
     this->position[1] = y;
 
-    this->size[0] = w * SCALE_X;
-    this->size[1] = h * SCALE_Y;
+    this->size[0] = w * GameConstants::SCALE_X;
+    this->size[1] = h * GameConstants::SCALE_Y;
 }
 
 void SpaceInvaders::UI::UIComponent::setPosition(int x, int y)

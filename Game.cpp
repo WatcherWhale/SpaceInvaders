@@ -1,9 +1,14 @@
 #include "Game.h"
+#include "Settings.h"
+
 using namespace SpaceInvaders;
 using namespace SpaceInvaders::Controllers;
 
 Game::Game(GameFactory* factory)
 {
+    GameConstants::load();
+    Settings::load("settings.conf");
+
 	this->factory = factory;
 	GameController::getInstance().setFactory(this->factory);
 }
@@ -12,7 +17,7 @@ void Game::run()
 {
 	// Create Windows
 	this->window = this->factory->createWindow(reinterpret_cast<void*>(this),
-	        "SpaceInvaders", WINDOW_SIZE_X, WINDOW_SIZE_Y);
+	        "SpaceInvaders", GameConstants::WINDOW_SIZE_X, GameConstants::WINDOW_SIZE_Y, GameConstants::WINDOW_FULLSCREEN);
     this->window->setClearColor(0, 0, 0);
 
 	if(this->window->create())

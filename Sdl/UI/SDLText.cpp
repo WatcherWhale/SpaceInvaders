@@ -31,8 +31,8 @@ void SDLText::generateTexture()
     // Optimize the surface
     this->texture = SDL_CreateTextureFromSurface(sdlWin->getRenderer(), surface);
 
-    this->textSize[0] = surface->w * SCALE_X;
-    this->textSize[1] = surface->h * SCALE_Y;
+    this->textSize[0] = surface->w * GameConstants::SCALE_X;
+    this->textSize[1] = surface->h * GameConstants::SCALE_Y;
 
     // Free the surface
     SDL_FreeSurface(surface);

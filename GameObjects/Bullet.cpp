@@ -23,9 +23,9 @@ SpaceInvaders::GameObjects::Bullet::Bullet(int position[], int type)
 void SpaceInvaders::GameObjects::Bullet::update(double deltaTime)
 {
     if(this->isPlayerBullet())
-        this->move(0, -1 * deltaTime * BULLET_SPEED);
+        this->move(0, -1 * deltaTime * GameConstants::BULLET_SPEED);
     else
-        this->move(0, deltaTime * BULLET_SPEED);
+        this->move(0, deltaTime * GameConstants::BULLET_SPEED);
 }
 
 void SpaceInvaders::GameObjects::Bullet::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)

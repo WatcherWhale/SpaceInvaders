@@ -5,11 +5,11 @@
 
 SpaceInvaders::UI::Button::Button(int x, int y, double w, double h) : UIComponent(x, y, w, h)
 {
-    this->position[0] = x * SCALE_X;
-    this->position[1] = y * SCALE_Y;
+    this->position[0] = x * GameConstants::SCALE_X;
+    this->position[1] = y * GameConstants::SCALE_Y;
 
-    this->size[0] = w * SCALE_X;
-    this->size[1] = h * SCALE_Y;
+    this->size[0] = w * GameConstants::SCALE_X;
+    this->size[1] = h * GameConstants::SCALE_Y;
 }
 
 SpaceInvaders::UI::Button::~Button()

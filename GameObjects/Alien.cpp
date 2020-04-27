@@ -28,10 +28,10 @@ void SpaceInvaders::GameObjects::Alien::update(double deltaTime)
     if(this->down)
     {
         this->down = false;
-        y = (DEFAULT_SPRITE_SIZE/2);
+        y = (GameConstants::DEFAULT_SPRITE_SIZE/2);
     }
 
-    this->move(deltaTime * this->moveDirection * ENEMY_SPEED * this->speedMult, y);
+    this->move(deltaTime * this->moveDirection * GameConstants::ENEMY_SPEED * this->speedMult, y);
 }
 
 void SpaceInvaders::GameObjects::Alien::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)
@@ -47,8 +47,8 @@ bool SpaceInvaders::GameObjects::Alien::isDead()
 
 bool SpaceInvaders::GameObjects::Alien::isTouchingWall()
 {
-    return this->position[0] <= 20 * SCALE_X + this->bounds[2] ||
-        this->position[0] >= WINDOW_SIZE_X - this->bounds[2] - 20 * SCALE_X;
+    return this->position[0] <= 20 * GameConstants::SCALE_X + this->bounds[2] ||
+        this->position[0] >= GameConstants::WINDOW_SIZE_X - this->bounds[2] - 20 * GameConstants::SCALE_X;
 }
 
 void SpaceInvaders::GameObjects::Alien::movePosition(int direction, bool down)

@@ -19,8 +19,8 @@ namespace SpaceInvaders::Windows
     class SDLWindow : public Window
     {
     public:
-        SDLWindow(void* game, std::string title, int width, int height) :
-            Window(game, title, width, height, WINDOW_IS_MAXIMIZED){};
+        SDLWindow(void* game, std::string title, int width, int height, bool isMaximized) :
+            Window(game, title, width, height, isMaximized){};
 
         bool create() override;
         void destroy() override;

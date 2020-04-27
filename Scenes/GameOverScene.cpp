@@ -13,7 +13,7 @@ void SpaceInvaders::Scenes::GameOverScene::load()
             ->createText("Game Over",fontLoader->getFont("bold"), Color(255,255,255), 0, 0);
 
     gameOverTxt->scale(2);
-    gameOverTxt->setPosition(std::lround( (WINDOW_SIZE_X - gameOverTxt->getSize()[0]) / 2.0),
+    gameOverTxt->setPosition(std::lround( (GameConstants::WINDOW_SIZE_X - gameOverTxt->getSize()[0]) / 2.0),
             gameOverTxt->getPosition()[1]);
 
     // Create points scored text
@@ -22,18 +22,20 @@ void SpaceInvaders::Scenes::GameOverScene::load()
             ->createText(pointsStr, fontLoader->getFont("regular"), Color(255, 255, 255), 0,
                          std::lround(gameOverTxt->getSize()[1]));
 
-    pointsTxt->setPosition(std::lround((WINDOW_SIZE_X - pointsTxt->getSize()[0])/2.0),
+    pointsTxt->setPosition(std::lround((GameConstants::WINDOW_SIZE_X - pointsTxt->getSize()[0])/2.0),
                            pointsTxt->getPosition()[1]);
 
     // Create Restart Button
     auto* restartButton = GameController::getInstance().getFactory()->getUiFactory()
             ->createButton(500, pointsTxt->getPosition()[1] + 20, 270, 70);
     restartButton->setSprite(GameController::getInstance().getSpriteLoader()->loadSprite("Assets/Sprites/Button.png", true));
-    restartButton->setPosition(std::lround((WINDOW_SIZE_X - restartButton->getSize()[0]) / 2.0), restartButton->getPosition()[1]);
+    restartButton->setPosition(std::lround((GameConstants::WINDOW_SIZE_X - restartButton->getSize()[0]) / 2.0),
+            restartButton->getPosition()[1]);
 
     auto* restartButtonText = GameController::getInstance().getFactory()->getUiFactory()
             ->createText("Restart", GameController::getInstance().getFontLoader()->getFont("regular"), Color(0,0,0),
-                         std::lround(restartButton->getPosition()[0] + 20 * SCALE_X), restartButton->getPosition()[1], 160, 70);
+                         std::lround(restartButton->getPosition()[0] + 20 * GameConstants::SCALE_X),
+                         restartButton->getPosition()[1], 160, 70);
 
     double twTh = restartButtonText->getTextSize()[0] / restartButtonText->getTextSize()[1];
     restartButtonText->setSize(twTh * restartButtonText->getSize()[1], restartButtonText->getSize()[1]);
@@ -53,11 +55,13 @@ void SpaceInvaders::Scenes::GameOverScene::load()
     auto* menuButton = GameController::getInstance().getFactory()->getUiFactory()
             ->createButton(500, restartButton->getPosition()[1] + 20, 270, 70);
     menuButton->setSprite(GameController::getInstance().getSpriteLoader()->loadSprite("Assets/Sprites/Button.png", true));
-    menuButton->setPosition(std::lround((WINDOW_SIZE_X - menuButton->getSize()[0]) / 2.0), menuButton->getPosition()[1]);
+    menuButton->setPosition(std::lround((GameConstants::WINDOW_SIZE_X - menuButton->getSize()[0]) / 2.0),
+            menuButton->getPosition()[1]);
 
     auto* menuButtonText = GameController::getInstance().getFactory()->getUiFactory()
             ->createText("Menu", GameController::getInstance().getFontLoader()->getFont("regular"), Color(0,0,0),
-                         std::lround(menuButton->getPosition()[0] + 20 * SCALE_X), menuButton->getPosition()[1], 160, 70);
+                         std::lround(menuButton->getPosition()[0] + 20 * GameConstants::SCALE_X),
+                         menuButton->getPosition()[1], 160, 70);
 
     twTh = menuButtonText->getTextSize()[0] / menuButtonText->getTextSize()[1];
     menuButtonText->setSize(twTh * menuButtonText->getSize()[1], menuButtonText->getSize()[1]);

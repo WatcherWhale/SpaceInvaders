@@ -4,9 +4,9 @@
 
 using namespace SpaceInvaders::Windows;
 
-Window* SDLFactory::createWindow(void* game, std::string title, int width, int height)
+Window* SDLFactory::createWindow(void* game, std::string title, int width, int height, bool isMaximized)
 {
-    return new SDLWindow(game, title, width, height);
+    return new SDLWindow(game, title, width, height, isMaximized);
 }
 
 SpaceInvaders::Assets::Sprites::SpriteLoader* SDLFactory::createSpriteLoader()

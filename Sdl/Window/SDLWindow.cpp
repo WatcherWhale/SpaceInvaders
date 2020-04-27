@@ -173,9 +173,9 @@ void SDLWindow::draw()
 
     auto deltaTime = Controllers::GameController::getInstance().getTimer()->interval();
 
-    if(deltaTime < TIME_120FPS )
+    if(deltaTime < GameConstants::FPS_TIME )
     {
-        SDL_Delay( TIME_120FPS - deltaTime );
+        SDL_Delay(GameConstants::FPS_TIME - deltaTime );
     }
 }
 

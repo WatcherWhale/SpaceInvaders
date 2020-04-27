@@ -1,6 +1,5 @@
 #include "GameScene.h"
 #include "../Controllers/GameController.h"
-#include "../GameObjects/Bullet.h"
 
 SpaceInvaders::Scenes::GameScene::GameScene()
 {
@@ -9,8 +8,10 @@ SpaceInvaders::Scenes::GameScene::GameScene()
 
 SpaceInvaders::Scenes::GameScene::~GameScene()
 {
-    unsigned long callbackId = this->getLvlController()->getEnemyController()->getShootCallbackId();
-    Controllers::GameController::getInstance().getTimer()->stopCallback(callbackId);
+    unsigned long shootCallbackId = this->getLvlController()->getEnemyController()->getShootCallbackId();
+    unsigned long bonusCallbackId = this->getLvlController()->getEnemyController()->getBonusCallbackId();
+    Controllers::GameController::getInstance().getTimer()->stopCallback(shootCallbackId);
+    Controllers::GameController::getInstance().getTimer()->stopCallback(bonusCallbackId);
 }
 
 
@@ -67,7 +68,7 @@ void SpaceInvaders::Scenes::GameScene::lateUpdate()
         {
             this->gameObjects.erase(this->gameObjects.begin() + i);
         }
-        else if(go->getTag() == GameObjects::GameObjectTag::ENEMY && go->isRemovable())
+        else if(go->isRemovable())
         {
             this->gameObjects.erase(this->gameObjects.begin() + i);
         }

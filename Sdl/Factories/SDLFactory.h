@@ -17,7 +17,7 @@ namespace SpaceInvaders::Factories
     public:
         SDLFactory();
 
-        Windows::Window* createWindow(void* game, std::string title, int width, int height) override;
+        Windows::Window* createWindow(void* game, std::string title, int width, int height, bool isMaximized) override;
         Assets::Sprites::SpriteLoader* createSpriteLoader() override;
         Assets::FontLoader* createFontLoader() override;
         Utils::Timer* createTimer() override;

@@ -19,3 +19,8 @@ SpaceInvaders::GameObjects::Bullet* SpaceInvaders::Factories::GameFactory::creat
 {
     return new GameObjects::Bullet(position, type);
 }
+
+SpaceInvaders::GameObjects::Bonus* SpaceInvaders::Factories::GameFactory::createBonus(double xPos, double direction)
+{
+    return new GameObjects::Bonus(xPos, direction);
+}
