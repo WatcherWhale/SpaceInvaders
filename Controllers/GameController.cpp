@@ -2,6 +2,7 @@
 #include "../Scenes/GameScene.h"
 #include "../Scenes/LoadScene.h"
 #include "../Scenes/GameOverScene.h"
+#include "../Scenes/MenuScene.h"
 
 SpaceInvaders::Controllers::GameController::GameController()
 {
@@ -46,6 +47,11 @@ void SpaceInvaders::Controllers::GameController::loadScene(SpaceInvaders::Contro
     else if(scene == SceneEnum::GAMEOVER)
     {
         this->currentScene = new Scenes::GameOverScene();
+        this->currentScene->load();
+    }
+    else if(scene == SceneEnum::MENU)
+    {
+        this->currentScene = new Scenes::MenuScene();
         this->currentScene->load();
     }
 
@@ -131,6 +137,7 @@ void SpaceInvaders::Controllers::GameController::clearPoints()
 void SpaceInvaders::Controllers::GameController::resetLevel()
 {
     this->currentLevel = 0;
+    this->lives = 3;
 }
 
 int SpaceInvaders::Controllers::GameController::getLevel()

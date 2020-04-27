@@ -59,6 +59,7 @@ namespace SpaceInvaders::Controllers
         Scenes::Scene* currentScene = nullptr;
 
         int currentLevel = 0;
+        int lives = 3;
         int points = 0;
         bool running = true;
     };
