@@ -11,14 +11,26 @@ add_executable(SpaceInvaders
 			  	main.cpp
 
 				GameConstants.h
+				GameConstants.cpp
 			  	Game.cpp
 		      	Game.h
 
+				Settings.cpp
+				Settings.h
+
 				Factories/Factory.cpp
 				Factories/Factory.h
+				Sdl/Factories/SDLFactory.cpp
+				Sdl/Factories/SDLFactory.h
+				Factories/UIFactory.cpp
+				Factories/UIFactory.h
+				Sdl/Factories/SDLUIFactory.cpp
+				Sdl/Factories/SDLUIFactory.h
 
         		Windows/Window.cpp
         		Windows/Window.h
+				Sdl/Window/SDLWindow.cpp
+				Sdl/Window/SDLWindow.h
 
 				Color.cpp
 				Color.h
@@ -34,6 +46,14 @@ add_executable(SpaceInvaders
 				AssetLoaders/Sprites/Sprite.h
 				AssetLoaders/FontLoader.cpp
 				AssetLoaders/FontLoader.h
+				AssetLoaders/Sprites/SpriteMap.cpp
+				AssetLoaders/Sprites/SpriteMap.h
+				AssetLoaders/Audio/AudioLoader.cpp
+				AssetLoaders/Audio/AudioLoader.h
+				AssetLoaders/Audio/AudioClip.cpp
+				AssetLoaders/Audio/AudioClip.h
+				AssetLoaders/Audio/Music.cpp
+				AssetLoaders/Audio/Music.h
 
 				Controllers/LevelController.cpp
 				Controllers/LevelController.h
@@ -46,12 +66,8 @@ add_executable(SpaceInvaders
 				GameObjects/Player.h
 				GameObjects/Alien.cpp
 				GameObjects/Alien.h
-
-
-			   	Sdl/Factories/SDLFactory.cpp
-			   	Sdl/Factories/SDLFactory.h
-			   	Sdl/Window/SDLWindow.cpp
-			   	Sdl/Window/SDLWindow.h
+				GameObjects/Bonus.cpp
+				GameObjects/Bonus.h
 
 				Sdl/AssetLoaders/Sprites/SDLSpriteLoader.cpp
 				Sdl/AssetLoaders/Sprites/SDLSpriteLoader.h
@@ -59,10 +75,47 @@ add_executable(SpaceInvaders
 				Sdl/AssetLoaders/Sprites/SDLSprite.h
 				Sdl/AssetLoaders/SDLFontLoader.cpp
 				Sdl/AssetLoaders/SDLFontLoader.h
-		UI/Text.cpp
-		UI/Text.h
-		Sdl/UI/SDLText.cpp
-		Sdl/UI/SDLText.h Scenes/Scene.cpp Scenes/Scene.h UI/UIComponent.h UI/UIComponent.cpp AssetLoaders/Sprites/SpriteMap.cpp AssetLoaders/Sprites/SpriteMap.h Controllers/GameController.cpp Controllers/GameController.h Scenes/GameScene.cpp Scenes/GameScene.h Scenes/LoadScene.cpp Scenes/LoadScene.h GameObjects/Bullet.cpp GameObjects/Bullet.h Utils/Timer.cpp Utils/Timer.h Scenes/GameOverScene.cpp Scenes/GameOverScene.h UI/Button.cpp UI/Button.h Utils/FunctionDefinitions.h Factories/UIFactory.cpp Factories/UIFactory.h Sdl/Factories/SDLUIFactory.cpp Sdl/Factories/SDLUIFactory.h Utils/Math.cpp Utils/Math.h Utils/Random.cpp Utils/Random.h Sdl/Utils/SDLTimer.cpp Sdl/Utils/SDLTimer.h GameObjects/Bonus.cpp GameObjects/Bonus.h Settings.cpp Settings.h Scenes/MenuScene.cpp Scenes/MenuScene.h GameConstants.cpp AssetLoaders/Audio/AudioLoader.cpp AssetLoaders/Audio/AudioLoader.h AssetLoaders/Audio/AudioClip.cpp AssetLoaders/Audio/AudioClip.h AssetLoaders/Audio/Music.cpp AssetLoaders/Audio/Music.h Sdl/AssetLoaders/Audio/SDLMusic.cpp Sdl/AssetLoaders/Audio/SDLMusic.h Sdl/AssetLoaders/Audio/SDLAudioLoader.cpp Sdl/AssetLoaders/Audio/SDLAudioLoader.h Sdl/AssetLoaders/Audio/SDLAudioClip.cpp Sdl/AssetLoaders/Audio/SDLAudioClip.h)
+				Sdl/AssetLoaders/Audio/SDLMusic.cpp
+				Sdl/AssetLoaders/Audio/SDLMusic.h
+				Sdl/AssetLoaders/Audio/SDLAudioLoader.cpp
+				Sdl/AssetLoaders/Audio/SDLAudioLoader.h
+				Sdl/AssetLoaders/Audio/SDLAudioClip.cpp
+				Sdl/AssetLoaders/Audio/SDLAudioClip.h
+
+				UI/UIComponent.h
+				UI/UIComponent.cpp
+				UI/Text.cpp
+				UI/Text.h
+				UI/Button.cpp
+				UI/Button.h
+				Sdl/UI/SDLText.cpp
+				Sdl/UI/SDLText.h
+
+				Scenes/Scene.cpp
+				Scenes/Scene.h
+				Scenes/GameScene.cpp
+				Scenes/GameScene.h
+				Scenes/LoadScene.cpp
+				Scenes/LoadScene.h
+				Scenes/GameOverScene.cpp
+				Scenes/GameOverScene.h
+				Scenes/MenuScene.cpp
+				Scenes/MenuScene.h
+
+				Controllers/GameController.cpp
+				Controllers/GameController.h
+
+				GameObjects/Bullet.cpp
+				GameObjects/Bullet.h
+				Utils/Timer.cpp
+				Utils/Timer.h
+				Utils/FunctionDefinitions.h
+				Utils/Math.cpp
+				Utils/Math.h
+				Utils/Random.cpp
+				Utils/Random.h
+				Sdl/Utils/SDLTimer.cpp
+				Sdl/Utils/SDLTimer.h)
 
 
 target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)
