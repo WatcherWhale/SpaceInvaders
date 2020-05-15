@@ -20,6 +20,7 @@ namespace SpaceInvaders::GameObjects
         void loadSprites(Assets::Sprites::SpriteLoader* loader) override;
 
         int getLives();
+        void setLives(int lives);
 
     private:
         void shoot();

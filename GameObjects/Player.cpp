@@ -2,7 +2,6 @@
 #include "../GameConstants.h"
 #include <cmath>
 #include "../Controllers/GameController.h"
-#include "Bullet.h"
 
 using namespace SpaceInvaders::GameObjects;
 using namespace SpaceInvaders::Events;
@@ -138,4 +137,9 @@ void Player::onCollision(GameObject* collided)
 int Player::getLives()
 {
     return this->lives;
+}
+
+void Player::setLives(int lives)
+{
+    this->lives = lives;
 }
