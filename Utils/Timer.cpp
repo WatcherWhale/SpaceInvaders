@@ -15,8 +15,9 @@ void SpaceInvaders::Utils::Timer::update()
 {
     this->ticks += this->deltaTime;
 
-    int i = 0;
-    while(i < callbacks.size())
+    // Check all callbacks
+
+    for(int i = 0; i < callbacks.size(); i++)
     {
         auto cb = callbacks.at(i);
 

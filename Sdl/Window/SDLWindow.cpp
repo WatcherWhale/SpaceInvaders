@@ -114,6 +114,8 @@ void SDLWindow::draw()
 {
     this->clear();
 
+    // Draw Background
+
     if(this->background != nullptr)
     {
         auto* backgroundSprite = dynamic_cast<Assets::Sprites::SDLSprite*>(this->background);
@@ -126,6 +128,8 @@ void SDLWindow::draw()
 
         SDL_RenderCopy(this->renderer, reinterpret_cast<SDL_Texture*>(backgroundSprite->display()), nullptr, &backRect);
     }
+
+    // DrawSprites
 
     while (!spriteQueue.empty())
     {
@@ -148,6 +152,7 @@ void SDLWindow::draw()
         spriteQueue.pop();
     }
 
+    // Draw UI
     while(!this->uiQueue.empty())
     {
         auto* component = uiQueue.front();
@@ -169,8 +174,10 @@ void SDLWindow::draw()
         uiQueue.pop();
     }
 
+    // Update frame
     SDL_RenderPresent(this->renderer);
 
+    // Wait for end of frame
     auto deltaTime = Controllers::GameController::getInstance().getTimer()->interval();
 
     if(deltaTime < GameConstants::FPS_TIME )

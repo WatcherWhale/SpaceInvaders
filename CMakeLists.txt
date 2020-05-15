@@ -46,9 +46,7 @@ add_executable(SpaceInvaders
 				AssetLoaders/Sprites/Sprite.h
 				AssetLoaders/FontLoader.cpp
 				AssetLoaders/FontLoader.h
-				AssetLoaders/Sprites/SpriteMap.cpp
-				AssetLoaders/Sprites/SpriteMap.h
-				AssetLoaders/Audio/AudioLoader.cpp
+        AssetLoaders/Audio/AudioLoader.cpp
 				AssetLoaders/Audio/AudioLoader.h
 				AssetLoaders/Audio/AudioClip.cpp
 				AssetLoaders/Audio/AudioClip.h

@@ -23,6 +23,7 @@ void SpaceInvaders::Scenes::GameScene::update(double deltaTime)
 
     if(this->getLvlController()->getPlayer()->getLives() <= 0)
     {
+        Controllers::GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/gameover.wav")->play();
         Controllers::GameController::getInstance().loadScene(Controllers::SceneEnum::GAMEOVER);
         return;
     }
@@ -43,6 +44,7 @@ void SpaceInvaders::Scenes::GameScene::load()
     this->gameObjects.push_back(player);
     this->eventListeners.push_back(player);
 
+    // Create texts
     ptsText = Controllers::GameController::getInstance().getFactory()->getUiFactory()
             ->createText("0 pts",
                 Controllers::GameController::getInstance().getFontLoader()->getFont("regular"), Color(255, 255, 255),

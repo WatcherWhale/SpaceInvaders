@@ -145,6 +145,7 @@ void SpaceInvaders::Controllers::EnemyController::initiateShoot()
             // Instantiate bullet
             auto* bullet = GameController::getInstance().getFactory()->createBullet(alien->getPosition(), 1);
             GameController::getInstance().getCurrentScene()->instantiateGameObject(bullet);
+            GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/enemyshoot.wav")->play();
 
             // Start next shot
             ec->initiateShoot();

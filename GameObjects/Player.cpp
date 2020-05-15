@@ -8,13 +8,15 @@ using namespace SpaceInvaders::GameObjects;
 using namespace SpaceInvaders::Events;
 using namespace SpaceInvaders::Controllers;
 
-
 Player::Player(int lives) : GameObject()
 {
+    // Init player with the current lives
     this->lives = lives;
 
+    // Set the correct tag
     this->tag = GameObjectTag::PLAYER;
 
+    // Set the player in the correct position
     this->position[0] = GameConstants::WINDOW_SIZE_X / 2;
     this->position[1] = std::lround(GameConstants::WINDOW_SIZE_Y - 50 * GameConstants::SCALE_Y);
 
@@ -24,8 +26,10 @@ Player::Player(int lives) : GameObject()
 
 void Player::update(double deltaTime)
 {
+    // move the player in the right direction
     this->move(this->moveDirection * deltaTime * this->speed, 0);
 
+    // Keep the player inside the window
     double minX = 20 * GameConstants::SCALE_X + this->bounds[2];
     double maxX = GameConstants::WINDOW_SIZE_X - this->bounds[2] - 20 * GameConstants::SCALE_X;
 
@@ -85,15 +89,20 @@ void Player::onKeyUp(Key key)
 
 void Player::shoot()
 {
+    // Check if the player is already shooting
     if(this->shooting || this->spaceDown) return;
+
+    // Disable shooting
     this->shooting = true;
     this->spaceDown = true;
 
+    // Create a bullet and add it to the current scene
     auto* bullet = GameController::getInstance().getFactory()->createBullet(this->position, 0);
     GameController::getInstance().getCurrentScene()->instantiateGameObject(bullet);
 
     // Create callback
-    GameController::getInstance().getTimer()->requestCallback([](void* arg) {
+    GameController::getInstance().getTimer()->requestCallback([](void* arg)
+    {
         reinterpret_cast<Player*>(arg)->endShoot();
     }, this, GameConstants::PLAYER_TIMEOUT);
 
@@ -113,6 +122,7 @@ void Player::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)
 
 void Player::onCollision(GameObject* collided)
 {
+    // Check if the player collided with an enemy bullet
     if(collided->getTag() == GameObjectTag::BULLET)
     {
         auto* bullet = dynamic_cast<Bullet*>(collided);

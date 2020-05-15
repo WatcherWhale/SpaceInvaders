@@ -39,7 +39,7 @@ void SpaceInvaders::GameObjects::Bonus::onCollision(SpaceInvaders::GameObjects::
         {
             this->remove = true;
 
-            GameController::getInstance().addPoints(200);
+            GameController::getInstance().setLives(GameController::getInstance().getLives() + 1);
         }
     }
 }
