@@ -37,8 +37,7 @@ add_executable(SpaceInvaders
 
 				Events/EventHandler.cpp
 				Events/EventHandler.h
-				Events/EventListener.cpp
-				Events/EventListener.h
+		Events/EventListener.h
 
 				AssetLoaders/Sprites/SpriteLoader.cpp
 				AssetLoaders/Sprites/SpriteLoader.h
@@ -46,12 +45,10 @@ add_executable(SpaceInvaders
 				AssetLoaders/Sprites/Sprite.h
 				AssetLoaders/FontLoader.cpp
 				AssetLoaders/FontLoader.h
-        AssetLoaders/Audio/AudioLoader.cpp
+        		AssetLoaders/Audio/AudioLoader.cpp
 				AssetLoaders/Audio/AudioLoader.h
-				AssetLoaders/Audio/AudioClip.cpp
-				AssetLoaders/Audio/AudioClip.h
-				AssetLoaders/Audio/Music.cpp
-				AssetLoaders/Audio/Music.h
+		AssetLoaders/Audio/AudioClip.h
+		AssetLoaders/Audio/Music.h
 
 				Controllers/LevelController.cpp
 				Controllers/LevelController.h

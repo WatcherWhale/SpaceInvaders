@@ -14,6 +14,7 @@ void SpaceInvaders::Controllers::EnemyController::createEnemies(int level,
     {
         for (int y = 0; y < GameConstants::ENEMIES_Y; y++)
         {
+            // Calculate the enemy location
             int realX = std::lround( GameConstants::WINDOW_SIZE_X/2.f +
                     (2-x)/2.f * GameConstants::ENEMY_SPACING_X * GameConstants::SCALE_X +
                     (3-x)/2.f * GameConstants::DEFAULT_SPRITE_SIZE * GameConstants::SCALE_X);

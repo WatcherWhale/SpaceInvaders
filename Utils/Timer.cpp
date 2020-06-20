@@ -16,7 +16,6 @@ void SpaceInvaders::Utils::Timer::update()
     this->ticks += this->deltaTime;
 
     // Check all callbacks
-
     for(int i = 0; i < callbacks.size(); i++)
     {
         auto cb = callbacks.at(i);
@@ -43,6 +42,9 @@ unsigned long SpaceInvaders::Utils::Timer::requestCallback(CallbackFunction func
     cb.id = this->ticks + this->callbacks.size();
 
     this->callbacks.push_back(cb);
+
+    std::cout << "Got request for " << duration << "\n" << "There are now " << this->callbacks.size() << " requests";
+
     return cb.id;
 }
 

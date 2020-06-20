@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "../GameConstants.h"
 #include <cmath>
+#include <iostream>
 #include "../Controllers/GameController.h"
 
 using namespace SpaceInvaders::GameObjects;
@@ -51,7 +52,7 @@ void Player::onKeyDown(Key key)
     switch (key)
     {
         case Key::SPACE:
-            this->shoot();
+             this->shoot();
         break;
 
         case Key::LEFT:
@@ -81,9 +82,6 @@ void Player::onKeyUp(Key key)
         case Key::SPACE:
             this->spaceDown = false;
             break;
-
-        default:
-            break;
     }
 }
 
@@ -112,6 +110,7 @@ void Player::shoot()
 void Player::endShoot()
 {
     this->shooting = false;
+    std::cout << "Shoot end\n";
 }
 
 

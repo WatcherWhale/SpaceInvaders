@@ -1,9 +1,7 @@
 #include "SDLWindow.h"
-#include "../../Game.h"
 #include "../AssetLoaders/Sprites/SDLSprite.h"
 
 #include <cmath>
-#include <iostream>
 
 using namespace SpaceInvaders;
 using namespace SDL::Windows;
@@ -51,10 +49,6 @@ bool SDLWindow::create()
 
         this->clear();
         SDL_UpdateWindowSurface(this->window);
-
-        //Start background music
-        //this->backgroundMusic = Mix_LoadMUS(this->backgroundMusicPath.c_str());
-        //Mix_PlayMusic(this->backgroundMusic, -1 );
 
         return true;
     }
