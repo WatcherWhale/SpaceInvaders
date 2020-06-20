@@ -2,6 +2,7 @@
 #include "SDLSprite.h"
 
 using namespace SpaceInvaders::Assets::Sprites;
+using namespace SDL::Assets::Sprites;
 
 SDLSpriteLoader::~SDLSpriteLoader()
 {

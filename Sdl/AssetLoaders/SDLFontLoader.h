@@ -5,7 +5,9 @@
 #include <SDL2/SDL_ttf.h>
 #include "../../GameConstants.h"
 
-namespace SpaceInvaders::Assets
+using namespace SpaceInvaders::Assets;
+
+namespace SDL::Assets
 {
     class SDLFontLoader : public FontLoader
     {

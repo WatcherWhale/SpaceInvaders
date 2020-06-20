@@ -2,7 +2,7 @@
 #include <iostream>
 #include "SDLFontLoader.h"
 
-SpaceInvaders::Assets::SDLFontLoader::~SDLFontLoader()
+SDL::Assets::SDLFontLoader::~SDLFontLoader()
 {
     for(auto font : this->fonts)
     {
@@ -12,13 +12,13 @@ SpaceInvaders::Assets::SDLFontLoader::~SDLFontLoader()
     this->fonts.clear();
 }
 
-void SpaceInvaders::Assets::SDLFontLoader::loadFont(std::string fontName, std::string path)
+void SDL::Assets::SDLFontLoader::loadFont(std::string fontName, std::string path)
 {
     TTF_Font* font = TTF_OpenFont(path.c_str(), 32);
     this->fonts[fontName] = reinterpret_cast<void*>(font);
 }
 
-void SpaceInvaders::Assets::SDLFontLoader::unload()
+void SDL::Assets::SDLFontLoader::unload()
 {
     for(auto font : this->fonts)
     {

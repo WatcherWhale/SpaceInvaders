@@ -3,7 +3,8 @@
 #include "../Utils/SDLTimer.h"
 #include "../AssetLoaders/Audio/SDLAudioLoader.h"
 
-using namespace SpaceInvaders::Windows;
+using namespace SDL::Windows;
+using namespace SDL::Factories;
 
 Window* SDLFactory::createWindow(void* game, std::string title, int width, int height, bool isMaximized)
 {
@@ -12,14 +13,13 @@ Window* SDLFactory::createWindow(void* game, std::string title, int width, int h
 
 SpaceInvaders::Assets::Sprites::SpriteLoader* SDLFactory::createSpriteLoader()
 {
-    return new Assets::Sprites::SDLSpriteLoader();
+    return new SDL::Assets::Sprites::SDLSpriteLoader();
 }
 
 SpaceInvaders::Assets::FontLoader* SDLFactory::createFontLoader()
 {
-    return new Assets::SDLFontLoader();
+    return new SDL::Assets::SDLFontLoader();
 }
-
 
 SDLFactory::SDLFactory()
 {
@@ -28,10 +28,10 @@ SDLFactory::SDLFactory()
 
 SpaceInvaders::Utils::Timer* SDLFactory::createTimer()
 {
-    return new Utils::SDLTimer();
+    return new SDL::Utils::SDLTimer();
 }
 
 SpaceInvaders::Assets::Audio::AudioLoader* SDLFactory::createAudioLoader()
 {
-    return new Assets::Audio::SDLAudioLoader();
+    return new SDL::Assets::Audio::SDLAudioLoader();
 }

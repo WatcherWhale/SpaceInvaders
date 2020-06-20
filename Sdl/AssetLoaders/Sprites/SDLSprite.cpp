@@ -3,6 +3,7 @@
 #include "../../Window/SDLWindow.h"
 
 using namespace SpaceInvaders::Assets::Sprites;
+using namespace SDL::Assets::Sprites;
 
 SDLSprite::~SDLSprite()
 {
@@ -16,8 +17,8 @@ void SDLSprite::load()
 
     if(this->optimized)
     {
-        auto* win = Controllers::GameController::getInstance().getWindow();
-        auto* sdlWin = dynamic_cast<Windows::SDLWindow*>(win);
+        auto* win = SpaceInvaders::Controllers::GameController::getInstance().getWindow();
+        auto* sdlWin = dynamic_cast<SDL::Windows::SDLWindow*>(win);
 
         this->texture = SDL_CreateTextureFromSurface(sdlWin->getRenderer(), surface);
         SDL_QueryTexture(this->texture, nullptr, nullptr, &this->width, &this->height);

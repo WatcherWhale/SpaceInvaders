@@ -6,13 +6,13 @@
 
 using namespace SpaceInvaders::Factories;
 
-namespace SpaceInvaders::Factories
+namespace SDL::Factories
 {
     class SDLUIFactory : public UIFactory
     {
     public:
-        UI::Text* createText(std::string text, void* font, Color color, int x, int y) override;
-        UI::Text* createText(std::string text, void* font, Color color, int x, int y, int w, int h) override;
+        SpaceInvaders::UI::Text* createText(std::string text, void* font, Color color, int x, int y) override;
+        SpaceInvaders::UI::Text* createText(std::string text, void* font, Color color, int x, int y, int w, int h) override;
     };
 }
 #endif

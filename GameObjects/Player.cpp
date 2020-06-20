@@ -32,6 +32,7 @@ void Player::update(double deltaTime)
     double minX = 20 * GameConstants::SCALE_X + this->bounds[2];
     double maxX = GameConstants::WINDOW_SIZE_X - this->bounds[2] - 20 * GameConstants::SCALE_X;
 
+    // Constrain position of the spaceship
     if(this->dPosition[0] < minX)
     {
         this->dPosition[0] = minX;

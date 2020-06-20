@@ -5,7 +5,9 @@
 #include <string>
 #include "../../../AssetLoaders/Audio/Music.h"
 
-namespace  SpaceInvaders::Assets::Audio
+using namespace SpaceInvaders::Assets::Audio;
+
+namespace SDL::Assets::Audio
 {
     class SDLMusic : public Music
     {

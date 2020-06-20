@@ -5,6 +5,7 @@
 
 using namespace SpaceInvaders;
 using namespace SpaceInvaders::Factories;
+using namespace SDL::Factories;
 
 int main(int argc, char* argv[])
 {

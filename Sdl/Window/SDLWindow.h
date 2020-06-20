@@ -14,7 +14,7 @@
 
 using namespace SpaceInvaders::Windows;
 
-namespace SpaceInvaders::Windows
+namespace SDL::Windows
 {
     class SDLWindow : public Window
     {
@@ -27,7 +27,7 @@ namespace SpaceInvaders::Windows
         void pollEvents() override;
         void draw() override;
         void clear() override;
-        void setIcon(Assets::Sprites::Sprite* sprite) override;
+        void setIcon(SpaceInvaders::Assets::Sprites::Sprite* sprite) override;
 
         SDL_Renderer* getRenderer();
 

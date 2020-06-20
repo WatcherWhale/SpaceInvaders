@@ -3,7 +3,9 @@
 
 #include "../../Utils/Timer.h"
 
-namespace SpaceInvaders::Utils
+using namespace SpaceInvaders::Utils;
+
+namespace SDL::Utils
 {
     class SDLTimer : public Timer
     {

@@ -5,7 +5,9 @@
 #include <string>
 #include "../../../AssetLoaders/Sprites/Sprite.h"
 
-namespace SpaceInvaders::Assets::Sprites
+using namespace SpaceInvaders::Assets::Sprites;
+
+namespace SDL::Assets::Sprites
 {
     class SDLSprite : public Sprite
     {

@@ -5,7 +5,9 @@
 #include <SDL2/SDL_mixer.h>
 #include "../../../AssetLoaders/Audio/AudioClip.h"
 
-namespace  SpaceInvaders::Assets::Audio
+using namespace SpaceInvaders::Assets::Audio;
+
+namespace SDL::Assets::Audio
 {
     class SDLAudioClip : public AudioClip
     {

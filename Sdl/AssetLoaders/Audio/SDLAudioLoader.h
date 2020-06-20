@@ -3,7 +3,9 @@
 
 #include "../../../AssetLoaders/Audio/AudioLoader.h"
 
-namespace  SpaceInvaders::Assets::Audio
+using namespace SpaceInvaders::Assets::Audio;
+
+namespace  SDL::Assets::Audio
 {
     class SDLAudioLoader : public AudioLoader
     {

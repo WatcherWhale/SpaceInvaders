@@ -4,16 +4,16 @@
 #include <SDL2/SDL.h>
 #include "../../UI/Text.h"
 
-namespace SpaceInvaders::UI
+namespace SDL::UI
 {
-    class SDLText : public Text
+class SDLText : public SpaceInvaders::UI::Text
     {
     public:
         SDLText(std::string text, void* font, Color textColor, int x, int y);
         SDLText(std::string text, void* font, Color textColor, int x, int y, double w, double h);
         ~SDLText() override;
 
-        UISpriteContainer display() override;
+    SpaceInvaders::UI::UISpriteContainer display() override;
 
     private:
         SDL_Texture* texture;

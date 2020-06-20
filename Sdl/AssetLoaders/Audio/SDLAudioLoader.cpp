@@ -2,7 +2,7 @@
 #include "SDLMusic.h"
 #include "SDLAudioClip.h"
 
-SpaceInvaders::Assets::Audio::AudioClip* SpaceInvaders::Assets::Audio::SDLAudioLoader::loadAudioClip(std::string path)
+SpaceInvaders::Assets::Audio::AudioClip* SDL::Assets::Audio::SDLAudioLoader::loadAudioClip(std::string path)
 {
     auto* loadedClip = AudioLoader::loadAudioClip(path);
 
@@ -17,7 +17,7 @@ SpaceInvaders::Assets::Audio::AudioClip* SpaceInvaders::Assets::Audio::SDLAudioL
     return clip;
 }
 
-SpaceInvaders::Assets::Audio::Music* SpaceInvaders::Assets::Audio::SDLAudioLoader::loadMusic(std::string path)
+SpaceInvaders::Assets::Audio::Music* SDL::Assets::Audio::SDLAudioLoader::loadMusic(std::string path)
 {
     auto* loadedMusic = AudioLoader::loadMusic(path);
 
@@ -32,7 +32,7 @@ SpaceInvaders::Assets::Audio::Music* SpaceInvaders::Assets::Audio::SDLAudioLoade
     return mus;
 }
 
-SpaceInvaders::Assets::Audio::SDLAudioLoader::~SDLAudioLoader()
+SDL::Assets::Audio::SDLAudioLoader::~SDLAudioLoader()
 {
     for (auto music : audioClips)
     {

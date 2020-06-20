@@ -4,7 +4,9 @@
 #include "../../Controllers/GameController.h"
 #include "../Window/SDLWindow.h"
 
+using namespace SpaceInvaders;
 using namespace SpaceInvaders::UI;
+using namespace SDL::UI;
 
 SDLText::SDLText(std::string text, void* font, Color textColor, int x, int y) : Text(text, font, textColor, x, y)
 {

@@ -10,18 +10,18 @@
 
 using namespace SpaceInvaders::Factories;
 
-namespace SpaceInvaders::Factories
+namespace SDL::Factories
 {
     class SDLFactory : public GameFactory
     {
     public:
         SDLFactory();
 
-        Windows::Window* createWindow(void* game, std::string title, int width, int height, bool isMaximized) override;
-        Assets::Sprites::SpriteLoader* createSpriteLoader() override;
-        Assets::FontLoader* createFontLoader() override;
-        Utils::Timer* createTimer() override;
-        Assets::Audio::AudioLoader* createAudioLoader() override;
+        SpaceInvaders::Windows::Window* createWindow(void* game, std::string title, int width, int height, bool isMaximized) override;
+        SpaceInvaders::Assets::Sprites::SpriteLoader* createSpriteLoader() override;
+        SpaceInvaders::Assets::FontLoader* createFontLoader() override;
+        SpaceInvaders::Utils::Timer* createTimer() override;
+        SpaceInvaders::Assets::Audio::AudioLoader* createAudioLoader() override;
     };
 }
 #endif // !SDLFACTORY_H

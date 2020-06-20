@@ -5,6 +5,9 @@
 #include <cmath>
 #include <iostream>
 
+using namespace SpaceInvaders;
+using namespace SDL::Windows;
+
 bool SDLWindow::create()
 {
     if( SDL_Init( SDL_INIT_VIDEO | SDL_INIT_AUDIO ) < 0)

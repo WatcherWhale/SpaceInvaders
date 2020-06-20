@@ -3,13 +3,13 @@
 
 #include "../../../AssetLoaders/Sprites/SpriteLoader.h"
 
-namespace SpaceInvaders::Assets::Sprites
+namespace SDL::Assets::Sprites
 {
 class SDLSpriteLoader : public SpaceInvaders::Assets::Sprites::SpriteLoader
     {
     public:
         ~SDLSpriteLoader();
-        Sprite* loadSprite(std::string path, bool optimize) override;
+        SpaceInvaders::Assets::Sprites::Sprite* loadSprite(std::string path, bool optimize) override;
     };
 }
 
