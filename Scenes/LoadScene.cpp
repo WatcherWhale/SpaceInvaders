@@ -1,6 +1,8 @@
 #include "LoadScene.h"
 #include "../Controllers/GameController.h"
 
+using namespace SpaceInvaders;
+
 void SpaceInvaders::Scenes::LoadScene::update(double deltaTime)
 {
     if(this->loadThread.wait_for(std::chrono::seconds(0)) == std::future_status::ready)

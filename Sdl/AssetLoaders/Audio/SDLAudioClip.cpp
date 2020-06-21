@@ -1,6 +1,8 @@
 #include "SDLAudioClip.h"
 #include "../../../GameConstants.h"
 
+using namespace SpaceInvaders;
+
 SDL::Assets::Audio::SDLAudioClip::SDLAudioClip(std::string path)
 {
     Mix_Volume(-1, GameConstants::CLIP_VOLUME);

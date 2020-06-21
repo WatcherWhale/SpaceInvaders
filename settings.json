@@ -1,0 +1,15 @@
+{
+    "video":
+    {
+        "width": 1920,
+        "height": 1080,
+        "fullscreen": false,
+        "fps": 60
+    },
+    "volume":
+    {
+        "music": 10,
+        "sfx": 10
+    },
+    "texturepack": "default"
+}
