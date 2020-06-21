@@ -1,5 +1,7 @@
 #include "GameConstants.h"
 
+using namespace SpaceInvaders;
+
 int GameConstants::WINDOW_SIZE_X = 1920;
 int GameConstants::WINDOW_SIZE_Y = 1080;
 bool GameConstants::WINDOW_FULLSCREEN = false;

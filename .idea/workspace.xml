@@ -14,8 +14,7 @@
     <list default="true" id="bbcf06a3-5ae5-42cc-83a1-2feda02e0bee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameConstants.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameConstants.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameObjects/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameObjects/Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/Timer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/Timer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameConstants.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameConstants.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +145,7 @@
       <workItem from="1589525589731" duration="8588000" />
       <workItem from="1592637394750" duration="15365000" />
       <workItem from="1592736083968" duration="51000" />
-      <workItem from="1592736153608" duration="5263000" />
+      <workItem from="1592736153608" duration="6496000" />
     </task>
     <servers />
   </component>
