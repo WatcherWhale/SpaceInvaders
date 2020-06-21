@@ -13,6 +13,7 @@
 #include "../Utils/Timer.h"
 #include "../GameObjects/Bonus.h"
 #include "../AssetLoaders/Audio/AudioLoader.h"
+#include "../GameObjects/Bunker.h"
 
 namespace SpaceInvaders::Factories
 {
@@ -32,6 +33,8 @@ namespace SpaceInvaders::Factories
         GameObjects::Alien* createAlien(int x, int y, int row, int column, int type);
         GameObjects::Bullet* createBullet(int position[], int type);
         GameObjects::Bonus* createBonus(double xPos, double direction);
+        GameObjects::Bunker* createBunker(int pos);
+        GameObjects::Bunker* createBunker(int pos, int health);
 
     protected:
         UIFactory* uiFactory;

@@ -15,6 +15,7 @@ namespace SpaceInvaders::GameObjects
         void loadSprites(Assets::Sprites::SpriteLoader* loader) override;
 
         bool isPlayerBullet();
+        void setRemoved();
 
         GameObject* getKilled();
 

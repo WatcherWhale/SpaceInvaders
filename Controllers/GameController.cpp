@@ -140,6 +140,7 @@ void SpaceInvaders::Controllers::GameController::resetLevel()
 {
     this->currentLevel = 0;
     this->lives = 3;
+    for(int i = 0; i < 4; i++) this->bunkerHealth[i] = 0;
 }
 
 int SpaceInvaders::Controllers::GameController::getLevel()
@@ -161,3 +162,14 @@ SpaceInvaders::Assets::Audio::AudioLoader* SpaceInvaders::Controllers::GameContr
 {
     return this->audioLoader;
 }
+
+int SpaceInvaders::Controllers::GameController::getBunkerHealth(int i)
+{
+    return this->bunkerHealth[i];
+}
+
+void SpaceInvaders::Controllers::GameController::setBunkerHealth(int i, int health)
+{
+    this->bunkerHealth[i] = health;
+}
+

@@ -8,8 +8,8 @@
     },
     "volume":
     {
-        "music": 10,
-        "sfx": 10
+        "music": 50,
+        "sfx": 50
     },
     "texturepack": "default"
 }

@@ -32,10 +32,10 @@ namespace SpaceInvaders::GameObjects
         static bool checkCollison(GameObject* go1, GameObject* go2);
 
     protected:
-        int position[2]{};
-        double dPosition[2]{};
-        double bounds[4]{};
-        double collider[4]{};
+        int position[2]{0,0};
+        double dPosition[2]{0,0};
+        double bounds[4]{0,0,0,0};
+        double collider[4]{0,0,0,0};
         int currentSprite = 0;
         std::vector<Assets::Sprites::Sprite*> sprites;
         GameObjectTag tag;

@@ -32,6 +32,7 @@ namespace SpaceInvaders
 
         constexpr static const double PLAYER_SPEED = 200;
         static const unsigned long PLAYER_TIMEOUT = 500;
+        static const int WALL_SPACING = 200;
 
         constexpr static const double BULLET_SPEED = 1000;
 
