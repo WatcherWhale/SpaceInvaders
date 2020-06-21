@@ -104,7 +104,7 @@ void Player::shoot()
         reinterpret_cast<Player*>(arg)->endShoot();
     }, this, GameConstants::PLAYER_TIMEOUT);
 
-    GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/shoot.wav")->play();
+    GameController::getInstance().getAudioLoader()->loadAudioClip(GameConstants::getAsset("Audio/SFX/shoot.wav"))->play();
 }
 
 void Player::endShoot()
@@ -116,7 +116,7 @@ void Player::endShoot()
 
 void Player::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)
 {
-    this->sprites.push_back(loader->loadSprite(R"(Assets\Sprites\Player\Player.png)", true));
+    this->sprites.push_back(loader->loadSprite(GameConstants::getAsset("Sprites/Player/Player.png"), true));
 }
 
 void Player::onCollision(GameObject* collided)
@@ -128,7 +128,7 @@ void Player::onCollision(GameObject* collided)
         if(!bullet->isPlayerBullet())
         {
             this->lives--;
-            GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/death.wav")->play();
+            GameController::getInstance().getAudioLoader()->loadAudioClip(GameConstants::getAsset("Audio/SFX/death.wav"))->play();
             Controllers::GameController::getInstance().setLives(this->lives);
         }
     }

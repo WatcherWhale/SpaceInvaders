@@ -36,8 +36,10 @@ void SpaceInvaders::GameObjects::Alien::update(double deltaTime)
 
 void SpaceInvaders::GameObjects::Alien::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)
 {
+
+
     this->sprites.push_back(
-            loader->loadSprite(R"(Assets\Sprites\Enemies\Enemy)"+ std::to_string(this->type) + ".png", true));
+            loader->loadSprite(GameConstants::getAsset(R"(Sprites/Enemies/Enemy)"+ std::to_string(this->type) + ".png") , true));
 }
 
 bool SpaceInvaders::GameObjects::Alien::isDead()

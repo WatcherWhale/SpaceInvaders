@@ -24,7 +24,7 @@ void SpaceInvaders::Scenes::LoadScene::draw(SpaceInvaders::Windows::Window* wind
     if(this->progress >= 1)
     {
         auto* spriteLoader = SpaceInvaders::Controllers::GameController::getInstance().getSpriteLoader();
-        window->setBackground(spriteLoader->loadSprite("Assets/Sprites/Background.png", true));
+        window->setBackground(spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Background.png"), true));
     }
 }
 
@@ -35,29 +35,29 @@ void loadAssetsAsync(SpaceInvaders::Scenes::LoadScene* loadScene)
     auto* audioLoader = SpaceInvaders::Controllers::GameController::getInstance().getAudioLoader();
 
     // Pre load sprites
-    auto* icon = spriteLoader->loadSprite("Assets/Sprites/Icon.png", false);
+    auto* icon = spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Icon.png"), false);
     SpaceInvaders::Controllers::GameController::getInstance().getWindow()->setIcon(icon);
     loadScene->addProgress();
 
-    spriteLoader->loadSprite("Assets/Sprites/Background.png", true);
+    spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Background.png"), true);
     loadScene->addProgress();
-    spriteLoader->loadSprite("Assets/Sprites/Player/Player.png", true);
-    spriteLoader->loadSprite("Assets/Sprites/Enemies/Enemy1.png", true);
-    spriteLoader->loadSprite("Assets/Sprites/Player/Bullet.png", true);
-    spriteLoader->loadSprite("Assets/Sprites/Enemies/Bullet.png", true);
-    spriteLoader->loadSprite("Assets/Sprites/Button.png", true);
+    spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Player/Player.png"), true);
+    spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Enemies/Enemy1.png"), true);
+    spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Player/Bullet.png"), true);
+    spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Enemies/Bullet.png"), true);
+    spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Button.png"), true);
 
     // Pre load fonts
-    fontLoader->loadFont("regular", "Assets/Fonts/8bitRegular.ttf");
-    fontLoader->loadFont("bold", "Assets/Fonts/8bitBold.ttf");
+    fontLoader->loadFont("regular", GameConstants::getAsset("Fonts/8bitRegular.ttf"));
+    fontLoader->loadFont("bold", GameConstants::getAsset("Fonts/8bitBold.ttf"));
 
     // Pre load audio
-    auto mus = audioLoader->loadMusic("Assets/Audio/Music/we_are_number_one_8_bit.mp3");
+    auto mus = audioLoader->loadMusic(GameConstants::getAsset("Audio/Music/we_are_number_one_8_bit.mp3"));
     mus->play(true);
 
-    audioLoader->loadAudioClip("Assets/Audio/SFX/button.wav");
-    audioLoader->loadAudioClip("Assets/Audio/SFX/death.wav");
-    audioLoader->loadAudioClip("Assets/Audio/SFX/shoot.wav");
-    audioLoader->loadAudioClip("Assets/Audio/SFX/gameover.wav");
-    audioLoader->loadAudioClip("Assets/Audio/SFX/enemyshoot.wav");
+    audioLoader->loadAudioClip(GameConstants::getAsset("Audio/SFX/button.wav"));
+    audioLoader->loadAudioClip(GameConstants::getAsset("Audio/SFX/death.wav"));
+    audioLoader->loadAudioClip(GameConstants::getAsset("Audio/SFX/shoot.wav"));
+    audioLoader->loadAudioClip(GameConstants::getAsset("Audio/SFX/gameover.wav"));
+    audioLoader->loadAudioClip(GameConstants::getAsset("Audio/SFX/enemyshoot.wav"));
 }
