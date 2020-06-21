@@ -39,6 +39,10 @@ Settings::Settings(vector<string> settings)
         {
             GameConstants::CLIP_VOLUME = atoi(settingValue.c_str());
         }
+        else if(settingKey == "texturepack")
+        {
+            GameConstants::TEXTURE_PACK = settingValue;
+        }
     }
 }
 
@@ -49,6 +53,8 @@ Settings Settings::load(string path)
     string lineStr;
 
     fileStream.open(path.c_str());
+
+    getline(fileStream, lineStr);
 
     while(getline(fileStream, lineStr))
     {

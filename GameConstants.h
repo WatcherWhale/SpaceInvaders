@@ -1,11 +1,14 @@
 #ifndef GAME_GAMECONSTANTS_H
 #define GAME_GAMECONSTANTS_H
 #include <cstdint>
+#include <string>
 
 class GameConstants
 {
 public:
     static void recalculate();
+    static std::string getAsset(std::string file);
+
 
     static int WINDOW_SIZE_X;
     static int WINDOW_SIZE_Y;
@@ -22,6 +25,8 @@ public:
     static double SCALE_Y;
 
     static uint32_t FPS_TIME;
+
+    static std::string TEXTURE_PACK;
 
     constexpr static const double PLAYER_SPEED = 200;
     static const unsigned long PLAYER_TIMEOUT = 500;

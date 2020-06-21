@@ -28,7 +28,7 @@ void SpaceInvaders::Scenes::GameOverScene::load()
     // Create Restart Button
     auto* restartButton = GameController::getInstance().getFactory()->getUiFactory()
             ->createButton(500, pointsTxt->getPosition()[1] + 20, 270, 70);
-    restartButton->setSprite(GameController::getInstance().getSpriteLoader()->loadSprite("Assets/Sprites/Button.png", true));
+    restartButton->setSprite(GameController::getInstance().getSpriteLoader()->loadSprite(GameConstants::getAsset("Sprites/Button.png"), true));
     restartButton->setPosition(std::lround((GameConstants::WINDOW_SIZE_X - restartButton->getSize()[0]) / 2.0),
             restartButton->getPosition()[1]);
 
@@ -48,14 +48,14 @@ void SpaceInvaders::Scenes::GameOverScene::load()
 
     restartButton->addClickListener(this, [](void* listener)
     {
-        GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/button.wav")->play();
+        GameController::getInstance().getAudioLoader()->loadAudioClip(GameConstants::getAsset("Audio/SFX/button.wav"))->play();
         GameController::getInstance().loadScene(SceneEnum::GAME);
     });
 
     // Create Menu Button
     auto* menuButton = GameController::getInstance().getFactory()->getUiFactory()
             ->createButton(500, restartButton->getPosition()[1] + 20, 270, 70);
-    menuButton->setSprite(GameController::getInstance().getSpriteLoader()->loadSprite("Assets/Sprites/Button.png", true));
+    menuButton->setSprite(GameController::getInstance().getSpriteLoader()->loadSprite(GameConstants::getAsset("Sprites/Button.png"), true));
     menuButton->setPosition(std::lround((GameConstants::WINDOW_SIZE_X - menuButton->getSize()[0]) / 2.0),
             menuButton->getPosition()[1]);
 
@@ -74,7 +74,7 @@ void SpaceInvaders::Scenes::GameOverScene::load()
 
     menuButton->addClickListener(this, [](void* listener)
     {
-        GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/button.wav")->play();
+        GameController::getInstance().getAudioLoader()->loadAudioClip(GameConstants::getAsset("Audio/SFX/button.wav"))->play();
         GameController::getInstance().loadScene(SceneEnum::MENU);
     });
 

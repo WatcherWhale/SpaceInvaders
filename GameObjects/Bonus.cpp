@@ -13,7 +13,8 @@ SpaceInvaders::GameObjects::Bonus::Bonus(double xPos, double direction)
 
 void SpaceInvaders::GameObjects::Bonus::loadSprites(SpaceInvaders::Assets::Sprites::SpriteLoader* loader)
 {
-    auto* sprite = GameController::getInstance().getSpriteLoader()->loadSprite("Assets/Sprites/Enemies/Bonus.png", true);
+    auto* sprite = GameController::getInstance().getSpriteLoader()->loadSprite(
+            GameConstants::getAsset("Sprites/Enemies/Bonus.png"), true);
     this->sprites.push_back(sprite);
 }
 

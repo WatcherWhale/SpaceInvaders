@@ -26,7 +26,7 @@ void MenuScene::load()
 
     auto* startButton = GameController::getInstance().getFactory()->getUiFactory()
             ->createButton(500, copyrightTitle->getPosition()[1] + 100, 270, 70);
-    startButton->setSprite(GameController::getInstance().getSpriteLoader()->loadSprite("Assets/Sprites/Button.png", true));
+    startButton->setSprite(GameController::getInstance().getSpriteLoader()->loadSprite(GameConstants::getAsset("Sprites/Button.png"), true));
     startButton->setPosition(std::lround((GameConstants::WINDOW_SIZE_X - startButton->getSize()[0]) / 2.0),
                              startButton->getPosition()[1]);
 
@@ -46,14 +46,14 @@ void MenuScene::load()
 
     startButton->addClickListener(this, [](void* listener)
     {
-        GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/button.wav")->play();
+        GameController::getInstance().getAudioLoader()->loadAudioClip(GameConstants::getAsset("Audio/SFX/button.wav"))->play();
         GameController::getInstance().loadScene(SceneEnum::GAME);
     });
 
 
     auto* exitButton = GameController::getInstance().getFactory()->getUiFactory()
             ->createButton(500, startButton->getPosition()[1] + 20, 270, 70);
-    exitButton->setSprite(GameController::getInstance().getSpriteLoader()->loadSprite("Assets/Sprites/Button.png", true));
+    exitButton->setSprite(GameController::getInstance().getSpriteLoader()->loadSprite(GameConstants::getAsset("Sprites/Button.png"), true));
     exitButton->setPosition(std::lround((GameConstants::WINDOW_SIZE_X - exitButton->getSize()[0]) / 2.0),
                             exitButton->getPosition()[1]);
 
@@ -72,7 +72,7 @@ void MenuScene::load()
 
     exitButton->addClickListener(this, [](void* listener)
     {
-        GameController::getInstance().getAudioLoader()->loadAudioClip("Assets/Audio/SFX/button.wav")->play();
+        GameController::getInstance().getAudioLoader()->loadAudioClip(GameConstants::getAsset("Audio/SFX/button.wav"))->play();
         GameController::getInstance().stopGame();
     });
 
