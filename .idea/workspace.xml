@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
+      <config projectName="SpaceInvaders" targetName="SpaceInvaders_SFML" />
       <config projectName="SpaceInvaders" targetName="SpaceInvaders" />
     </generated>
   </component>
@@ -12,10 +13,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbcf06a3-5ae5-42cc-83a1-2feda02e0bee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cmake/FindSFML.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SFML/AssetLoaders/Sprites/SFMLSprite.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SFML/AssetLoaders/Sprites/SFMLSprite.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SFML/AssetLoaders/Sprites/SFMLSpriteLoader.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SFML/AssetLoaders/Sprites/SFMLSpriteLoader.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SFML/Window/SFMLWindow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SFML/Window/SFMLWindow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/texturepacks/default/Sprites/Bunkers/.Bunkers.kra-autosave.kra" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/texturepacks/default/Sprites/Bunkers/Bunkers.kra" beforeDir="false" afterPath="$PROJECT_DIR$/texturepacks/default/Sprites/Bunkers/Bunkers.kra" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +42,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OCResolveContextSettings">
+    <option name="configuration" value="0-Debug-SpaceInvaders_SFML" />
   </component>
   <component name="ProjectId" id="1YFyZGr3FzKxAiLEwCI08RpwTYC" />
   <component name="ProjectLevelVcsManager">
@@ -68,7 +78,7 @@
       <recent name="C:\Users\Mathias\Projects\SpaceInvaders\cmake-build-debug\Assets\Sprites\Player" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.SpaceInvaders_SFML">
+  <component name="RunManager" selected="CMake Application.SpaceInvaders">
     <configuration name="SpaceInvaders" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SpaceInvaders" TARGET_NAME="SpaceInvaders" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SpaceInvaders" RUN_TARGET_NAME="SpaceInvaders">
       <method v="2">
         <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_Move Files" />
@@ -155,7 +165,7 @@
       <workItem from="1589525589731" duration="8588000" />
       <workItem from="1592637394750" duration="15365000" />
       <workItem from="1592736083968" duration="51000" />
-      <workItem from="1592736153608" duration="18236000" />
+      <workItem from="1592736153608" duration="21889000" />
     </task>
     <servers />
   </component>
@@ -207,7 +217,7 @@
     </state>
     <state x="987" y="373" key="FileChooserDialogImpl/-1920.581.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586439648035" />
     <state x="987" y="373" key="FileChooserDialogImpl/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1592663523391" />
-    <state width="2517" height="250" key="GridCell.Tab.0.bottom" timestamp="1592759432990">
+    <state width="2517" height="250" key="GridCell.Tab.0.bottom" timestamp="1592760012586">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="227" key="GridCell.Tab.0.bottom/-1920.382.1536.832/0.0.1920.1040@-1920.382.1536.832" timestamp="1584987052016" />
@@ -218,8 +228,8 @@
     <state width="2517" height="306" key="GridCell.Tab.0.bottom/-1920.581.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586441245220" />
     <state width="2517" height="306" key="GridCell.Tab.0.bottom/-1920.612.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1587401817074" />
     <state width="1877" height="129" key="GridCell.Tab.0.bottom/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589528597508" />
-    <state width="2517" height="250" key="GridCell.Tab.0.bottom/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1592759432990" />
-    <state width="2517" height="250" key="GridCell.Tab.0.center" timestamp="1592759432990">
+    <state width="2517" height="250" key="GridCell.Tab.0.bottom/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1592760012586" />
+    <state width="2517" height="250" key="GridCell.Tab.0.center" timestamp="1592760012584">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="227" key="GridCell.Tab.0.center/-1920.382.1536.832/0.0.1920.1040@-1920.382.1536.832" timestamp="1584987052016" />
@@ -230,8 +240,8 @@
     <state width="2517" height="306" key="GridCell.Tab.0.center/-1920.581.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586441245220" />
     <state width="2517" height="306" key="GridCell.Tab.0.center/-1920.612.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1587401817074" />
     <state width="1877" height="129" key="GridCell.Tab.0.center/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589528597508" />
-    <state width="2517" height="250" key="GridCell.Tab.0.center/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1592759432990" />
-    <state width="2517" height="250" key="GridCell.Tab.0.left" timestamp="1592759432990">
+    <state width="2517" height="250" key="GridCell.Tab.0.center/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1592760012584" />
+    <state width="2517" height="250" key="GridCell.Tab.0.left" timestamp="1592760012584">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="227" key="GridCell.Tab.0.left/-1920.382.1536.832/0.0.1920.1040@-1920.382.1536.832" timestamp="1584987052016" />
@@ -242,8 +252,8 @@
     <state width="2517" height="306" key="GridCell.Tab.0.left/-1920.581.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586441245219" />
     <state width="2517" height="306" key="GridCell.Tab.0.left/-1920.612.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1587401817073" />
     <state width="1877" height="129" key="GridCell.Tab.0.left/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589528597508" />
-    <state width="2517" height="250" key="GridCell.Tab.0.left/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1592759432990" />
-    <state width="2517" height="250" key="GridCell.Tab.0.right" timestamp="1592759432990">
+    <state width="2517" height="250" key="GridCell.Tab.0.left/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1592760012584" />
+    <state width="2517" height="250" key="GridCell.Tab.0.right" timestamp="1592760012584">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="227" key="GridCell.Tab.0.right/-1920.382.1536.832/0.0.1920.1040@-1920.382.1536.832" timestamp="1584987052016" />
@@ -254,7 +264,7 @@
     <state width="2517" height="306" key="GridCell.Tab.0.right/-1920.581.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1586441245220" />
     <state width="2517" height="306" key="GridCell.Tab.0.right/-1920.612.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1587401817074" />
     <state width="1877" height="129" key="GridCell.Tab.0.right/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1589528597508" />
-    <state width="2517" height="250" key="GridCell.Tab.0.right/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1592759432990" />
+    <state width="2517" height="250" key="GridCell.Tab.0.right/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1592760012584" />
     <state width="2517" height="243" key="GridCell.Tab.1.bottom" timestamp="1592756389718">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -312,6 +322,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="933" y="442" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1592667629888" />
+    <state x="-1920" y="0" width="1936" height="1128" maximized="true" key="dock-window-1" timestamp="1592761385483">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1920" y="0" width="1936" height="1128" maximized="true" key="dock-window-1/2560.709.1536.832/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1592761385483" />
     <state x="935" y="228" key="refactoring.ChangeSignatureDialog" timestamp="1587393447602">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

@@ -5,8 +5,9 @@ set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR/cmake})
 set(CMAKE_CXX_STANDARD 20)
 
 find_package(SDL2 REQUIRED)
-find_package(SFML COMPONENTS graphics window system REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})
+
+find_package(SFML COMPONENTS graphics window system REQUIRED)
 include_directories(${SFML_INCLUDE_DIR})
 
 add_executable(SpaceInvaders
@@ -196,7 +197,9 @@ add_executable(SpaceInvaders_SFML
 		Utils/Random.cpp
 		Utils/Random.h
 		Utils/JsonFile.cpp
-		Utils/JsonFile.h)
+		Utils/JsonFile.h
+
+		SFML/Window/SFMLWindow.cpp SFML/Window/SFMLWindow.h SFML/AssetLoaders/Sprites/SFMLSprite.cpp SFML/AssetLoaders/Sprites/SFMLSprite.h SFML/AssetLoaders/Sprites/SFMLSpriteLoader.cpp SFML/AssetLoaders/Sprites/SFMLSpriteLoader.h)
 
 
 target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)

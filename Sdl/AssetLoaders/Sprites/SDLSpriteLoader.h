@@ -5,7 +5,7 @@
 
 namespace SDL::Assets::Sprites
 {
-class SDLSpriteLoader : public SpaceInvaders::Assets::Sprites::SpriteLoader
+    class SDLSpriteLoader : public SpaceInvaders::Assets::Sprites::SpriteLoader
     {
     public:
         ~SDLSpriteLoader();
