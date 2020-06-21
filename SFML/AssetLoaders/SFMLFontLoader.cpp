@@ -3,11 +3,6 @@
 
 SFML::Assets::SFMLFontLoader::~SFMLFontLoader()
 {
-    for(auto font : this->fonts)
-    {
-        delete font.second;
-    }
-
     this->fonts.clear();
 }
 
@@ -21,10 +16,5 @@ void SFML::Assets::SFMLFontLoader::loadFont(std::string fontName, std::string pa
 
 void SFML::Assets::SFMLFontLoader::unload()
 {
-    for(auto font : this->fonts)
-    {
-        delete font.second;
-    }
-
     this->fonts.clear();
 }

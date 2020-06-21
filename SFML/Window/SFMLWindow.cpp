@@ -63,7 +63,7 @@ void SFML::Windows::SFMLWindow::pollEvents()
 
 void SFML::Windows::SFMLWindow::clear()
 {
-    this->window->clear();
+    this->window->clear(sf::Color(this->clearColor.getR(),this->clearColor.getG(),this->clearColor.getB()));
 }
 
 void SFML::Windows::SFMLWindow::draw()
@@ -72,12 +72,25 @@ void SFML::Windows::SFMLWindow::draw()
 
     if(this->background != nullptr)
     {
+        auto* backgroundSprite = static_cast<sf::Sprite*>(this->background->display());
+        backgroundSprite->setPosition(0,0);
+        backgroundSprite->setScale(1920.f/this->background->getWidth(), 1080.f/this->background->getHeight());
 
+        this->window->draw(*backgroundSprite);
     }
 
     while (!spriteQueue.empty())
     {
         auto* container = spriteQueue.front();
+        sf::Sprite* sprite = static_cast<sf::Sprite*>(container->sprite->display());
+
+        double offsetX = container->bounds[2] * container->bounds[0] * container->sprite->getWidth();
+        double offsetY = container->bounds[3] * container->bounds[1] * container->sprite->getHeight();
+
+        sprite->setPosition(offsetX, offsetY);
+        sprite->setScale(container->bounds[2], container->bounds[3]);
+
+        this->window->draw(*sprite);
 
         spriteQueue.pop();
     }
@@ -86,8 +99,38 @@ void SFML::Windows::SFMLWindow::draw()
     {
         auto* component = uiQueue.front();
 
+        do
+        {
+
+
+            auto container = component->display();
+            auto* uiTexture = static_cast<sf::Drawable*>(container.texture);
+
+            if(typeid(*uiTexture) == typeid(sf::Sprite))
+            {
+                auto* sprite = static_cast<sf::Sprite*>(container.texture);
+                sprite->setPosition(container.position[0], container.position[1]);
+                sprite->setScale(container.size[0] / sprite->getLocalBounds().width,
+                                    container.size[1] / sprite->getLocalBounds().height);
+
+                this->window->draw(*sprite);
+            }
+            else if(typeid(*uiTexture) == typeid(sf::Text))
+            {
+                auto* sprite = static_cast<sf::Text*>(container.texture);
+                sprite->setPosition(container.position[0], container.position[1]);
+                //sprite->setScale(container.size[0] / sprite->getLocalBounds().width,
+                //                 container.size[1] / sprite->getLocalBounds().height);
+
+                this->window->draw(*sprite);
+            }
+
+        } while(!component->doneDisplaying());
+
         uiQueue.pop();
     }
+
+    this->window->display();
 }
 
 void SFML::Windows::SFMLWindow::HandleKeyEvent(bool down, sf::Keyboard::Key keycode)

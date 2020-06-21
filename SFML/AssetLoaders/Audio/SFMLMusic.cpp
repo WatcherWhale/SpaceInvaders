@@ -9,7 +9,6 @@ SFML::Assets::Audio::SFMLMusic::SFMLMusic(std::string path)
     this->music = new sf::Music();
     this->music->openFromFile(path);
     this->music->setVolume((float) GameConstants::CLIP_VOLUME);
-    this->music->setLoop(true);
 }
 
 SFML::Assets::Audio::SFMLMusic::~SFMLMusic()
@@ -17,7 +16,18 @@ SFML::Assets::Audio::SFMLMusic::~SFMLMusic()
     delete this->music;
 }
 
-void SFML::Assets::Audio::SFMLMusic::play()
+void SFML::Assets::Audio::SFMLMusic::play(bool loop)
+{
+    this->music->setLoop(true);
+    this->music->play();
+}
+
+void SFML::Assets::Audio::SFMLMusic::pause()
+{
+    this->music->pause();
+}
+
+void SFML::Assets::Audio::SFMLMusic::resume()
 {
     this->music->play();
 }

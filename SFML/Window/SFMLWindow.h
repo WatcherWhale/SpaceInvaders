@@ -28,7 +28,7 @@ namespace SFML::Windows
 
     private:
         sf::RenderWindow* window;
-        void HandleKeyEvent(bool down, sf::Keyboard::Key keycode)
+        void HandleKeyEvent(bool down, sf::Keyboard::Key keycode);
     };
 }
 #endif

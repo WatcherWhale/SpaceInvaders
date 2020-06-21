@@ -18,6 +18,7 @@ namespace SFML::Assets::Sprites
         void* display() override;
 
     private:
+        sf::Texture* texture;
         sf::Sprite* sprite;
         sf::Image* image;
 

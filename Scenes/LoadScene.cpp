@@ -59,7 +59,7 @@ void loadAssetsAsync(SpaceInvaders::Scenes::LoadScene* loadScene)
     fontLoader->loadFont("bold", GameConstants::getAsset("Fonts/8bitBold.ttf"));
 
     // Pre load audio
-    auto mus = audioLoader->loadMusic(GameConstants::getAsset("Audio/Music/we_are_number_one_8_bit.mp3"));
+    auto mus = audioLoader->loadMusic(GameConstants::getAsset("Audio/Music/we_are_number_one_8_bit.wav"));
     mus->play(true);
 
     audioLoader->loadAudioClip(GameConstants::getAsset("Audio/SFX/button.wav"));

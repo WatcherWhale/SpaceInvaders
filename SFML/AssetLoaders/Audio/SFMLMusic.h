@@ -3,19 +3,21 @@
 
 
 #include <string>
-#include "../../../AssetLoaders/Audio/AudioClip.h"
+#include "../../../AssetLoaders/Audio/Music.h"
 #include <SFML/Audio.hpp>
 
 using namespace SpaceInvaders::Assets::Audio;
 
 namespace SFML::Assets::Audio
 {
-    class SFMLMusic : public AudioClip
+    class SFMLMusic : public Music
     {
     public:
         SFMLMusic(std::string path);
         ~SFMLMusic() override;
-        void play() override;
+        void play(bool loop) override;
+        void pause() override;
+        void resume() override;
     private:
         sf::Music* music;
     };

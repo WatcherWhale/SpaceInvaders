@@ -1,13 +1,14 @@
 cmake_minimum_required(VERSION 3.15)
-project(SpaceInvaders)
+project(SpaceInvaders_SFML)
 
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR/cmake})
 set(CMAKE_CXX_STANDARD 20)
 
-find_package(SDL2 REQUIRED)
-include_directories(${SDL2_INCLUDE_DIR})
+#find_package(SDL2 REQUIRED)
+#include_directories(${SDL2_INCLUDE_DIR})
 
-find_package(SFML COMPONENTS graphics window system REQUIRED)
+
+find_package(SFML COMPONENTS graphics system window audio REQUIRED)
 include_directories(${SFML_INCLUDE_DIR})
 
 add_executable(SpaceInvaders
@@ -199,8 +200,8 @@ add_executable(SpaceInvaders_SFML
 		Utils/JsonFile.cpp
 		Utils/JsonFile.h
 
-		SFML/Window/SFMLWindow.cpp SFML/Window/SFMLWindow.h SFML/AssetLoaders/Sprites/SFMLSprite.cpp SFML/AssetLoaders/Sprites/SFMLSprite.h SFML/AssetLoaders/Sprites/SFMLSpriteLoader.cpp SFML/AssetLoaders/Sprites/SFMLSpriteLoader.h SFML/AssetLoaders/SFMLFontLoader.cpp SFML/AssetLoaders/SFMLFontLoader.h SFML/AssetLoaders/Audio/SFMLAudioClip.cpp SFML/AssetLoaders/Audio/SFMLAudioClip.h SFML/AssetLoaders/Audio/SFMLMusic.cpp SFML/AssetLoaders/Audio/SFMLMusic.h)
+		SFML/Window/SFMLWindow.cpp SFML/Window/SFMLWindow.h SFML/AssetLoaders/Sprites/SFMLSprite.cpp SFML/AssetLoaders/Sprites/SFMLSprite.h SFML/AssetLoaders/Sprites/SFMLSpriteLoader.cpp SFML/AssetLoaders/Sprites/SFMLSpriteLoader.h SFML/AssetLoaders/SFMLFontLoader.cpp SFML/AssetLoaders/SFMLFontLoader.h SFML/AssetLoaders/Audio/SFMLAudioClip.cpp SFML/AssetLoaders/Audio/SFMLAudioClip.h SFML/AssetLoaders/Audio/SFMLMusic.cpp SFML/AssetLoaders/Audio/SFMLMusic.h SFML/AssetLoaders/Audio/SFMLAudioLoader.cpp SFML/AssetLoaders/Audio/SFMLAudioLoader.h SFML/UI/SFMLText.cpp SFML/UI/SFMLText.h SFML/Utils/SFMLTimer.cpp SFML/Utils/SFMLTimer.h SFML/Factories/SFMLFactory.cpp SFML/Factories/SFMLFactory.h SFML/Factories/SFMLUIFactory.cpp SFML/Factories/SFMLUIFactory.h)
 
 
-target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)
-target_link_libraries(SpaceInvaders_SFML ${SFML_LIBRARY} -lmingw32)
+#target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -l -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)
+target_link_libraries(SpaceInvaders_SFML sfml-main sfml-graphics sfml-audio sfml-window sfml-system)
