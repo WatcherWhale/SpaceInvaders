@@ -4,7 +4,7 @@ SpaceInvaders::Utils::Random::Random()
 {
     std::random_device rd;
     this->seed = rd();
-    this->rand = std::mt19937_64(rd());
+    this->rand = std::mt19937_64(this->seed);
 }
 
 SpaceInvaders::Utils::Random::Random(long seed)
@@ -15,7 +15,7 @@ SpaceInvaders::Utils::Random::Random(long seed)
 
 double SpaceInvaders::Utils::Random::next()
 {
-    return rand() / static_cast<double>(std::mt19937_64::max());
+    return this->rand() / static_cast<double>(std::mt19937_64::max());
 }
 
 double SpaceInvaders::Utils::Random::next(double min, double max)
@@ -30,7 +30,7 @@ double SpaceInvaders::Utils::Random::next(double max)
 
 unsigned int SpaceInvaders::Utils::Random::nextInt()
 {
-    return rand();
+    return this->rand();
 }
 
 int SpaceInvaders::Utils::Random::nextInt(int min, int max)

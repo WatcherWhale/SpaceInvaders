@@ -44,6 +44,16 @@ void SpaceInvaders::Scenes::GameScene::load()
     this->gameObjects.push_back(player);
     this->eventListeners.push_back(player);
 
+    for(int i = 0; i < 4; i++)
+    {
+        auto* bunker = Controllers::GameController::getInstance().getFactory()->createBunker(i,
+                Controllers::GameController::getInstance().getBunkerHealth(i));
+
+        bunker->loadSprites(loader);
+        this->gameObjects.push_back(bunker);
+    }
+
+
     // Create texts
     ptsText = Controllers::GameController::getInstance().getFactory()->getUiFactory()
             ->createText("0 pts",

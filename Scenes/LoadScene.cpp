@@ -49,6 +49,11 @@ void loadAssetsAsync(SpaceInvaders::Scenes::LoadScene* loadScene)
     spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Enemies/Bullet.png"), true);
     spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Button.png"), true);
 
+    spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Bunkers/Bunker1.png"), true);
+    spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Bunkers/Bunker2.png"), true);
+    spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Bunkers/Bunker3.png"), true);
+    spriteLoader->loadSprite(GameConstants::getAsset("Sprites/Bunkers/Bunker4.png"), true);
+
     // Pre load fonts
     fontLoader->loadFont("regular", GameConstants::getAsset("Fonts/8bitRegular.ttf"));
     fontLoader->loadFont("bold", GameConstants::getAsset("Fonts/8bitBold.ttf"));

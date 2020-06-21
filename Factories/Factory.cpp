@@ -24,3 +24,13 @@ SpaceInvaders::GameObjects::Bonus* SpaceInvaders::Factories::GameFactory::create
 {
     return new GameObjects::Bonus(xPos, direction);
 }
+
+SpaceInvaders::GameObjects::Bunker* SpaceInvaders::Factories::GameFactory::createBunker(int pos)
+{
+    return new SpaceInvaders::GameObjects::Bunker(pos);
+}
+
+SpaceInvaders::GameObjects::Bunker* SpaceInvaders::Factories::GameFactory::createBunker(int pos, int health)
+{
+    return new SpaceInvaders::GameObjects::Bunker(pos, health);
+}

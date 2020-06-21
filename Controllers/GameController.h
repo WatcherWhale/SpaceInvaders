@@ -35,6 +35,9 @@ namespace SpaceInvaders::Controllers
         int getLives();
         void setLives(int lives);
 
+        int getBunkerHealth(int i);
+        void setBunkerHealth(int i, int health);
+
         Events::EventHandler* getEventHandler();
 
         void setFactory(Factories::GameFactory* factory);
@@ -66,6 +69,7 @@ namespace SpaceInvaders::Controllers
         int lives = 3;
         int points = 0;
         bool running = true;
+        int bunkerHealth[4] {0, 0, 0, 0};
     };
 }
 #endif

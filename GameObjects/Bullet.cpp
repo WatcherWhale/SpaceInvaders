@@ -55,3 +55,8 @@ SpaceInvaders::GameObjects::GameObject* SpaceInvaders::GameObjects::Bullet::getK
 {
     return this->killed;
 }
+
+void SpaceInvaders::GameObjects::Bullet::setRemoved()
+{
+    this->remove = true;
+}
