@@ -1,7 +1,5 @@
 #include "Player.h"
-#include "../GameConstants.h"
 #include <cmath>
-#include <iostream>
 #include "../Controllers/GameController.h"
 
 using namespace SpaceInvaders::GameObjects;
@@ -110,7 +108,6 @@ void Player::shoot()
 void Player::endShoot()
 {
     this->shooting = false;
-    std::cout << "Shoot end\n";
 }
 
 

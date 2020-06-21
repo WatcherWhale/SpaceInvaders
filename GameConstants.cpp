@@ -1,4 +1,3 @@
-#include <iostream>
 #include "GameConstants.h"
 
 int GameConstants::WINDOW_SIZE_X = 1920;
@@ -23,7 +22,5 @@ void GameConstants::recalculate()
 
 std::string GameConstants::getAsset(std::string file)
 {
-    std::cout << "texturepacks/" + GameConstants::TEXTURE_PACK + "/" + file << "\n";
-
     return "texturepacks/" + GameConstants::TEXTURE_PACK + "/" + file;
 }
