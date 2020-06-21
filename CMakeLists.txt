@@ -5,7 +5,9 @@ set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR/cmake})
 set(CMAKE_CXX_STANDARD 20)
 
 find_package(SDL2 REQUIRED)
+find_package(SFML COMPONENTS graphics window system REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})
+include_directories(${SFML_INCLUDE_DIR})
 
 add_executable(SpaceInvaders
 			  	main.cpp
@@ -15,7 +17,7 @@ add_executable(SpaceInvaders
 			  	Game.cpp
 		      	Game.h
 
-		Factories/Factory.cpp
+				Factories/Factory.cpp
 				Factories/Factory.h
 				Sdl/Factories/SDLFactory.cpp
 				Sdl/Factories/SDLFactory.h
@@ -34,7 +36,7 @@ add_executable(SpaceInvaders
 
 				Events/EventHandler.cpp
 				Events/EventHandler.h
-		Events/EventListener.h
+				Events/EventListener.h
 
 				AssetLoaders/Sprites/SpriteLoader.cpp
 				AssetLoaders/Sprites/SpriteLoader.h
@@ -44,8 +46,8 @@ add_executable(SpaceInvaders
 				AssetLoaders/FontLoader.h
         		AssetLoaders/Audio/AudioLoader.cpp
 				AssetLoaders/Audio/AudioLoader.h
-		AssetLoaders/Audio/AudioClip.h
-		AssetLoaders/Audio/Music.h
+				AssetLoaders/Audio/AudioClip.h
+				AssetLoaders/Audio/Music.h
 
 				Controllers/LevelController.cpp
 				Controllers/LevelController.h
@@ -107,7 +109,95 @@ add_executable(SpaceInvaders
 				Utils/Random.cpp
 				Utils/Random.h
 				Sdl/Utils/SDLTimer.cpp
-				Sdl/Utils/SDLTimer.h Utils/JsonFile.cpp Utils/JsonFile.h GameObjects/Bunker.cpp GameObjects/Bunker.h)
+				Sdl/Utils/SDLTimer.h
+				Utils/JsonFile.cpp
+				Utils/JsonFile.h
+				GameObjects/Bunker.cpp
+				GameObjects/Bunker.h)
+
+add_executable(SpaceInvaders_SFML
+		main.cpp
+
+		GameConstants.h
+		GameConstants.cpp
+		Game.cpp
+		Game.h
+
+		Factories/Factory.cpp
+		Factories/Factory.h
+		Factories/UIFactory.cpp
+		Factories/UIFactory.h
+
+		Windows/Window.cpp
+		Windows/Window.h
+
+		Color.cpp
+		Color.h
+
+		Events/EventHandler.cpp
+		Events/EventHandler.h
+		Events/EventListener.h
+
+		AssetLoaders/Sprites/SpriteLoader.cpp
+		AssetLoaders/Sprites/SpriteLoader.h
+		AssetLoaders/Sprites/Sprite.cpp
+		AssetLoaders/Sprites/Sprite.h
+		AssetLoaders/FontLoader.cpp
+		AssetLoaders/FontLoader.h
+		AssetLoaders/Audio/AudioLoader.cpp
+		AssetLoaders/Audio/AudioLoader.h
+		AssetLoaders/Audio/AudioClip.h
+		AssetLoaders/Audio/Music.h
+
+		Controllers/LevelController.cpp
+		Controllers/LevelController.h
+		Controllers/EnemyController.cpp
+		Controllers/EnemyController.h
+
+		GameObjects/GameObject.cpp
+		GameObjects/GameObject.h
+		GameObjects/Player.cpp
+		GameObjects/Player.h
+		GameObjects/Alien.cpp
+		GameObjects/Alien.h
+		GameObjects/Bonus.cpp
+		GameObjects/Bonus.h
+		GameObjects/Bullet.cpp
+		GameObjects/Bullet.h
+		GameObjects/Bunker.cpp
+		GameObjects/Bunker.h
+
+		UI/UIComponent.h
+		UI/UIComponent.cpp
+		UI/Text.cpp
+		UI/Text.h
+		UI/Button.cpp
+		UI/Button.h
+
+		Scenes/Scene.cpp
+		Scenes/Scene.h
+		Scenes/GameScene.cpp
+		Scenes/GameScene.h
+		Scenes/LoadScene.cpp
+		Scenes/LoadScene.h
+		Scenes/GameOverScene.cpp
+		Scenes/GameOverScene.h
+		Scenes/MenuScene.cpp
+		Scenes/MenuScene.h
+
+		Controllers/GameController.cpp
+		Controllers/GameController.h
+
+		Utils/Timer.cpp
+		Utils/Timer.h
+		Utils/FunctionDefinitions.h
+		Utils/Math.cpp
+		Utils/Math.h
+		Utils/Random.cpp
+		Utils/Random.h
+		Utils/JsonFile.cpp
+		Utils/JsonFile.h)
 
 
 target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)
+target_link_libraries(SpaceInvaders_SFML ${SFML_LIBRARY} -lmingw32)
