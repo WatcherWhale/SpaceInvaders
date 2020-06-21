@@ -1,6 +1,8 @@
 #include "SDLMusic.h"
 #include "../../../GameConstants.h"
 
+using namespace SpaceInvaders;
+
 SDL::Assets::Audio::SDLMusic::SDLMusic(std::string path)
 {
     this->music_clip = Mix_LoadMUS(path.c_str());

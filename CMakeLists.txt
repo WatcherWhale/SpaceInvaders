@@ -15,10 +15,7 @@ add_executable(SpaceInvaders
 			  	Game.cpp
 		      	Game.h
 
-				Settings.cpp
-				Settings.h
-
-				Factories/Factory.cpp
+		Factories/Factory.cpp
 				Factories/Factory.h
 				Sdl/Factories/SDLFactory.cpp
 				Sdl/Factories/SDLFactory.h
@@ -110,7 +107,7 @@ add_executable(SpaceInvaders
 				Utils/Random.cpp
 				Utils/Random.h
 				Sdl/Utils/SDLTimer.cpp
-				Sdl/Utils/SDLTimer.h)
+				Sdl/Utils/SDLTimer.h Utils/JsonFile.cpp Utils/JsonFile.h)
 
 
 target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)

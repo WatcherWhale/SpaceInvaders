@@ -20,10 +20,9 @@ namespace SpaceInvaders
 	public:
 		Game(GameFactory* factory);
         void run();
-        void stop();
 
     private:
-
+        void loadSettings();
 		GameFactory* factory;
 		Windows::Window* window;
     };

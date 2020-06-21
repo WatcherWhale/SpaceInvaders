@@ -1,5 +1,5 @@
 #include "Game.h"
-#include "Settings.h"
+#include "Utils/JsonFile.h"
 
 using namespace SpaceInvaders;
 using namespace SpaceInvaders::Controllers;
@@ -7,7 +7,7 @@ using namespace SpaceInvaders::Controllers;
 Game::Game(GameFactory* factory)
 {
     // Load the settings from the settings file
-    Settings::load("settings.conf");
+    this->loadSettings();
 
     // Set the factory
 	this->factory = factory;
@@ -67,4 +67,26 @@ void Game::run()
 	GameController::getInstance().unload();
 	// Destroy the window
     this->window->destroy();
+}
+
+void Game::loadSettings()
+{
+    Utils::JsonFile settings = Utils::JsonFile::load("settings.json");
+
+    // Load Video
+    GameConstants::WINDOW_SIZE_X = settings.getObject("video")->at("width");
+    GameConstants::WINDOW_SIZE_Y = settings.getObject("video")->at("height");
+
+    GameConstants::WINDOW_FULLSCREEN = settings.getObject("video")->at("fullscreen");
+
+    int fps = settings.getObject("video")->at("fps");
+    GameConstants::FPS_TIME = 1000 / fps;
+
+    GameConstants::recalculate();
+
+    // Load volume
+    GameConstants::MUSIC_VOLUME = settings.getObject("volume")->at("music");
+    GameConstants::CLIP_VOLUME = settings.getObject("volume")->at("sfx");
+
+    GameConstants::TEXTURE_PACK = settings.getString("texturepack");
 }
