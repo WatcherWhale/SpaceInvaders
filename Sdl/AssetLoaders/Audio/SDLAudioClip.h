@@ -14,7 +14,7 @@ namespace SDL::Assets::Audio
     public:
         SDLAudioClip(std::string path);
         ~SDLAudioClip();
-        void play();
+        void play() override;
     private:
         Mix_Chunk* chunk;
     };

@@ -199,7 +199,7 @@ add_executable(SpaceInvaders_SFML
 		Utils/JsonFile.cpp
 		Utils/JsonFile.h
 
-		SFML/Window/SFMLWindow.cpp SFML/Window/SFMLWindow.h SFML/AssetLoaders/Sprites/SFMLSprite.cpp SFML/AssetLoaders/Sprites/SFMLSprite.h SFML/AssetLoaders/Sprites/SFMLSpriteLoader.cpp SFML/AssetLoaders/Sprites/SFMLSpriteLoader.h)
+		SFML/Window/SFMLWindow.cpp SFML/Window/SFMLWindow.h SFML/AssetLoaders/Sprites/SFMLSprite.cpp SFML/AssetLoaders/Sprites/SFMLSprite.h SFML/AssetLoaders/Sprites/SFMLSpriteLoader.cpp SFML/AssetLoaders/Sprites/SFMLSpriteLoader.h SFML/AssetLoaders/SFMLFontLoader.cpp SFML/AssetLoaders/SFMLFontLoader.h SFML/AssetLoaders/Audio/SFMLAudioClip.cpp SFML/AssetLoaders/Audio/SFMLAudioClip.h SFML/AssetLoaders/Audio/SFMLMusic.cpp SFML/AssetLoaders/Audio/SFMLMusic.h)
 
 
 target_link_libraries(SpaceInvaders ${SDL2_LIBRARY} -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer)
