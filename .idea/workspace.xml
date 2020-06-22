@@ -12,17 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbcf06a3-5ae5-42cc-83a1-2feda02e0bee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/EnemyController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/EnemyController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SFML/AssetLoaders/Audio/SFMLAudioClip.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SFML/AssetLoaders/Audio/SFMLAudioClip.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SFML/UI/SFMLText.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SFML/UI/SFMLText.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SFML/UI/SFMLText.h" beforeDir="false" afterPath="$PROJECT_DIR$/SFML/UI/SFMLText.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SFML/Window/SFMLWindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SFML/Window/SFMLWindow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/GameOverScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/GameOverScene.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/LoadScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/LoadScene.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameObjects/Bonus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameObjects/Bonus.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="bbcf06a3-5ae5-42cc-83a1-2feda02e0bee" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
