@@ -21,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/SFML/Window/SFMLWindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SFML/Window/SFMLWindow.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/GameOverScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/GameOverScene.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/LoadScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/LoadScene.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameObjects/Bonus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameObjects/Bonus.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
