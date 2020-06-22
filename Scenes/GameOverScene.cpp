@@ -90,4 +90,6 @@ void SpaceInvaders::Scenes::GameOverScene::load()
     // Clear everything
     GameController::getInstance().clearPoints();
     GameController::getInstance().resetLevel();
+
+    Controllers::GameController::getInstance().loadScene(Controllers::SceneEnum::GAME);
 }

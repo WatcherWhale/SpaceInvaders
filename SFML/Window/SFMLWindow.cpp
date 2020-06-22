@@ -82,12 +82,12 @@ void SFML::Windows::SFMLWindow::draw()
     while (!spriteQueue.empty())
     {
         auto* container = spriteQueue.front();
-        sf::Sprite* sprite = static_cast<sf::Sprite*>(container->sprite->display());
+        auto* sprite = static_cast<sf::Sprite*>(container->sprite->display());
 
         double offsetX = container->bounds[2] * container->bounds[0] * container->sprite->getWidth();
         double offsetY = container->bounds[3] * container->bounds[1] * container->sprite->getHeight();
 
-        sprite->setPosition(offsetX, offsetY);
+        sprite->setPosition(container->position[0] + offsetX, container->position[1] + offsetY);
         sprite->setScale(container->bounds[2], container->bounds[3]);
 
         this->window->draw(*sprite);
@@ -101,29 +101,14 @@ void SFML::Windows::SFMLWindow::draw()
 
         do
         {
-
-
             auto container = component->display();
-            auto* uiTexture = static_cast<sf::Drawable*>(container.texture);
 
-            if(typeid(*uiTexture) == typeid(sf::Sprite))
-            {
-                auto* sprite = static_cast<sf::Sprite*>(container.texture);
-                sprite->setPosition(container.position[0], container.position[1]);
-                sprite->setScale(container.size[0] / sprite->getLocalBounds().width,
-                                    container.size[1] / sprite->getLocalBounds().height);
+            auto* sprite = static_cast<sf::Sprite*>(container.texture);
+            sprite->setPosition(container.position[0], container.position[1]);
+            sprite->setScale(container.size[0] / sprite->getLocalBounds().width,
+                                container.size[1] / sprite->getLocalBounds().height);
 
-                this->window->draw(*sprite);
-            }
-            else if(typeid(*uiTexture) == typeid(sf::Text))
-            {
-                auto* sprite = static_cast<sf::Text*>(container.texture);
-                sprite->setPosition(container.position[0], container.position[1]);
-                //sprite->setScale(container.size[0] / sprite->getLocalBounds().width,
-                //                 container.size[1] / sprite->getLocalBounds().height);
-
-                this->window->draw(*sprite);
-            }
+            this->window->draw(*sprite);
 
         } while(!component->doneDisplaying());
 

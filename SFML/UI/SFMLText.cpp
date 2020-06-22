@@ -21,18 +21,25 @@ SFMLText::SFMLText(std::string text, void* font, Color textColor,
 
 void SFMLText::generateTexture()
 {
-    this->txt = new sf::Text(this->text, *reinterpret_cast<sf::Font*>(this->font), 32);
-    this->txt->setFillColor(sf::Color(color->getR(), color->getG(), color->getB()));
-    this->txt->setScale(this->txt->getScale().x * GameConstants::SCALE_X, this->txt->getScale().y * GameConstants::SCALE_Y);
+    auto txt = sf::Text(this->text, *reinterpret_cast<sf::Font*>(this->font), 32);
+    txt.setFillColor(sf::Color(color->getR(), color->getG(), color->getB()));
 
-    this->size[0] = this->txt->getLocalBounds().width;
-    this->size[1] = this->txt->getLocalBounds().height;
+    this->renderTexture = new sf::RenderTexture();
+    this->renderTexture->create(txt.getGlobalBounds().width, txt.getGlobalBounds().height);
+    this->renderTexture->clear(sf::Color::Transparent);
+    this->renderTexture->draw(txt);
+    this->renderTexture->display();
+
+    this->sprite = new sf::Sprite(this->renderTexture->getTexture());
+
+    this->size[0] = this->sprite->getLocalBounds().width * GameConstants::SCALE_X;
+    this->size[1] = this->sprite->getLocalBounds().height * GameConstants::SCALE_Y;
 }
 
 UISpriteContainer SFMLText::display()
 {
     UISpriteContainer container;
-    container.texture = this->txt;
+    container.texture = this->sprite;
     container.position = this->position;
     container.size = this->size;
     return container;

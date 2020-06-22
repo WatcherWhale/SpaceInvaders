@@ -17,5 +17,6 @@ SFML::Assets::Audio::SFMLAudioClip::~SFMLAudioClip()
 
 void SFML::Assets::Audio::SFMLAudioClip::play()
 {
+    this->music->stop();
     this->music->play();
 }

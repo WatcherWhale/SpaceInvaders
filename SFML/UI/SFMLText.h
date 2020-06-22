@@ -15,7 +15,8 @@ namespace SFML::UI
         SpaceInvaders::UI::UISpriteContainer display() override;
 
     private:
-        sf::Text* txt;
+        sf::RenderTexture* renderTexture;
+        sf::Sprite* sprite;
         void generateTexture() override;
     };
 }
