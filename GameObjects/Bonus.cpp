@@ -1,6 +1,7 @@
 #include "Bonus.h"
 #include "../Controllers/GameController.h"
 #include "../Scenes/GameScene.h"
+#include "../Utils/Math.h"
 
 using namespace SpaceInvaders::Controllers;
 
@@ -41,9 +42,19 @@ void SpaceInvaders::GameObjects::Bonus::onCollision(SpaceInvaders::GameObjects::
         {
             this->remove = true;
 
-            GameController::getInstance().setLives(GameController::getInstance().getLives() + 1);
-            auto* scene = dynamic_cast<Scenes::GameScene*>(GameController::getInstance().getCurrentScene());
-            scene->getLvlController()->getPlayer()->setLives(GameController::getInstance().getLives());
+            int choice = Utils::Default_Random.nextInt(0, 2);
+
+            if(choice == 0)
+            {
+                GameController::getInstance().setLives(GameController::getInstance().getLives() + 1);
+                auto* scene = dynamic_cast<Scenes::GameScene*>(GameController::getInstance().getCurrentScene());
+                scene->getLvlController()->getPlayer()->setLives(GameController::getInstance().getLives());
+            }
+            else
+            {
+                int bunker = Utils::Default_Random.nextInt(0, 4);
+                GameController::getInstance().setBunkerHealth(bunker, 0);
+            }
         }
     }
 }
